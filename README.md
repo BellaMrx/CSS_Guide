@@ -10,6 +10,8 @@
 1. Introduction to CSS
     - 1.1. History of CSS 
     - 1.2. Principle of CSS application
+    - 1.3. Structure of a CSS rule
+    - 1.4. The declaration of a selector
 
 --------------------------------------------------------------------------------------------
 
@@ -33,7 +35,8 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 
 ## 1.2. Principle of CSS application
  In CSS, rules for the individual HTML elements determine the appearance. It is not important at this point to understand what is written in *style.css*.
-  example --> *1_Introduction/Part_1/index.html*
+ 
+ example --> *1_Introduction/Part_1/index.html*
 
    ```
     <header>
@@ -111,3 +114,18 @@ From this point on, knowledge of HTML should be available. If there is no knowle
    ```
   ![Preview](1_Introduction/Images/Preview_1_1.png)
 
+
+## 1.3. Structure of a CSS rule
+ A CSS rule is defined with a selector and the declarations it contains. Selectors are an essential building block of CSS, of which there are many different types.
+ - **Selector**: Specifies the HTML element to which the CSS rule should be applied. It is possible to apply a rule to multiple HTML elements.
+   ```
+    h1, h2, h3, p { color: red;}
+   ```
+ This specifies that the font color is red, but only for the HTML elements h1, h2, h3 and p.
+
+ - **Declaration**: Declarations are used to format the selected HTML elements. The declaration consists of two parts, the *property* and a *value*.
+
+ ![Preview](1_Introduction/Images/CSSstatement.PNG)
+
+
+## 1.4. The declaration of a selector
