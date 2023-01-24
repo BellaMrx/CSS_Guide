@@ -10,8 +10,8 @@
 1. Introduction to CSS
     - 1.1. History of CSS 
     - 1.2. Principle of CSS application
-    - 1.3. Structure of a CSS rule
-    - 1.4. The declaration of a selector
+    - 1.3. Embedding CSS into HTML
+
 
 --------------------------------------------------------------------------------------------
 
@@ -115,7 +115,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
   ![Preview](1_Introduction/Images/Preview_1_1.png)
 
 
-## 1.3. Structure of a CSS rule
+### Structure of a CSS rule
  A CSS rule is defined with a selector and the declarations it contains. Selectors are an essential building block of CSS, of which there are many different types.
  - **Selector**: Specifies the HTML element to which the CSS rule should be applied. It is possible to apply a rule to multiple HTML elements.
 
@@ -129,7 +129,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
  ![Preview](1_Introduction/Images/CSSstatement.PNG)
 
 
-## 1.4. The declaration of a selector
+### The declaration of a selector
  The declaration inside the braces consists of at least one property and one value. E.g. with `font-family` the font is selected, with color the font color. The order of the statements can be arbitrary.
 
  - **Property**: This specifies the CSS property (e.g. color, font, alignment) to be changed for the HTML element selected with the selector. CSS has many properties. More about that later.
@@ -142,3 +142,45 @@ From this point on, knowledge of HTML should be available. If there is no knowle
      text-align: center;
     }
    ```
+
+
+### Use comments for CSS code
+ If a lot of CSS code is used, comments should be applied in the code to be able to understand what it is later.
+ A comment in the CSS is displayed like this:
+
+   ```
+    /* creates a circle */
+    .circle { 
+     height: 50px; 
+     width: 50px;
+     border-radius: 50px;
+    }
+
+    /* ----------------- */
+    /* header and footer */
+    /* ----------------- */
+    ...
+   ```
+
+
+## 1.3. Embedding CSS into HTML
+ There are three ways to include CSS in an HTML document:
+- **inline style**: The CSS code is applied directly to the HTML element. 
+- **internal style sheet**: The style statements are collected in the header of the HTML document.
+- **external style sheet**: The CSS code is created in a CSS file and linked to the HTML document.
+
+**inline style**
+ This method is not very advantageous, because the HTML document becomes quickly confusing, and each change must be made individually, which is very time-consuming. However, if only one property is to be changed that only applies to this element, then this method can be used or also for testing.
+
+ example --> *1_Introduction/Part_2/index.html*
+
+    ```
+    <h2 style="font-family: Verdana; background: blue; padding: 2px; text-align: center;">CSS Tips</h2>
+    <p style="font-family: Verdana;">Daily articles about CSS and all things related to web design and development...</p>
+    <h3 style="font-family: Verdana; margin-left: 20px;">More tips</h3>
+   ```
+
+**internal style sheet**
+
+
+
