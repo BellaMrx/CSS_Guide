@@ -358,7 +358,7 @@ The `@import` rule is noted in the HTML document header between `<style> ... </s
     </head>
    ```
 
-### Media-specific stylesheets for specific output devices.
+### Media-specific stylesheets for specific output devices
 If a stylesheet is to be specified for a particular output medium, this can be done with the media attribute in the link element.
 
 This example demonstrates how to create a media-specific stylesheet for the screen and another for the printer:
