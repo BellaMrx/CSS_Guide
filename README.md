@@ -118,6 +118,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 ## 1.3. Structure of a CSS rule
  A CSS rule is defined with a selector and the declarations it contains. Selectors are an essential building block of CSS, of which there are many different types.
  - **Selector**: Specifies the HTML element to which the CSS rule should be applied. It is possible to apply a rule to multiple HTML elements.
+
    ```
     h1, h2, h3, p { color: red;}
    ```
@@ -129,3 +130,15 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 
 
 ## 1.4. The declaration of a selector
+ The declaration inside the braces consists of at least one property and one value. E.g. with `font-family` the font is selected, with color the font color. The order of the statements can be arbitrary.
+
+ - **Property**: This specifies the CSS property (e.g. color, font, alignment) to be changed for the HTML element selected with the selector. CSS has many properties. More about that later.
+ - **Value**: This specifies the value for the CSS property used. This value depends on the property used, e.g. if the property is `color`, the value of a color (e.g. red) can be specified.
+
+   ```
+    h1 { 
+     font-family: "Arial";
+     color: red;
+     text-align: center;
+    }
+   ```
