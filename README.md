@@ -164,13 +164,13 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 
 
 ## 1.3. Embedding CSS into HTML
- There are three ways to include CSS in an HTML document:
+There are three ways to include CSS in an HTML document:
 - **inline style**: The CSS code is applied directly to the HTML element. 
 - **internal style sheet**: The style statements are collected in the header of the HTML document.
 - **external style sheet**: The CSS code is created in a CSS file and linked to the HTML document.
 
 **inline style**
-This method is not very advantageous, because the HTML document becomes quickly confusing, and each change must be made individually, which is very time-consuming. However, if only a single property is to be changed that only applies to this element, then this method can be used for testing or demonstration purposes.
+- This method is not very advantageous, because the HTML document becomes quickly confusing, and each change must be made individually, which is very time-consuming. However, if only a single property is to be changed that only applies to this element, then this method can be used for testing or demonstration purposes.
 
  example --> *1_Introduction/Part_2/index.html*
 
@@ -181,7 +181,7 @@ This method is not very advantageous, because the HTML document becomes quickly 
    ```
 
 **internal style sheet**
-With this method, the CSS instructions are specified in the header of the HTML document between `<style> ... </style>` are specified. These apply to the gaze HTML document. For learning CSS it is advantageous, because you have everything in one file. But if a style is applied to multiple web pages and changed later, each page must be changed individually.
+- With this method, the CSS instructions are specified in the header of the HTML document between `<style> ... </style>` are specified. These apply to the gaze HTML document. For learning CSS it is advantageous, because you have everything in one file. But if a style is applied to multiple web pages and changed later, each page must be changed individually.
  
  example --> *1_Introduction/Part_3/index.html*
 
@@ -211,7 +211,7 @@ With this method, the CSS instructions are specified in the header of the HTML d
    ```
 
 **external style sheet**
-This method is best suited for large web pages. HTML and CSS are saved in separate files. This is the only way to ensure that the layout is consistent for each page of a large web project. The CSS file is included in the link element in the header.
+- This method is best suited for large web pages. HTML and CSS are saved in separate files. This is the only way to ensure that the layout is consistent for each page of a large web project. The CSS file is included in the link element in the header.
  
  example --> *1_Introduction/Part_4/index.html*
 
