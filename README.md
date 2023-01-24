@@ -170,17 +170,178 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 - **external style sheet**: The CSS code is created in a CSS file and linked to the HTML document.
 
 **inline style**
- This method is not very advantageous, because the HTML document becomes quickly confusing, and each change must be made individually, which is very time-consuming. However, if only one property is to be changed that only applies to this element, then this method can be used or also for testing.
+ This method is not very advantageous, because the HTML document becomes quickly confusing, and each change must be made individually, which is very time-consuming. However, if only a single property is to be changed that only applies to this element, then this method can be used for testing or demonstration purposes.
 
  example --> *1_Introduction/Part_2/index.html*
 
-    ```
+   ```
     <h2 style="font-family: Verdana; background: blue; padding: 2px; text-align: center;">CSS Tips</h2>
     <p style="font-family: Verdana;">Daily articles about CSS and all things related to web design and development...</p>
     <h3 style="font-family: Verdana; margin-left: 20px;">More tips</h3>
    ```
 
 **internal style sheet**
+ With this method, the CSS instructions are specified in the header of the HTML document between `<style> ... </style>` are specified. These apply to the gaze HTML document. For learning CSS it is advantageous, because you have everything in one file. But if a style is applied to multiple web pages and changed later, each page must be changed individually.
+ 
+ example --> *1_Introduction/Part_3/index.html*
+
+   ```
+    <head>
+        <title>My CSS blog</title>
+        <meta charset="UTF-8" />
+        <style>
+            body {
+                margin: 0px;
+            }
+        
+            h1 {
+                font-family: "Verdana", "Geneva";
+                font-size: 200%;
+                text-align: center;
+            }
+        
+            h2 {
+            font-family: "Verdana", "Geneva";
+            background: #add8e6;
+            padding: 2px;
+            text-align: center;
+            }      
+        </style>
+    </head>
+   ```
+
+**external style sheet**
+ This method is best suited for large web pages. HTML and CSS are saved in separate files. This is the only way to ensure that the layout is consistent for each page of a large web project. The CSS file is included in the link element in the header.
+ 
+ example --> *1_Introduction/Part_4/index.html*
+
+   ```
+    <head>
+        <title>My CSS blog</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>My CSS blog</h1>
+            <p>A blog with tips about CSS ...</p>
+        </header>
+        <nav>
+            <p>
+                <a href="#">Blog</a> | <a href="#">Tips</a> |
+                <a href="#">About me</a> | <a href="#">Legal notice</a>
+            </p>
+        </nav>
+        <main>
+            <article>
+                <h2>CSS Tips</h2>
+                <p>
+                Daily articles about CSS and all things related to web design and development...
+                </p>
+                <h3>More tips</h3>
+                <ul>
+                    <li><a href="#">Hover effects</a></li>
+                    <li><a href="#">Center a div</a></li>
+                </ul>
+            </article>
+        </main>
+        <footer>
+            <hr />
+            <p>
+                <a href="#">Contact</a> | <a href="#">FAQ</a> |
+                <a href="#">About me</a> | <a href="#">Legal notice</a>
+            </p>
+        </footer>
+    </body>
+   ```
+ 
+ example --> *1_Introduction/Part_4/style.css*
+
+   ```
+    h1 { 
+        font-family: "Verdana", "Geneva";
+        font-size: 200%;
+        text-align: center;
+    }
+
+    h2 { 
+        font-family: "Verdana", "Geneva";
+        background: #add8e6;
+        padding: 10px;
+	    text-align: center;
+    }
+
+    h3 { 
+        font-family: "Verdana", "Geneva"; 
+        margin-left: 20px;
+    }
+
+    header { 
+        background: #add8e6;
+        padding: 2px;
+        text-align:center;
+    }
+
+    nav, footer {
+        text-align: center;  
+    }
+
+    p { 
+        font-family: "Verdana", "Geneva"; 
+    }
+
+    li { 
+        font-family: "Verdana", "Geneva"; 
+    }
+
+    article p { 
+        margin: 20px; 
+    }
+
+    article ul { 
+        margin: 20px; 
+    }
+   ```
+
+Several methods can be used at the same time, e.g. an internal and external stylesheet. Here the rule noted last gets the preference.
+
+ example --> *1_Introduction/Part_5/index.html*
+
+   ```
+    <head>
+        <title>CSS Conflicts</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            p {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>A headline</h1>
+        <p style="text-align: left">First paragraph text ...</p>
+        <p>Second paragraph text ...</p>
+    </body>
+   ```
+ 
+ example --> *1_Introduction/Part_5/style.css*
+
+   ```
+    p { 
+        text-align:right; 
+        color: grey; 
+    }
+   ```
+
+ Using the global title attribute, alternative stylessheets can be set up within the link or style element. This can be useful during team development to compare different styles. Or for different color schemes e.g. light and dark mode.
+
+  example --> *1_Introduction/Part_6
+
+  ![Preview](1_Introduction/Images/LightDarkMode.png)
+
 
 
 
