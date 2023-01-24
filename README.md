@@ -170,7 +170,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 - **external style sheet**: The CSS code is created in a CSS file and linked to the HTML document.
 
 **inline style**
- This method is not very advantageous, because the HTML document becomes quickly confusing, and each change must be made individually, which is very time-consuming. However, if only a single property is to be changed that only applies to this element, then this method can be used for testing or demonstration purposes.
+This method is not very advantageous, because the HTML document becomes quickly confusing, and each change must be made individually, which is very time-consuming. However, if only a single property is to be changed that only applies to this element, then this method can be used for testing or demonstration purposes.
 
  example --> *1_Introduction/Part_2/index.html*
 
@@ -181,7 +181,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
    ```
 
 **internal style sheet**
- With this method, the CSS instructions are specified in the header of the HTML document between `<style> ... </style>` are specified. These apply to the gaze HTML document. For learning CSS it is advantageous, because you have everything in one file. But if a style is applied to multiple web pages and changed later, each page must be changed individually.
+With this method, the CSS instructions are specified in the header of the HTML document between `<style> ... </style>` are specified. These apply to the gaze HTML document. For learning CSS it is advantageous, because you have everything in one file. But if a style is applied to multiple web pages and changed later, each page must be changed individually.
  
  example --> *1_Introduction/Part_3/index.html*
 
@@ -211,7 +211,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
    ```
 
 **external style sheet**
- This method is best suited for large web pages. HTML and CSS are saved in separate files. This is the only way to ensure that the layout is consistent for each page of a large web project. The CSS file is included in the link element in the header.
+This method is best suited for large web pages. HTML and CSS are saved in separate files. This is the only way to ensure that the layout is consistent for each page of a large web project. The CSS file is included in the link element in the header.
  
  example --> *1_Introduction/Part_4/index.html*
 
@@ -336,11 +336,59 @@ Several methods can be used at the same time, e.g. an internal and external styl
     }
    ```
 
- Using the global title attribute, alternative stylessheets can be set up within the link or style element. This can be useful during team development to compare different styles. Or for different color schemes e.g. light and dark mode.
+Using the global title attribute, alternative stylessheets can be set up within the link or style element. This can be useful during team development to compare different styles. Or for different color schemes e.g. light and dark mode.
 
-  example --> *1_Introduction/Part_6
+  example --> *1_Introduction/Part_6*
 
   ![Preview](1_Introduction/Images/LightDarkMode.png)
+
+
+### Include style statements from an external CSS file with @import
+The `@import` rule is noted in the HTML document header between `<style> ... </style>`. In practice, this example makes little sense, but should illustrate the use of the @import -rule. It is important that the `@import` rule is noted at the beginning, before which no CSS statement may stand.
+
+ example --> *1_Introduction/Part_7/index.html*
+
+   ```
+    <head>
+        <title>My CSS blog</title>
+        <meta charset="UTF-8">
+        <style>
+        @import url("style.css");
+        </style>
+    </head>
+   ```
+
+### Media-specific stylesheets for specific output devices.
+If a stylesheet is to be specified for a particular output medium, this can be done with the media attribute in the link element.
+
+This example demonstrates how to create a media-specific stylesheet for the screen and another for the printer:
+
+ example --> *1_Introduction/Part_8/index.html*
+
+   ```
+    <head>
+        <title>My CSS blog</title>
+        <meta charset="UTF-8">
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+        <link rel="stylesheet" type="text/css" media="print" href="print.css"> -->
+        <style>
+            @import url("style.css") screen;
+            @import url("print.css") print;
+        </style>
+    </head>
+   ```
+
+If the output device is a screen (`media="screen"`), the HTML document is formatted with *style.css*. If the output device is a printer (`media="print"`), the document is formatted with *print.css*.
+
+| attribute      | explanation                    |
+| -------------- | ------------------------------ |
+|`media="all"`   | all output devices             |
+|`media="print"` | printer                        |
+|`media="screen"`| screen-oriented output devices |
+
+There are other media types or device classes such as `aural, braille, embossed, handheld, projection, speech, tty, tv` these are considered obsolete since Media Queries Level 4, so their use is discouraged.
+
+
 
 
 
