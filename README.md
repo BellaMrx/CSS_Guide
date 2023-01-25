@@ -359,6 +359,7 @@ The `@import` rule is noted in the HTML document header between `<style> ... </s
     </head>
    ```
 
+
 ### Media-specific stylesheets for specific output devices
 If a stylesheet is to be specified for a particular output medium, this can be done with the media attribute in the link element.
 
@@ -391,12 +392,12 @@ There are other media types or device classes such as `aural, braille, embossed,
 
 
 ### Media-specific stylesheets with CSS
-Media-specific stylesheets play a major role in responsive web design. Responsive web design is standard today, as web pages are viewed first not only on the computer but predominantly on the smartphone. For media-specific stylesheets, logical operators have been introduced (`and`,`not`), which can be used to perform queries about various media properties, such as the usable screen width or screen orientation.
+Media-specific stylesheets (media queries) play a major role in responsive web design. Responsive web design is standard today because web pages are viewed first not only on the computer but predominantly on the smartphone. For media-specific stylesheets, logical operators have been introduced (`and`,`not`), which can be used to perform queries about various media properties, such as the usable screen width or screen orientation.
 
    ```
     <link rel="stylesheet" media="screen and (min-width: 1080px)" href="style1080.css">
    ```
-If the media has a screen and it is at least 1080 pixels wide, the CSS file style1080.css is included in the HTML document. 
+If the media has a screen and it is at least 1080 pixels wide, the CSS file *style1080.css* is included in the HTML document. 
 
 There are other such media properties like `min-width`. More about that later.
 
