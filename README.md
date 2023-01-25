@@ -11,7 +11,8 @@
     - 1.1. History of CSS 
     - 1.2. Principle of CSS application
     - 1.3. Embedding CSS into HTML
-
+    - 1.4. Analyze CSS in the web browser
+2. 
 
 --------------------------------------------------------------------------------------------
 
@@ -340,7 +341,7 @@ Using the global title attribute, alternative stylessheets can be set up within 
 
   example --> *1_Introduction/Part_6*
 
-  ![Preview](1_Introduction/Images/LightDarkMode.png)
+ ![Preview](1_Introduction/Images/LightDarkMode.png)
 
 
 ### Include style statements from an external CSS file with @import
@@ -389,7 +390,24 @@ If the output device is a screen (`media="screen"`), the HTML document is format
 There are other media types or device classes such as `aural, braille, embossed, handheld, projection, speech, tty, tv` these are considered obsolete since Media Queries Level 4, so their use is discouraged.
 
 
+### Media-specific stylesheets with CSS
+Media-specific stylesheets play a major role in responsive web design. Responsive web design is standard today, as web pages are viewed first not only on the computer but predominantly on the smartphone. For media-specific stylesheets, logical operators have been introduced (`and`,`not`), which can be used to perform queries about various media properties, such as the usable screen width or screen orientation.
+
+   ```
+    <link rel="stylesheet" media="screen and (min-width: 1080px)" href="style1080.css">
+   ```
+If the media has a screen and it is at least 1080 pixels wide, the CSS file style1080.css is included in the HTML document. 
+
+There are other such media properties like `min-width`. More about that later.
 
 
+## 1.4. Analyze CSS in the web browser
+A good learning and help tool are the development tools provided by each web browser.
+
+ ![Preview](1_Introduction/Images/BrowserAnalyze.PNG)
+
+Here it is possible to examine a styled HTML element. When an element is selected e.g. header. The CSS instructions are displayed, which can then be changed there for testing purposes. This is only visual, the file remains untouched.
+
+-------------------------------------------------------------------------------------
 
 
