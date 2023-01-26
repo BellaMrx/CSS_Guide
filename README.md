@@ -13,6 +13,7 @@
     - 1.3. Embedding CSS into HTML
     - 1.4. Analyze CSS in the web browser
 2. The CSS selectors
+    - 2.1 The simple selectors of CSS
 
 --------------------------------------------------------------------------------------------
 
@@ -427,6 +428,11 @@ Such a type selector, also called HTML element selector, addresses the HTML elem
  example --> *2_CSS_Selectors/Part_1/index.html*
 
    ```
+    <head>
+        <title>Type selectors</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
     <body>
         <header>Header</header>
         <nav>Navigation</nav>
@@ -465,3 +471,180 @@ Such a type selector, also called HTML element selector, addresses the HTML elem
    ```
 
  ![Preview](2_CSS_Selectors/Images/Preview_2_1.png)
+
+
+### Class selector
+In an HTML document there is usually more than just, for example, a `<p>` element, so that individual paragraphs can also be designed differently, classes are very useful. It is possible to assign a class to each element. A class is assigned with the global HTML attribute *class*.
+    
+index.html
+   ```
+    <p class="note">A paragraph text</p>
+   ```
+style.css
+   ```
+    .note {
+        color:red;
+    }
+   ```
+
+It is also possible to use several classes at once.
+    
+ example --> *2_CSS_Selectors/Part_2/index.html*
+   ```
+    <body>
+        <header class="head_foot">Header</header>
+        <nav class="bigfont">Navigation</nav>
+        <main>
+            <h1>Class selector</h1>
+            <p>The p element without a class</p>
+            <p class="note">The p element with the class <code>note</code></p>
+            <p class="note warning">
+                The p element with the classes <code>note</code> and <code>warning</code>
+            </p>
+            <p class="warning">The p element with the class <code>warning</code>.</p>
+            <p class="note bigfont">
+                The p element with the classes <code>note</code> and <code>bigfont</code>
+            </p>
+        </main>
+        <footer class="head_foot">Footer</footer>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_2/styles/style.css*
+   ```
+    /* black frame, centered text, 5 pixel distance from top */
+    header, nav, footer { 
+        text-align:center;
+        border: 1px solid black;
+        margin-top: 5px;
+        padding: 5px;
+        font-family: Verdana, Arial;
+    }
+
+    /* gray text */
+    h1, abbr {
+        color: gray;
+        font-family: Verdana, Arial;
+    }
+
+    /* font family for p elements */
+    p { 
+        font-family: Verdana, Arial; 
+    }
+
+    /* style for a hint */
+    .note {
+        margin-left: 50px;
+        border-left: 10px solid green;
+        padding-left: 5px;
+    }
+
+    /* style for a note as a warning */
+    .warning {
+        border-left: 10px solid red;
+        border-top: 2px solid red;
+        border-right: 10px solid red;
+        border-bottom: 2px solid red;
+        text-align: center;
+    }
+
+    /* font size to 140%, background color to gray */
+    .headfoot {
+        font-size: 140%;
+        background: #f5f5f5;
+    }
+
+    /* font size to 130%  */
+    .bigfont { 
+        font-size: 130%; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_2.PNG)
+
+
+### ID selector
+
+
+
+
+
+
+The different selectors can also be linked together, e.g. `p.note`.
+
+ example --> *2_CSS_Selectors/Part_3/index.html*
+   ```
+    <body>
+        <div id="header">Header</div>
+        <div id="nav">Navigation</div>
+        <div id="main">
+            <h1>Class selector</h1>
+            <p>The p element without a class.</p>
+            <p class="note">The p element with the class <code>note</code>.</p>
+            <p class="note warning">
+                The p element with the classes <code>note warning</code>.
+            </p>
+            <p class="warning">The p element with the class <code>warning</code>.</p>
+            <p class="note bigfont">
+                The p element with the classes <code>note bigfont</code>.
+            </p>
+        </div>
+        <div id="footer">Footer</div>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_3/styles/style.css*
+   ```
+    /* black frame, centered text, 5 pixel distance from top */
+    #header, #nav, #footer { 
+        text-align:center;
+        border: 1px solid black;
+        margin-top: 5px;
+        padding: 5px;
+        font-family: Verdana, Arial;
+    }
+
+    /* Font size to 140%, background color to gray */
+    #header, #footer {
+        font-size: 140%;
+        background: #f5f5f5;
+    }
+
+    #main { 
+        margin: 20px; 
+    }
+
+    /* grey text */
+    h1, abbr {
+        color: gray;
+        font-family: Verdana, Arial;
+    }
+
+    /* font family for p elements */
+    p { 
+        font-family: Verdana, Arial; 
+    }
+
+    /* paragraph text for a note */
+    .note {
+        margin-left: 50px;
+        border-left: 10px solid green;
+        padding-left: 5px;
+    }
+
+    /* paragraph text for a note as a warning */
+    .warning {
+        border-left: 10px solid red;
+        border-top: 2px solid red;
+        border-right: 10px solid red;
+        border-bottom: 2px solid red;
+        text-align: center;
+    }   
+
+    /* font size to 130% */
+    .bigfont { 
+        font-size: 130%; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_3.PNG)
