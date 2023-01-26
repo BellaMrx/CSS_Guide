@@ -1,0 +1,18 @@
+/* file: style.css */
+ 
+/* black frame, centered text, 5 pixel distance from top */
+header, nav, footer { 
+  text-align:center;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+/* gray text */
+h1, abbr { 
+  color: gray; 
+}
+
+/* gray dotted frame */
+p { 
+  border: 1px dotted gray; 
+}

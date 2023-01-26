@@ -12,7 +12,7 @@
     - 1.2. Principle of CSS application
     - 1.3. Embedding CSS into HTML
     - 1.4. Analyze CSS in the web browser
-2. 
+2. The CSS selectors
 
 --------------------------------------------------------------------------------------------
 
@@ -411,4 +411,57 @@ Here it is possible to examine a styled HTML element. When an element is selecte
 
 -------------------------------------------------------------------------------------
 
+# 2. The CSS selectors
+CSS offers many different selectors, which are divided into:
+- **Simple selectors**: these include the type selector, the universal selector (*), the class selector(.class), the ID selector (#id), the attribute selector, and several pseudo-classes.
+- **Combinators**: Combinators are two selectors concatenated with a > character (E > F; child selector), the plus sign (E + F; neighbor selector), a tilde character (E ~ F; sibling selector), or a space (E F; descendant selector).
 
+If you want to know which selectors are implemented in the web browser and which ones can be used, you can do it here [CSS- Selector- Test ](http://css4-selectors.com/browser-selector-test/).
+
+
+## 2.1 The simple selectors of CSS
+### Type selector
+
+Such a type selector, also called HTML element selector, addresses the HTML elements directly with the element name.
+
+ example --> *2_CSS_Selectors/Part_1/index.html*
+
+   ```
+    <body>
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <main>
+            <h1>Type selectors</h1>
+            <p>
+                Such a type selector addresses the <abbr>HTML</abbr> elements directly with the element name.
+            </p>
+            <p>
+                This rule is applied to all elements of the same type in the HTML document. It is irrelevant where in the HTML document these elements are written, to which class they belong or which identifier they have.
+            </p>
+        </main>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_1/styles/style.css*
+
+   ```
+    /* black frame, centered text, 5 pixel distance from top */
+    header, nav, footer { 
+        text-align:center;
+        border: 1px solid black;
+        margin-top: 5px;
+    }
+
+    /* gray text */
+    h1, abbr { 
+        color: gray; 
+    }
+
+    /* gray dotted frame */
+    p { 
+        border: 1px dotted gray; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_1.png)
