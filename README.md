@@ -651,7 +651,6 @@ Meaningful class names and ID names should be assigned. A meaningful name should
 ### Universal selector
 The universal selector is used to select all HTML elements in the HTML document. The universal selector is marked with the asterisk `*`.
 
-
  example --> *2_CSS_Selectors/Part_4/index.html*
    ```
     <body>
@@ -684,4 +683,31 @@ The universal selector is used to select all HTML elements in the HTML document.
    ```
 
  ![Preview](2_CSS_Selectors/Images/Preview_2_4.PNG)
+
+
+### Attribute selector
+The attribute selector is used to select HTML elements according to their HTML attributes. This is the possibility to check the presence of an attribute.
+
+ example --> *2_CSS_Selectors/Part_5/index.html*
+   ```
+    <h1>Attribute selector</h1>
+    <p>
+      Here you can find my GitHub profile
+        <a href="https://github.com/BellaMrx" title="BellaMrx GitHub Profile">BellaMrx</a>
+    </p>
+    <p title="A paragraph with title">
+      This paragraph also has a title attribute.
+    </p>
+   ```
+
+ example --> *2_CSS_Selectors/Part_5/styles/style.css*
+   ```
+    a[title] {
+        text-decoration: none;
+        color: gray;
+        font-weight: bold;
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_5.PNG)
 

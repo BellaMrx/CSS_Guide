@@ -1,0 +1,13 @@
+/* styling for all elements with the title attribute */
+/*[title] { border: 1px solid black; } */
+
+
+/* styling for all a element with the attribute title 
+ */
+
+ 
+a[title] {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
