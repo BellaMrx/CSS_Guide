@@ -1,0 +1,20 @@
+/* Styling for all HTML elements where title
+   has the attribute value deprecated */
+[title=deprecated] {
+  color: red;
+  text-decoration: line-through;
+}
+
+/* Styling HTML elements where title contains the word
+   attribute value contains the word "CSS-Guide". */
+[title~=CSS-Guide] { 
+  font-weight: bold; 
+}
+
+/* Styling HTML elements where hreflang
+   begins with the attribute value en, followed by 
+   a hyphen */
+[hreflang|=en] { 
+  font-weight: bold; 
+}
+

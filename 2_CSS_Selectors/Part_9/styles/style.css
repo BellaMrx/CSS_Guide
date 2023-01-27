@@ -1,0 +1,12 @@
+:target { 
+   background: lightgrey; 
+}
+div#fade_in { 
+   display: none; 
+}
+div#fade_in:target { 
+   display: block; 
+}
+
+
+

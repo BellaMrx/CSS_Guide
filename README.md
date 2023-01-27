@@ -711,3 +711,199 @@ The attribute selector is used to select HTML elements according to their HTML a
 
  ![Preview](2_CSS_Selectors/Images/Preview_2_5.PNG)
 
+
+### Attribute selector for attributes with a specific attribute value
+There are 3 possibilities:
+- `[attributname=attributevalue]`
+- `[attributname~=attributevalue]`
+- `[attributname|=attributevalue]`
+
+ example --> *2_CSS_Selectors/Part_6/index.html*
+   ```
+    <body>
+        <h1>[title=deprecated]</h1>
+        <p>
+        The HTML element <code title="deprecated">center</code> was declared deprecated in HTML5 and should be implemented by a CSS solution such as
+        <code>text-align: center;</code>.
+        </p>
+        <h1>[title~=CSS-Guide]</h1>
+        <ul>
+            <li>
+                <a href="https://github.com/BellaMrx/CSS_Guide" title="GitHub Website BellaMrx CSS-Guide">CSS-Guide</a>
+            </li>
+        </ul>
+        <h1>[hreflang|=en]</h1>
+        <ul>
+            <li>
+                <a href="https://www.w3schools.com/css/css_attribute_selectors.asp" hreflang="en">W3Schools</a>
+            </li>
+        </ul>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_6/styles/style.css*
+   ```
+    /* Styling for all HTML elements where title
+    has the attribute value deprecated */
+    [title=deprecated] {
+         color: red;
+        text-decoration: line-through;
+    }
+
+    /* Styling HTML elements where title contains the word
+    attribute value contains the word "CSS-Guide". */
+    [title~=CSS-Guide] { 
+        font-weight: bold; 
+    }
+
+    /* Styling HTML elements where hreflang
+    begins with the attribute value en, followed by a hyphen */
+    [hreflang|=en] { 
+        font-weight: bold; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_6.PNG)
+
+
+### CSS pseudo-classes
+CSS pseudo-classes are selectors for specific properties.
+- Pseudo-classes for visited and non-visited hyperlinks
+
+ example --> *2_CSS_Selectors/Part_7/index.html*
+   ```
+    <body>
+        <h1>:link und :visited</h1>
+        <ul>
+            <li><a href="https://www.google.com/">Google</a></li>
+            <li><a href="https://www.w3schools.com/">w3school</a></li>
+            <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+        </ul>
+        <article class="articlestyle">
+            <h2>:any-link</h2>
+            <p>A simple <a href="https://github.com/BellaMrx">link</a>.</p>
+        </article>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_7/styles/style.css*
+   ```
+    a:link { 
+        color: red; 
+    }
+    a:visited { 
+        color: green; 
+    }
+    .articlestyle a:any-link { 
+        color: grey; 
+    }
+    /* Chrome and Opera */
+    .articlestyle a:-webkit-any-link { 
+        color: grey; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_7.PNG)
+
+
+- Pseudo classes for user interactions with mouse and keyboard
+
+ example --> *2_CSS_Selectors/Part_8/index.html*
+   ```
+    <body>
+        <h1>:hover und :focus</h1>
+        <ul>
+            <li><a href="https://www.google.com/">Google</a></li>
+            <li><a href="https://www.w3schools.com/">w3school</a></li>
+            <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+        </ul>
+        <h2>:focus</h2>
+        <form>
+            Your name:
+            <input type="text" name="name" id="name" placeholder="Your name" />
+        </form>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_8/styles/style.css*
+   ```
+    input { 
+        background-color: lightgray; 
+    }
+    input:focus { 
+        background-color: white; 
+    }
+    input:hover { 
+        box-shadow: 0 0 3px blue;  
+    } 
+    input:placeholder-shown {
+        color: white;
+    }
+    li { 
+        background-color: lightgray; 
+    }
+    li:hover { 
+        background-color: snow; 
+    }
+    li:active { 
+        background-color: gray; 
+    }
+    a:link { 
+        text-decoration: none; color: blue; 
+    }
+    a:hover { 
+        font-weight: bold; 
+    }
+    a:active { 
+        color: red; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_8.PNG)
+
+
+- Pseudo class for reference targets
+
+ example --> *2_CSS_Selectors/Part_9/index.html*
+   ```
+    <body>
+        <h1>:target</h1>
+        <ul>
+            <li><a href="#target01">Target nr. 1</a></li>
+            <li><a href="#target02">Target nr. 2</a></li>
+            <li><a href="#target03">Target nr. 3</a></li>
+            <li><a href="#fade_in">Show hint</a></li>
+        </ul>
+        <div id="fade_in">Important notice!!!</div>
+        <h2 id="target01">Target nr. 1</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        </p>
+        <h2><a id="target02">Target nr. 2</a></h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        </p>
+        <p id="target03">
+            Target nr. 3: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        </p>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_9/styles/style.css*
+   ```
+    :target { 
+        background: lightgrey; 
+    }
+    div#fade_in { 
+        display: none; 
+    }
+    div#fade_in:target { 
+        display: block; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_9.PNG)
+
+
+
+
