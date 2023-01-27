@@ -421,8 +421,8 @@ If you want to know which selectors are implemented in the web browser and which
 
 
 ## 2.1 The simple selectors of CSS
-### Type selector
 
+### Type selector
 Such a type selector, also called HTML element selector, addresses the HTML elements directly with the element name.
 
  example --> *2_CSS_Selectors/Part_1/index.html*
@@ -474,7 +474,7 @@ Such a type selector, also called HTML element selector, addresses the HTML elem
 
 
 ### Class selector
-In an HTML document there is usually more than just, for example, a `<p>` element, so that individual paragraphs can also be designed differently, classes are very useful. It is possible to assign a class to each element. A class is assigned with the global HTML attribute *class*.
+In an HTML document there is usually more than just, for example, a `<p>` element, so that individual paragraphs can also be designed differently, classes are very useful. It is possible to assign a class to each element. A class is assigned with the global HTML attribute *class*. In CSS the class is marked with a *dot* e.g. `.note {...}`.
     
 index.html
    ```
@@ -564,13 +564,7 @@ It is also possible to use several classes at once.
 
 
 ### ID selector
-
-
-
-
-
-
-The different selectors can also be linked together, e.g. `p.note`.
+An ID is assigned with the HTML attribute `id`. IDs are always unique elements in an HTML document, i.e. they may only be assigned to one element in the HTML document. Since an ID occurs only once, the id is usually preferred for div elements. In CSS the id is marked with a *#* e.g. `#main {...}`
 
  example --> *2_CSS_Selectors/Part_3/index.html*
    ```
@@ -648,3 +642,46 @@ The different selectors can also be linked together, e.g. `p.note`.
    ```
 
  ![Preview](2_CSS_Selectors/Images/Preview_2_3.PNG)
+
+
+In practice, class selectors should be preferred for specific properties or groups such as notes, warnings, error messages. The ID selector should be used to note individual or unique areas of a web page. 
+Meaningful class names and ID names should be assigned. A meaningful name should describe the function and not the formatting (e.g. `.redBorder` = bad name, `.warning` = good name). Only upper and lower case letters, numbers, hyphens and underscores may be used for the name of the selector. The name must also not start with a digit.
+
+
+### Universal selector
+The universal selector is used to select all HTML elements in the HTML document. The universal selector is marked with the asterisk `*`.
+
+
+ example --> *2_CSS_Selectors/Part_4/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <main>
+            <h1>Universal selector</h1>
+            <p>A single paragraph text</p>
+            <p>A second paragraph text</p>
+        </main>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_4/styles/style.css*
+   ```
+    /* black frame for all elements */
+
+    * {
+        margin: 5px;
+        padding: 3px;
+        border: 1px dotted black;
+        text-align: center;
+    }
+
+    /* thicker border around the main element */
+    /* main { border: 2px solid black; } */
+    /* Thicker border around all HTML elements inside the main element */
+    /* main * { border: 2px solid black; } */
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_4.PNG)
+

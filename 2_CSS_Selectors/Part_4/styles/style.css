@@ -1,0 +1,13 @@
+/* black frame for all elements */
+
+* {
+    margin: 5px;
+    padding: 3px;
+    border: 1px dotted black;
+    text-align: center;
+}
+
+/* thicker border around the main element */
+/* main { border: 2px solid black; } */
+/* Thicker border around all HTML elements inside the main element */
+/* main * { border: 2px solid black; } */
