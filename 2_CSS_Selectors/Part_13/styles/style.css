@@ -1,0 +1,7 @@
+article:first-of-type { 
+    border: 2px solid black; 
+}
+
+article:last-of-type { 
+    border: 2px dotted gray; 
+}

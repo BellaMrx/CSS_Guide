@@ -13,7 +13,8 @@
     - 1.3. Embedding CSS into HTML
     - 1.4. Analyze CSS in the web browser
 2. The CSS selectors
-    - 2.1 The simple selectors of CSS
+    - 2.1. The simple selectors of CSS
+    - 2.2. Combinators
 
 --------------------------------------------------------------------------------------------
 
@@ -420,7 +421,7 @@ CSS offers many different selectors, which are divided into:
 If you want to know which selectors are implemented in the web browser and which ones can be used, you can do it here [CSS- Selector- Test ](http://css4-selectors.com/browser-selector-test/).
 
 
-## 2.1 The simple selectors of CSS
+## 2.1. The simple selectors of CSS
 
 ### Type selector
 Such a type selector, also called HTML element selector, addresses the HTML elements directly with the element name.
@@ -1017,4 +1018,175 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
  ![Preview](2_CSS_Selectors/Images/Preview_2_11.png)
+
+
+ example --> *2_CSS_Selectors/Part_12/index.html*
+   ```
+    <body>
+        <h1>:nth-child on table</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Line1.1</td>
+                    <td>Line1.2</td>
+                </tr>
+                <tr>
+                    <td>Line2.1</td>
+                    <td>Line2.2</td>
+                </tr>
+                <tr>
+                    <td>Line3.1</td>
+                    <td>Line3.2</td>
+                </tr>
+                <tr>
+                    <td>Line4.1</td>
+                    <td>Line4.2</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>:nth-last-child on list</h1>
+        <ul>
+            <li>Entry 1</li>
+            <li>Entry 2</li>
+            <li>Entry 3</li>
+            <li>Entry 4</li>
+        </ul>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_12/styles/style.css*
+   ```
+    tr:nth-child(odd) { 
+        background: lightgray; 
+    }
+
+    tr:nth-child(even) { 
+        background: grey; 
+    }
+
+    li:nth-last-child(odd) { 
+        color: blue; 
+    }
+
+    li:nth-last-child(even) { 
+        color: lightgray; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_12.PNG)
+
+
+- Structure pseudo-classes for certain child elements
+
+ example --> *2_CSS_Selectors/Part_13/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Article 1</h1>
+            <p>Text for article</p>
+        </article>
+        <article>
+            <h1>Article 2</h1>
+            <p>Text for article</p>
+        </article>
+        <article>
+            <h1>Article 3</h1>
+            <p>Text for article</p>
+        </article>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_13/styles/style.css*
+   ```
+    article:first-of-type { 
+        border: 2px solid black; 
+    }
+
+    article:last-of-type { 
+        border: 2px dotted gray; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_13.png)
+
+
+ example --> *2_CSS_Selectors/Part_14/index.html*
+   ```
+    <body>
+        <h1>:only-of-type</h1>
+        <p><em>Bear</em>! Who is this <em>Bear</em>?</p>
+        <p>Attention! <em>Bear</em> could be behind <strong>you</strong>!</p>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_14/styles/style.css*
+   ```
+    em:only-of-type { 
+        font-weight: bold; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_14.PNG)
+
+
+- Pseudo elements, the selectors for elements that do not exist
+
+ example --> *2_CSS_Selectors/Part_15/index.html*
+   ```
+    <body>
+        <h1>:first-letter and :first-line</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+            sem. Nulla consequat massa quis enim.
+        </p>
+        <h1>:before and :after</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>from A to B</td>
+                    <td class="time">55</td>
+                </tr>
+                <tr>
+                    <td>from A to C</td>
+                    <td class="time">35</td>
+                </tr>
+                <tr>
+                    <td>from B to C</td>
+                    <td class="time">20</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_15/styles/style.css*
+   ```
+    p::first-line { 
+        font-weight: bold; 
+    }
+
+    p::first-letter{ 
+        font-size: xx-large; float: left; 
+    }
+
+    h1::-moz-selection { 
+        background-color: orange; color:red; 
+    }
+
+    td.time::before { 
+        content: "approx. "; 
+    }
+
+    td.time::after { 
+        content: " Minutes";    
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_15.png)
+
+
+## 2.2. Combinators
+
 

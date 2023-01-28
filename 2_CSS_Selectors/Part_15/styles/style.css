@@ -1,0 +1,19 @@
+p::first-line { 
+    font-weight: bold; 
+}
+
+p::first-letter{ 
+    font-size: xx-large; float: left; 
+}
+
+h1::-moz-selection { 
+    background-color: orange; color:red; 
+}
+
+td.time::before { 
+    content: "approx. "; 
+}
+
+td.time::after { 
+    content: " Minutes"; 
+}

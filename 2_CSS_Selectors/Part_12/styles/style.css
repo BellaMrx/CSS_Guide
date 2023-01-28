@@ -1,0 +1,15 @@
+tr:nth-child(odd) { 
+    background: lightgray; 
+}
+
+tr:nth-child(even) { 
+    background: grey; 
+}
+
+li:nth-last-child(odd) { 
+    color: blue; 
+}
+
+li:nth-last-child(even) { 
+    color: lightgray; 
+}
