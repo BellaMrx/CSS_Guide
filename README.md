@@ -1188,5 +1188,146 @@ Structure pseudo-classes can be used to select elements based on their position 
 
 
 ## 2.2. Combinators
+A combiner is a character between two selectors that concatenates these selectors. The first selector forms the condition and the second selector forms the target to be selected if the condition is true.
+
+| Combinator | Designation                 | Meaning                                             |
+| ---------- | --------------------------- | --------------------------------------------------- |
+| E,F        | descendant combinator       | F is selected if it is a descendant of an E element |
+| E > F      | child combinator            | F is selected only if it is a direct descendant of an E element |
+| E + F      | adjacent sibling combinator | F is only selected if it occurs directly after E (in the same parent element) |
+| E ~ F      | general sibling combinator  | F is selected only if occurs after E (in the same parent element) |
+
+- Descendant selector (E, F)
+
+ example --> *2_CSS_Selectors/Part_16/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Descendant combiner (E1 E2)</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>
+                    <p>A paragraph text in the list item</p>
+                </li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p>2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_16/styles/style.css*
+   ```
+    article p { 
+        background: lightblue; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_16.png)
 
 
+- Child selector (E1 > E2)
+
+ example --> *2_CSS_Selectors/Part_17/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Child Combinator (E1 &gt; E2)</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>
+                    <p>A paragraph text in the list item</p>
+                </li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p>2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_17/styles/style.css*
+   ```
+    article > p { 
+        background: lightblue; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_17.png)
+
+
+- Neighbor selector (E1 + E2)
+
+ example --> *2_CSS_Selectors/Part_18/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Direct adjacent combiner (E1 + E2)</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>
+                    <p>A paragraph text in the list item</p>
+                </li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p>2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_18/styles/style.css*
+   ```
+    article + p { 
+        background: lightblue; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_18.png)
+
+
+- Sibling selector (E1 ~ E2)
+
+ example --> *2_CSS_Selectors/Part_19/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Indirect adjacent combiner (E1 ~ E2)</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>
+                    <p>A paragraph text in the list item</p>
+                </li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p>2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_19/styles/style.css*
+   ```
+    article ~ p { 
+        background: lightblue; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_19.png)
