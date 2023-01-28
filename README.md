@@ -773,7 +773,7 @@ CSS pseudo-classes are selectors for specific properties.
  example --> *2_CSS_Selectors/Part_7/index.html*
    ```
     <body>
-        <h1>:link und :visited</h1>
+        <h1>:link and :visited</h1>
         <ul>
             <li><a href="https://www.google.com/">Google</a></li>
             <li><a href="https://www.w3schools.com/">w3school</a></li>
@@ -804,6 +804,7 @@ CSS pseudo-classes are selectors for specific properties.
    ```
 
  ![Preview](2_CSS_Selectors/Images/Preview_2_7.PNG)
+ ![Preview](2_CSS_Selectors/Images/Preview_2_7_B.PNG)
 
 
 - Pseudo classes for user interactions with mouse and keyboard
@@ -811,7 +812,7 @@ CSS pseudo-classes are selectors for specific properties.
  example --> *2_CSS_Selectors/Part_8/index.html*
    ```
     <body>
-        <h1>:hover und :focus</h1>
+        <h1>:hover and :focus</h1>
         <ul>
             <li><a href="https://www.google.com/">Google</a></li>
             <li><a href="https://www.w3schools.com/">w3school</a></li>
@@ -860,6 +861,8 @@ CSS pseudo-classes are selectors for specific properties.
    ```
 
  ![Preview](2_CSS_Selectors/Images/Preview_2_8.PNG)
+ ![Preview](2_CSS_Selectors/Images/Preview_2_8_B.PNG)
+ ![Preview](2_CSS_Selectors/Images/Preview_2_8_C.PNG)
 
 
 - Pseudo class for reference targets
@@ -903,7 +906,115 @@ CSS pseudo-classes are selectors for specific properties.
    ```
 
  ![Preview](2_CSS_Selectors/Images/Preview_2_9.PNG)
+ ![Preview](2_CSS_Selectors/Images/Preview_2_9_B.PNG)
+ ![Preview](2_CSS_Selectors/Images/Preview_2_9_C.PNG)
+ ![Preview](2_CSS_Selectors/Images/Preview_2_9_D.PNG)
+ ![Preview](2_CSS_Selectors/Images/Preview_2_9_E.PNG)
 
 
+### CSS structure pseudo-classes
+Structure pseudo-classes can be used to select elements based on their position in the document structure.
 
+- CSS structure pseudo-classes with `:root` and `:empty`
+
+ example --> *2_CSS_Selectors/Part_10/index.html*
+   ```
+    <body>
+        <h1>:root and :empty</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        </p>
+        <p></p>
+        <h2>:empty on table</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Value</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Value</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_10/styles/style.css*
+   ```
+    :root { 
+        color: lightgrey; 
+    }
+
+    :empty { 
+        background-color: yellow; padding: 10px; 
+    }
+
+    td:empty { 
+        background-color: green; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_10.PNG)
+
+
+- Structure pseudo-classes for child elements
+
+ example --> *2_CSS_Selectors/Part_11/index.html*
+   ```
+    <body>
+        <h1>:first-child in body</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        </p>
+        <h2>:first-child and :last-child on table</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>:first-child in tr</td>
+                    <td>Text only</td>
+                    <td>:last-child in tr</td>
+                </tr>
+                <tr>
+                    <td>:first-child in tr</td>
+                    <td>Text only</td>
+                    <td>:last-child in tr</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>This is selected by :first-child in ul.</li>
+            <li>This is not selected.</li>
+            <li>This is not selected.</li>
+            <li>This is selected by :last-child in ul.</li>
+        </ul>
+        <p>This one is selected by :last-child of body.</p>
+    </body>
+   ```
+
+ example --> *2_CSS_Selectors/Part_11/styles/style.css*
+   ```
+    * { 
+        background-color: white; 
+    }
+
+    body { 
+        padding: 5px; 
+    }
+
+    :first-child { 
+        border: 2px solid black;  
+    }
+
+    :last-child { 
+        border: 2px dotted gray; 
+    }
+   ```
+
+ ![Preview](2_CSS_Selectors/Images/Preview_2_11.png)
 

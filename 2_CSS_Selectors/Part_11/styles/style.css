@@ -1,0 +1,15 @@
+* { 
+    background-color: white; 
+}
+
+body { 
+    padding: 5px; 
+}
+
+:first-child { 
+    border: 2px solid black;  
+}
+
+:last-child { 
+    border: 2px dotted gray; 
+}
