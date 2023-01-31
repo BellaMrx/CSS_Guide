@@ -1,0 +1,10 @@
+body {
+    background: gray;
+    font-family: Arial, Verdana;
+    color: white;
+}
+
+article {
+    background: lightblue;
+    color: black;
+}

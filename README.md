@@ -15,6 +15,9 @@
 2. The CSS selectors
     - 2.1. The simple selectors of CSS
     - 2.2. Combinators
+3. Inheritance and the cascade 
+    - 3.1 The principle of inheritance in CSS
+
 
 --------------------------------------------------------------------------------------------
 
@@ -1331,3 +1334,217 @@ A combiner is a character between two selectors that concatenates these selector
    ```
 
  ![Preview](2_CSS_Selectors/Images/Preview_2_19.png)
+
+
+ ----------------------------------------------------------------------
+
+# 3. Inheritance and the cascade 
+
+## 3.1 The principle of inheritance in CSS
+An important principle in CSS is inheritance. Only this makes it possible to define different CSS properties such as colors, font and font size once in a central place instead of having to repeat them all the time.
+The various HTML elements have ancestors and descendants (parent and child elements). Because of these relationships, the subsequent child elements inherit many style properties from the higher-level parent elements. 
+
+ example --> *3_Inheritance_Cascade/Part_1/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Inheritance</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p>2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+The body element here contains a header, article, two p and a footer element as direct descendants. This makes the body element the parent element of all these elements. Direct descendants of the article element are the h1, p, and ul elements. These direct descendants of article are the indirect descendants of the body element. Starting from the body element, the set CSS properties are inherited from element to element.
+
+ example --> *3_Inheritance_Cascade/Part_1/styles/style.css*
+   ```
+    body {
+        background: gray;
+        font-family: Arial, Verdana;
+        color: white;
+    }
+
+    article {
+        background: lightblue;
+        color: black;
+    }
+   ```
+If, as in this example with the article selector, a new inheritable CSS property is assigned to an element, such as the text color here, the element specified with the selector (here article) and its descendants no longer inherit the CSS property of the parent element. In that case, the CSS properties declared in the selector to the descendants of an article element now become a black text color. The font-family of the body selector, on the other hand, was not declared in the article type selector, so the font-family declared in the body selector (here Arial) is still passed on to article and its descendants. background is not passed on to the descendants by the article selector, but is transparent, since that is the default value in CSS.
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_1.png)
+
+If no specific value has been assigned to a CSS property, then the web browser uses the default value set for it when it inherits.
+If these inheritances did not exist, a CSS rule would have to be explicitly created for each element. Inheritance can help write an efficient and well-organized stylesheet. For example, it is often sufficient to specify the font and other CSS properties early in the body element.
+
+### Caution when using relative properties
+Inheriting relative units such as font size with percentages or em can result in surprising changes, because some web browsers reapply this value for each element if the font size is also defined with percentages or em for further elements. Because it is not the value defined in the stylesheet that is passed on, but the value calculated by the web browser.
+
+### Not everything is inherited
+Not all CSS properties are passed on to the descendants. Especially CSS properties like `margin`, `padding`, `border` or `width` would not make much sense.
+The following are not inherited: `background`, `border`, `width`, `height`, `padding`, `margin`, `position`, `top`, `right`, `bottom`, `left`, `float`, `clear`
+
+### Force inheritance with `inherit` 
+Some CSS properties are not inherited, but it is possible to force that with `inherit`.
+
+ example --> *3_Inheritance_Cascade/Part_2/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Inheritance</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p>2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *3_Inheritance_Cascade/Part_2/styles/style.css*
+   ```
+    body {
+        font-family: Arial, Verdana;
+        color: white;
+        background: gray;
+    }
+
+    article {
+        border: 4px dotted black;
+        background: lightblue;
+        color: black;
+    }
+
+    p {
+        border: inherit;
+        background: lightgray;
+    }
+   ```
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_2.png)
+
+### Restore the default value of a CSS property with `initial`
+
+ example --> *3_Inheritance_Cascade/Part_3/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Inheritance</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p>2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *3_Inheritance_Cascade/Part_3/styles/style.css*
+   ```
+    body {
+        font-family: Arial, Verdana;
+        color: white;
+        background: gray;
+    }
+
+    article {
+        border: 4px dotted black;
+        background: lightblue;
+        color: black;
+    }
+
+    p {
+        border: inherit;
+        background: unset;
+        color: initial;
+    }
+   ```
+
+With `color:initial;` the font color of all p elements in the HTML document is reset to the default value of the browser.
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_3.png)
+
+
+### Force inheritance or restore value with `unset`
+The `unset` keyword is a middle ground between `inherit` and `initial`. When the keyword is used for a CSS property, it behaves like `inherit` and inherits the value for the corresponding CSS property of the parent element. If there is no parent element with a set value for that CSS property, `unset` behaves like `initial` and resets a CSS property to the default value provided by the CSS specification.
+
+
+### Force inherit or restore values for all properties
+With the shorthand notation `all`, all CSS properties of the parent element can be inherited with `inherit` or reset to default with `initial`. `unset` can also be used with `all`.
+
+ example --> *3_Inheritance_Cascade/Part_4/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Inheritance</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p class="p_outside">2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *3_Inheritance_Cascade/Part_4/styles/style.css*
+   ```
+    body {
+        font-family: Arial, Verdana;
+        color: white;
+        background: gray;
+    }
+
+    article {
+        border: 4px dotted black;
+        background: lightblue;
+        color: black;
+    }
+
+    p {
+	    border: inherit;
+	    background: lightgray;
+	    color: unset;
+    }
+
+    .p_outside {
+        all: initial; 
+        display: block;
+        margin: 5px;
+        color: silver;
+    }
+   ```
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_4.png)
+
+
+
+
+
+
+

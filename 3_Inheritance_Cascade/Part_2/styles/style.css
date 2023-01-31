@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, Verdana;
+    color: white;
+    background: gray;
+}
+
+article {
+    border: 4px dotted black;
+    background: lightblue;
+    color: black;
+}
+
+p {
+    border: inherit;
+    background: lightgray;
+}
