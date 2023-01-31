@@ -17,6 +17,7 @@
     - 2.2. Combinators
 3. Inheritance and the cascade 
     - 3.1 The principle of inheritance in CSS
+    - 3.2. Understanding the control system of the cascade
 
 
 --------------------------------------------------------------------------------------------
@@ -1543,6 +1544,20 @@ With the shorthand notation `all`, all CSS properties of the parent element can 
  ![Preview](3_Inheritance_Cascade/Images/Preview_3_4.png)
 
 
+## 3.2. Understanding the control system of the cascade
+Cascade means that a document can be formatted not only by one stylesheet, but from a multitude of stylesheets that can come from different sources. This makes it possible for one stylesheet to build on another, saving a lot of work. Due to the multiple ways in which stylesheet statements can be included and combined with each other, conflicts and contradictions can come up. Such a conflict arises when the same CSS property has been assigned different values in several statements. For such cases, there is a rule system that decides which of the conflicting or competing style statements will ultimately be applied to an element.
+
+### The origin of a stylesheet
+- **Browser stylesheet**: The default stylesheet of the web browser is used if no CSS formatting is assigned to the HTML document. Each web browser provides basic formatting for this purpose. Each web browser provides its own default setting, so there are usually slight differences.
+
+- **User stylesheet**: Some web browsers offer the user directly or via extensions to include own stylesheet files. When custom stylesheets are included, the corresponding properties of the web browser are overridden.
+
+- **Author stylesheet**: This is the stylesheet you created and referenced or included with the @import rule, which is usually used to override or combine various CSS properties of the browser stylesheet and, if applicable, the user stylesheet.
+
+Of these three sources, the browser stylesheet has the lowest priority. If a user stylesheet (medium priority) is used, the browser stylesheet is overwritten. The author stylesheet has the highest priority and overwrites all others.
+
+
+### Increase the priority of a CSS property with `!important`
 
 
 
