@@ -1,0 +1,23 @@
+.aclass { 
+    color: green; 
+}
+
+#index li.aclass { 
+    color: orange; 
+}
+
+li { 
+    color: red; 
+}
+
+li.aclass { 
+    color: blue; 
+}
+
+body article ul li { 
+    color: yellow; 
+}
+
+#index li { 
+    color: gray; 
+}

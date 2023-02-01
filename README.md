@@ -18,6 +18,7 @@
 3. Inheritance and the cascade 
     - 3.1 The principle of inheritance in CSS
     - 3.2. Understanding the control system of the cascade
+    - 3.3. Pass values to CSS properties
 
 
 --------------------------------------------------------------------------------------------
@@ -1558,6 +1559,143 @@ Of these three sources, the browser stylesheet has the lowest priority. If a use
 
 
 ### Increase the priority of a CSS property with `!important`
+If a CSS rule or CSS property is declared multiple times in the same file, the last declared property usually becomes active.
+
+ example --> *3_Inheritance_Cascade/Part_5/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article class="priority">
+            <h1>without !important</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p>2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *3_Inheritance_Cascade/Part_5/styles/style.css*
+   ```
+    .priority {
+        border: 2px solid red;
+    }
+
+    .priority {
+        border: 2px dotted green;
+    }
+   ```
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_5.png)
+
+
+The CSS keyword `!important` can be used to increase the priority so that the property cannot be overridden by the following specifications.
+
+ example --> *3_Inheritance_Cascade/Part_6/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article class="priority">
+            <h1>with !important</h1>
+            <p>1. paragraph text for article</p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+            <p>2. paragraph text for article</p>
+        </article>
+        <p>1. paragraph text after the article</p>
+        <p>2. paragraph text after the article</p>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *3_Inheritance_Cascade/Part_6/styles/style.css*
+   ```
+    .priority {
+        border: 2px solid red !important;
+    }
+
+    .priority {
+        border: 2px dotted green;
+    }
+   ```
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_6.png)
+
+
+### Sorting by weighting of the selectors
+This sorting is used when there are equivalent specifications within a stylesheet. Here, a value is calculated for each selector that indicates the weighting of the selector. This value is called specificity. This specificity is expressed as a numerical value, and the higher this numerical value is, the more important the selector is, and it overwrites a competing selector with a lower value.
+
+from highest weight(A) to lowest weight(D):
+A = style attributes
+B = ID
+C = class, pseudo-class, attributes, 
+D = pseudo elements
+
+Universal selectors with `*` get no weighting and behave neutrally, as do combinatorial characters `>`,`+`,`~` and the space between two selectors.
+
+ example --> *3_Inheritance_Cascade/Part_7/index.html*
+   ```
+    <body>
+        <header>Header</header>
+        <article>
+            <h1>Inheritance</h1>
+            <p>1. paragraph text for article</p>
+            <ul id="index">
+                <li class="aclass">List Item 1</li>
+                <li class="aclass">List Item 2</li>
+            </ul>
+        </article>
+        <footer>Footer</footer>
+    </body>
+   ```
+
+ example --> *3_Inheritance_Cascade/Part_7/styles/style.css*
+   ```
+    .aclass { 
+        color: green; 
+    }
+
+    #index li.aclass { 
+        color: orange; 
+    }
+
+    li { 
+        color: red; 
+    }
+
+    li.aclass { 
+        color: blue; 
+    }
+
+    body article ul li { 
+        color: yellow; 
+    }
+
+    #index li { 
+        color: gray; 
+    }
+   ```
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_7.png)
+
+
+### Analyzing the cascade in the browser
+Many web browsers offer developer tools that are a great help. There you can easily see which CSS properties were inherited from the web browser (USER AGENT STYLESHEET) and which were inherited from other elements (INHERITED FROM). Crossed out elements were overwritten by another element.
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_8.PNG)
+
+
+## 3.3. Pass values to CSS properties 
+
 
 
 
