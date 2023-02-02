@@ -1730,13 +1730,13 @@ The numeric values in CSS can be integers or floating point numbers. The comma i
 CSS makes a strict distinction between keywords and strings.
 
 Strings are placed between single or double quotes in CSS:
-    content: " meter";
-    content: '$ ';
+- content: " meter";
+- content: '$ ';
 
 The keywords in CSS are not marked separately:
-    color: white;
-    width: auto;
-    display: inline-block;
+- color: white;
+- width: auto;
+- display: inline-block;
 
 
 ### Use color in CSS
