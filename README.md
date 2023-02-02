@@ -1742,8 +1742,8 @@ The keywords in CSS are not marked separately:
 ### Use color in CSS
 An important design element in CSS are colors. There are several ways to specify color values in CSS. None of these different color specifications have advantages or disadvantages when displayed on the web page.
 
-- use a name as color value:
-    - From the beginning it was possible in CSS to note color values directly with names.
+#### use a name as color value:
+From the beginning it was possible in CSS to note color values directly with names.
 
    ```
     section {
@@ -1752,11 +1752,11 @@ An important design element in CSS are colors. There are several ways to specify
     }
    ```
 
-    - A list of all color values, can be found at [147Colors](http://www.colors.commutercreative.com/).
+A list of all color values, can be found at [147Colors](http://www.colors.commutercreative.com/).
 
 
-- Classic hexadecimal notation for the color specification
-    - This notation is still one of the most commonly used for color values. The specification starts with the character #, followed by the color parts for red, green and blue in a range from 00(for 0) to FF(for 255). The general notation is #RRGGBB.
+#### Classic hexadecimal notation for the color specification
+This notation is still one of the most commonly used for color values. The specification starts with the character #, followed by the color parts for red, green and blue in a range from 00(for 0) to FF(for 255). The general notation is #RRGGBB.
 
    ```
     section {
@@ -1765,7 +1765,7 @@ An important design element in CSS are colors. There are several ways to specify
     }
    ```
 
-    - There is also a shorthand notation for hexadecimal values:
+There is also a shorthand notation for hexadecimal values.
 
    ```
     section {
@@ -1773,7 +1773,7 @@ An important design element in CSS are colors. There are several ways to specify
         color: #FFFFFF;     /* white */
     }
    ```
-    - The same but in shorthand:
+The same but in shorthand:
 
    ```
     section {
