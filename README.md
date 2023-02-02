@@ -1694,7 +1694,37 @@ Many web browsers offer developer tools that are a great help. There you can eas
  ![Preview](3_Inheritance_Cascade/Images/Preview_3_8.PNG)
 
 
-## 3.3. Pass values to CSS properties 
+## 3.3. Pass values to CSS properties
+Only the most common types will be discussed here. More information about CSS values can be found at [w3](https://www.w3.org/TR/css-values-3/).
+
+
+### The different units of measurement in CSS
+The specifications of numerical values, e.g. font sizes, heights and widths or distances, are noted directly after the value. In CSS, there are many units of measurement that can be used either as relative or absolute specifications. For the number 0, the unit of measurement does not have to be specified.
+
+   ```
+    font-size: 14pt;
+    margin: 1em;
+    width: 100%;
+    border: 3px ...;
+   ```
+
+The numeric values in CSS can be integers or floating point numbers. The comma is represented by a dot in CSS. e.g. `font-size: 1.2em;`. Some values in CSS do not require units of measurement, e.g. `z-index: 1;` or `opacity: 0.5;`. Negative values can also be used as long as it makes sense e.g. `z-index: -2;` , but negative values cannot be used for length specifications like height or width.
+
+| unit of measurement | CSS name | specification      | description                           |
+| ------------------- | -------- | ------------------ |-------------------------------------- |
+| pixel               | px       | absolute, relative | The display of pixels depends on the pixel density of the output device. At a high screen resolution, the pixels become smaller, which is why the display appears smaller. Pixels are thus a relative unit of measurement on display devices and an absolute unit of measurement in relation to the content. |
+| point               | pt       | absolute           | This is a typographic unit of measure, and 1 point is equal to 1/72 inch e.g. `font-size: 12pt;`  |
+| pica                | pc       | absolute           | Pica is a typographic unit of measurement, one pica is 1/6 inch and therefore equals 12 points e.g `font-size: 1pc;` or 12pt |
+| centimeter          | cm       | absolute           | A centimeter is the hundredth part of a meter and corresponds to 10 mm e.g. `margin: 1.2cm;` |
+| millimeter          | mm       | absolute           | A millimeter is one thousandth of a meter e.g. `padding: 3mm;` |
+| inch                | in       | absolute           | 1 inch equals 2.54 cm e.g. `margin-top: 1in;` |
+| square width        | em       | relative           | An em stands for the font size of the element. If em is used for the font size itself, then this value refers to the font size of the parent element e.g. `font-size: 1.3em;` |
+| x-height            | ex       | relative           | An ex represents the height of the lowercase x of the font used in this element. Again, if ex is used for the font size, then this height refers to the value of x in the parent element. |
+| percent             | %        | relative           | The percentage is very flexible. It depends on the CSS property whether this value refers to the element's own size, to that of the parent element, or to a general context. |
+| root em             | rem      | relative           | The rem initially behaves in the same way as em, except that the rem value is based on the root element and not on the font size of the respective parent element. In HTML the root element is the body or html element e.g. `font-size: 1.2.rem;` |
+| viewport width      | vw       | relative           | 1vw corresponds to 1% or the hundredth part of the width of the display area. Thus, 100vw is equal to the complete width of the display area. This unit of measurement can be used to adjust the font size to the display area of the device or the size of the browser window. |
+| viewport height     | vh       | relative           | 1vh corresponds to 1% or the hundredth part of the height of the display area. Therefore, 100vh is equal to the entire height of the display area. This unit of measurement can be used to adjust the font size to the display area of the device or the size of the browser window. |
+
 
 
 
