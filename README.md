@@ -1742,7 +1742,7 @@ The keywords in CSS are not marked separately:
 ### Use color in CSS
 An important design element in CSS are colors. There are several ways to specify color values in CSS. None of these different color specifications have advantages or disadvantages when displayed on the web page.
 
-#### use a name as color value:
+#### **use a name as color value**
 From the beginning it was possible in CSS to note color values directly with names.
 
    ```
@@ -1755,7 +1755,7 @@ From the beginning it was possible in CSS to note color values directly with nam
 A list of all color values, can be found at [147Colors](http://www.colors.commutercreative.com/).
 
 
-#### Classic hexadecimal notation for the color specification
+#### **Classic hexadecimal notation for the color specification**
 This notation is still one of the most commonly used for color values. The specification starts with the character #, followed by the color parts for red, green and blue in a range from 00(for 0) to FF(for 255). The general notation is #RRGGBB.
 
    ```
@@ -1782,6 +1782,70 @@ The same but in shorthand:
     }
    ```
 
+
+#### **Mix colors yourself with red, green and blue**
+An RGB color mixture can be defined with CSS function rgb(red, green, blue). The specifications for red, green and blue can be made either with percentage values (0-100%) or with decimal numbers (0-255).
+
+- decimal numbers
+
+   ```
+    section {
+        background-color: rgb(0, 0, 255);      /* blue */
+        color: rgb(255, 255, 255);      /* white */
+    }
+   ```
+
+- percent
+
+   ```
+    section {
+        background-color: rgb(0%, 0%, 100%);      /* blue */
+        color: rgb(100%, 100%, 100%);      /* white */
+    }
+   ```
+
+
+#### **RBG mix with transparency**
+Another function is rgba(), this has been extended by only one value, the alpha value for transparency. This value can be used to specify the transparency of the color. The value 0.0 means complete transparency, and the value 1.0 stands for complete opacity and thus corresponds to the function rgb().
+   ```
+    section {
+        color: rgba(255, 255, 255, 0.3)
+    }
+   ```
+
+ example --> *3_Inheritance_Cascade/Part_8/index.html*
+   ```
+    <body>
+        <h3>color: rgba(255, 255, 255, 0.5);</h3>
+        <p class="p_article_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+        <h3>color: rgb(255, 255, 255);</h3>
+        <p class="p_article_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+    </body>
+   ```
+
+ example --> *3_Inheritance_Cascade/Part_8/styles/style.css*
+   ```
+    .p_article_1 { 
+        background-image:url('../images/sunsetTree.jpg');
+        background-repeat: no-repeat;
+        font-weight: bolder;
+        width: 450px;
+        color: rgba(255, 255, 255, 0.5);    
+    } 
+ 
+    .p_article_2 { 
+        background-image:url('../images/sunsetTree.jpg');
+        background-repeat: no-repeat;
+        font-weight: bolder;
+        width: 450px;
+        color: rgb(255, 255, 255);     
+    } 
+   ```
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_9.png)
+
+
+#### **HSL Mix - mix colors with hue, saturation and lightness**
 
 
 

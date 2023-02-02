@@ -1,0 +1,15 @@
+.p_article_1 { 
+  background-image:url('../images/sunsetTree.jpg');
+  background-repeat: no-repeat;
+  font-weight: bolder;
+  width: 450px;
+  color: rgba(255, 255, 255, 0.5);    
+ } 
+ 
+.p_article_2 { 
+  background-image:url('../images/sunsetTree.jpg');
+  background-repeat: no-repeat;
+  font-weight: bolder;
+  width: 450px;
+  color: rgb(255, 255, 255);     
+ } 
