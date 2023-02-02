@@ -1726,6 +1726,68 @@ The numeric values in CSS can be integers or floating point numbers. The comma i
 | viewport height     | vh       | relative           | 1vh corresponds to 1% or the hundredth part of the height of the display area. Therefore, 100vh is equal to the entire height of the display area. This unit of measurement can be used to adjust the font size to the display area of the device or the size of the browser window. |
 
 
+### Strings and keywords as value for CSS properties
+CSS makes a strict distinction between keywords and strings.
+
+Strings are placed between single or double quotes in CSS:
+content: " meter";
+content: '$ ';
+
+The keywords in CSS are not marked separately:
+color: white;
+width: auto;
+display: inline-block;
+
+
+### Use color in CSS
+An important design element in CSS are colors. There are several ways to specify color values in CSS. None of these different color specifications have advantages or disadvantages when displayed on the web page.
+
+- use a name as color value:
+From the beginning it was possible in CSS to note color values directly with names.
+
+   ```
+    section {
+        background-color: gray;
+        color: blue;
+    }
+   ```
+
+A list of all color values, can be found at [147Colors](http://www.colors.commutercreative.com/).
+
+
+- Classic hexadecimal notation for the color specification
+This notation is still one of the most commonly used for color values. The specification starts with the character #, followed by the color parts for red, green and blue in a range from 00(for 0) to FF(for 255). The general notation is #RRGGBB.
+
+   ```
+    section {
+        background-color: #0000FF;      /* blue */
+        color: #FFFFFF;     /* white */
+    }
+   ```
+
+There is also a shorthand notation for hexadecimal values:
+
+   ```
+    section {
+        background-color: #000000;      /* black */
+        color: #FFFFFF;     /* white */
+    }
+   ```
+The same but in shorthand:
+
+   ```
+    section {
+        background-color: #000;      /* black */
+        color: #FFF;     /* white */
+    }
+   ```
+
+
+
+
+
+
+
 
 
 
