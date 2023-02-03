@@ -19,6 +19,7 @@
     - 3.1 The principle of inheritance in CSS
     - 3.2. Understanding the control system of the cascade
     - 3.3. Pass values to CSS properties
+4. 
 
 
 --------------------------------------------------------------------------------------------
@@ -1846,6 +1847,98 @@ Another function is rgba(), this has been extended by only one value, the alpha 
 
 
 #### **HSL Mix - mix colors with hue, saturation and lightness**
+Starting at Level 3, CSS offers an HSL blend of hue, saturation, and lightness. Many web designers find it more intuitive or easier to remember to specify the hue with an integer value from 0 to 360. It's like a color wheel from 0 to 359 degrees, where the value 0 or 360 represents red, 120 represents green, and 240 represents blue.
+The values of saturation and lightness are expressed as percentages. The more the value of saturation is reduced from 100% to 0%, the more the hue becomes a gray. The normal brightness, on the other hand, is indicated with the value 50%. A lightness of 100% is white and a lightness of 0% is black.
+   ```
+    .p_article { 
+        background-color: hsl(240, 100%, 50%);      /* blue */
+        color: hsl(0, 100%, 100%);      /* white font color */
+    } 
+   ```
+
+As with the RGB blends, there is still an HSL blend with hsla(hue, saturation, lightness, opacity), where the opacity can be specified as a fourth parameter from 0 (completely transparent) to 1 (no transparency).
+
+If you want to find out which color is used on a page, the browsers offer help.
+Firefox for example has a color picker:
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_10.jpg)
+
+ ![Preview](3_Inheritance_Cascade/Images/Preview_3_11.jpg)
+
+Google Chrome offers the extension ColorZilla (which is also available for Firefox). And for Microsft Edge I would use ColorFish Color Picker (if I would use it).
+
+The browsers offer many help options, it is recommended to be familiar with the brwosers.
+
+
+### Angle measures in CSS
+In CSS there are also some angle measures that can be used to define a rotation. If a negative value is used, the rotation is counterclockwise.
+
+| Unit of Measurement | CSS Name | Description |
+| ------------------- | -------- | ------------------------------------------------------------- |
+| degrees             | deg      | angle in degrees; 360 degrees corresponds to a complete circle e.g. tarnsform: rotate(90deg); |
+| Gon                 | grad     | angle in Gon; a complete circle corresponds to 400 Gon. 100 Gon = 90 degree e.g. tarnsform: rotate( 100grad); |
+| Radian              | rad      | angle in ground measure; a complete circle corresponds to 2 Pi e.g. tarnsform: rotate(5.5rad); |
+| full angle          | turn     | A full angle is a circle rotation (0.25turn corresponds to a 90 degree rotation) e.g. tarnsform: rotate(0.25turn); |
+
+
+### Shorthand in CSS
+- margin: is used for an outer border or distance between the current element and its parent or neighboring element.
+
+   ```
+    section { 
+        margin: 20px;
+    } 
+   ```
+
+is the shorthand notation of:
+   ```
+    section { 
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    } 
+   ```
+
+also possible:
+   ```
+    section { 
+        margin: 20px 10px 20px 5px;     /* margin-top, margin-right, margin-bottom, margin-left */
+    } 
+   ```
+
+The only important thing about this notation is that the order is clockwise (top = 12 o'clock).
+
+If the values of left and right are equal, is also possible:
+   ```
+    section { 
+        margin: 20px 10px 5px;     /* margin-top, margin-right and -left, margin-bottom */
+    } 
+   ```
+By omitting the fourth value (left), the value of right is used, making the left and right spacing 10px. 
+
+This also works with top and bottom:
+   ```
+    section { 
+        margin: 20px 10px;     /* margin-top and -bottom, margin-right and -left */
+    } 
+   ```
+
+also possible:
+   ```
+    section { 
+        margin: 20px;     /* margin-top, margin-bottom, margin -left */
+        margin-right: 0;
+    } 
+   ```
+
+Besides margin, there are other CSS properties that I will discuss here later.
+
+---------------------------------------------------------------------------------
+
+# 4. 
+
+
 
 
 
