@@ -19,7 +19,8 @@
     - 3.1 The principle of inheritance in CSS
     - 3.2. Understanding the control system of the cascade
     - 3.3. Pass values to CSS properties
-4. 
+4. The box model of CSS 
+    - 4.1. The classic box model
 
 
 --------------------------------------------------------------------------------------------
@@ -1936,8 +1937,98 @@ Besides margin, there are other CSS properties that I will discuss here later.
 
 ---------------------------------------------------------------------------------
 
-# 4. 
+# 4. The box model of CSS
+In CSS, the box model serves as the basis for positioning elements and creating a layout.
 
+
+## 4.1. The classic box model
+The box model includes
+- the actual **content** of text and images, which is specified with **width** and **height**
+- **padding**, which creates space between the content and the border of an element
+- the **border**
+- **margin**, this creates space around an element, outside of paddings and borders 
+
+ ![Preview](4_Box_Model/images/BoxModell.png)
+
+
+### width and height
+The actual content area with the space for text and images can be specified with the CSS properties width and height. If no value is specified, the HTML element is as wide and high as the surrounding element.
+
+ example --> *4_Box_Model/Part_1/index.html*
+   ```
+    <h1>width and height</h1>
+    <article class="article_01">
+        <h2 class="h_2">Article 1 (width: 300px)</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <article class="article_02">
+        <h2 class="h_2">Article 2 (width: 600px)</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+   ```
+
+ example --> *4_Box_Model/Part_1/styles/style.css*
+   ```
+    .article_01 { 
+        width: 300px; background: #e7fad7; 
+    }
+
+    .article_02 { 
+        width: 600px; background: #e7fad7; 
+    }
+
+    .h_2 { 
+        background: #adfd93; 
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_1.png)
+
+
+Note that the height specification is only an initial value. If the content of the encompassing element is greater than the specified height, the content will still be displayed and will overflow the box.
+
+ example --> *4_Box_Model/Part_2/index.html*
+   ```
+    <h1>height</h1>
+    <article class="article_01">
+        <h2>Headline</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+            sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+        </p>
+    </article>
+   ```
+
+ example --> *4_Box_Model/Part_1/styles/style.css*
+   ```
+    .article_01 {
+        width: 230px;
+        height: 215px;
+        background-color: #e7fad7;
+        border: black 1px solid;
+        /* overflow: hidden; */
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_2.png)
+
+
+If overflowing is to be prevented, this is possible with the CSS property `overflow: hidden;`, with which, however, the oversized content is no longer displayed.
+
+ ![Preview](4_Box_Model/images/Preview_4_2_overflow.png)
+
+
+In practice, fixed values for width and height are rarely defined. Responsive web design tends to use properties such as `min-width` or `min-height` or `max-height` to allow flexible limits suitable for the device or screen width.
 
 
 
