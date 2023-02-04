@@ -1,0 +1,16 @@
+.article01 {
+  width: 600px;
+  border: 10px solid #56d22d;
+  background-color: #e7fad7;
+}
+
+.article02 {
+  width: 600px;
+  padding: 50px;
+  border: 10px solid #76ea4f;
+  background-color: #e7fad7;
+}
+
+.h_2 { 
+  background-color: #adfd93;
+}

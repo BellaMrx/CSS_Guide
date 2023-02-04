@@ -2009,7 +2009,7 @@ Note that the height specification is only an initial value. If the content of t
     </article>
    ```
 
- example --> *4_Box_Model/Part_1/styles/style.css*
+ example --> *4_Box_Model/Part_2/styles/style.css*
    ```
     .article_01 {
         width: 230px;
@@ -2029,6 +2029,129 @@ If overflowing is to be prevented, this is possible with the CSS property `overf
 
 
 In practice, fixed values for width and height are rarely defined. Responsive web design tends to use properties such as `min-width` or `min-height` or `max-height` to allow flexible limits suitable for the device or screen width.
+
+
+### padding
+The CSS property padding alone sets all four sides clockwise, which is the shorthand notation:
+
+   ```
+    section { 
+        padding: 20px;
+    } 
+   ```
+
+is the shorthand notation of:
+   ```
+    section { 
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    } 
+   ```
+
+The shorthand notation with padding works the same as with margin.
+
+
+### border
+The border wraps around the inner space (padding) and has its own CSS properties for thickness, line style, and color. Again, as with margin and padding, all four sides can be adjusted separately.
+
+ example --> *4_Box_Model/Part_3/index.html*
+   ```
+    <h1>border</h1>
+    <article class="article01">
+        <h2 class="h_2">width: 600px; border: 10px solid sienna;</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <article class="article02">
+        <h2 class="h_2">width: 600px; border: 10px solid peru; padding: 50px;</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+   ```
+
+ example --> *4_Box_Model/Part_3/styles/style.css*
+   ```
+    .article01 {
+        width: 600px;
+        border: 10px solid #56d22d;
+        background-color: #e7fad7;
+    }
+
+    .article02 {
+        width: 600px;
+        padding: 50px;
+        border: 10px solid #76ea4f;
+        background-color: #e7fad7;
+    }
+
+    .h_2 { 
+        background-color: #adfd93;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_3.png)
+
+
+### margin
+The outer spacing of the box model is called margin. The outer margin has no color, is completely transparent and therefore takes on the background color of the surrounding element. Negative values are also allowed for margin. How these affect margin depends on whether the elements are static, positioned or floated.
+
+ example --> *4_Box_Model/Part_4/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h2>margin: 10px 0px;</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <article class="article01">
+        <h2>margin: 10px 0px;</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_4/styles/style.css*
+   ```
+    .article01 {
+        width: 600px;
+        padding: 5px;
+        border: 5px solid #76ea4f;
+        background-color: #e7fad7;
+        margin: 10px 0px;
+    }
+
+    .headfoot {
+        width: 600px;
+        padding: 5px;
+        border: 5px solid #76ea4f;
+        background-color: #adfd93;
+        text-align: center;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_4.png)
+
+
+
 
 
 

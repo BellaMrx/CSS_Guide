@@ -1,0 +1,15 @@
+.article01 {
+    width: 600px;
+    padding: 5px;
+    border: 5px solid #76ea4f;
+    background-color: #e7fad7;
+    margin: 10px 0px;
+}
+
+.headfoot {
+    width: 600px;
+    padding: 5px;
+    border: 5px solid #76ea4f;
+    background-color: #adfd93;
+    text-align: center;
+}
