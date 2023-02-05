@@ -21,6 +21,7 @@
     - 3.3. Pass values to CSS properties
 4. The box model of CSS 
     - 4.1. The classic box model
+    - 4.2. The newer alternative box model of CSS
 
 
 --------------------------------------------------------------------------------------------
@@ -2151,12 +2152,178 @@ The outer spacing of the box model is called margin. The outer margin has no col
  ![Preview](4_Box_Model/images/Preview_4_4.png)
 
 
+### Collapsing Margins
+For the vertical margins of two boxes placed one above the other, the values are not added together, but only the larger of the two margins is used. The smaller value is ignored. Horizontal distances do not collapse. If they touch, they are added together normally.
+
+ ![Preview](4_Box_Model/images/CollapsingMargins.png)
+
+ example --> *4_Box_Model/Part_5/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h2>Article 1</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <article class="article01">
+        <h2>Article 2</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_5/styles/style.css*
+   ```
+    .headfoot {
+        width: 600px;
+        padding: 5px;
+        border: 5px solid #adfd93;
+        background-color: #e7fad7;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .article01 {
+        width: 600px;
+        padding: 5px;
+        border: 5px solid #76ea4f;
+        background-color: #e7fad7;
+        margin: 10px 0px;
+    }
 
 
+    /* h1, h2, p {
+        margin-top: 0;
+    } */
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_5.png)
+
+ 
+The collapsing is intentional and serves to keep the spacing even for texts that consist of multiple paragraphs. It rules:
+- If both values are the same, only one is used.
+- If the values are different, the larger value is used.
 
 
+### Calculating the total width and height of a box
+It is possible to calculate the total width or total height of a box.
+
+ example --> *4_Box_Model/Part_6/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h2>Article 1</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <article class="article01">
+        <h2>Article 2</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_6/styles/style.css*
+   ```
+    .headfoot {
+        width: 600px;
+        padding: 5px;
+        border: 1px solid black;
+        background-color: #adfd93;
+        margin: 5px 0px;
+        text-align: center;
+    }
+
+    .article01 {
+        width: 600px;
+        padding: 15px;
+        border: 2px dotted #76ea4f;
+        background-color: #e7fad7;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_6.png)
 
 
+The total width of a box is calculated by adding width, padding-right, padding-left, border-right-width, border-left-width, margin-right and margin-left together.
+
+Calculation for this example:
+| CSS Property         | .headfoot | .article  |
+| -------------------- | --------- | --------- |
+| width      	  	   | 600 Pixel | 600 pixel |
+| + padding-right 	   | 5 Pixel   | 15 Pixel  |
+| + padding-left  	   | 5 Pixel   | 15 Pixel  |
+| + border-right-width | 1 Pixel   | 2 Pixel   |
+| + border-left-width  | 1 Pixel   | 2 Pixel   |
+| + margin-right 	   | 0 		   | 0 		   |
+| + margin-left 	   | 0 		   | 0 		   |
+| **total width**      | 612 pixel | 634 pixel |
+
+ example --> *4_Box_Model/Part_7/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h2>Article 1</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <article class="article01">
+        <h2>Article 2</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_7/styles/style.css*
+   ```
+    .headfoot {
+        width: 600px;
+        padding: 5px;
+        border: 1px solid black;
+        background-color: #adfd93;
+        margin: 5px 0px;
+        text-align: center;
+    }
+
+    .article01 {
+        width: 578px;
+        padding: 15px;
+        border: 2px dotted #76ea4f;
+        background-color: #e7fad7;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_7.png)
+
+
+## 4.2. The newer alternative box model of CSS
 
 
 

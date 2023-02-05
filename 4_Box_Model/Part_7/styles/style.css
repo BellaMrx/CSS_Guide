@@ -1,0 +1,15 @@
+.headfoot {
+  width: 600px;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: #adfd93;
+  margin: 5px 0px;
+  text-align: center;
+}
+
+.article01 {
+  width: 578px;
+  padding: 15px;
+  border: 2px dotted #76ea4f;
+  background-color: #e7fad7;
+}
