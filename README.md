@@ -2277,6 +2277,10 @@ Calculation for this example:
 | + margin-left 	   | 0 		   | 0 		   |
 | **total width**      | 612 pixel | 634 pixel |
 
+Thus the difference of the total width is exactly 22 pixels. Here you have to decide for yourself where to add or remove these 22 pixels. 
+
+Example:
+
  example --> *4_Box_Model/Part_7/index.html*
    ```
     <header class="headfoot">Header</header>
@@ -2324,10 +2328,115 @@ Calculation for this example:
 
 
 ## 4.2. The newer alternative box model of CSS
+The classic box model can be complicated, since the width specification determines the width of the content area and in the end padding, border and margin must also be taken into account for the total width. As long as the specification is only in pixels, a uniform layout is possible with awkward arithmetic.
+
+It becomes more complicated when different units are used for width, padding, border or margin. The problem was solved by using an inner `<div>` inside the corresponding column for padding, border and margin.
+
+With the alternative box model `border-box`, the width and height are no longer specified only for the content area, but these specifications also sensibly take into account the inner spacing and the frame.
+
+Box model `border-box`
+ ![Preview](4_Box_Model/images/BoxModellAlternative.png)
 
 
 
+### Use box model `box-sizing`
+To use the alternative box model, the CSS property `box-sizing` must be assigned the value `border-box` = `box-sizing: border-box`.
+
+Values that can be used for `box-sizing`:
+- `content-box`: This corresponds to the behavior of the classic box model, where the width and height values correspond to the content of the element in the box.
+- `border-box`: With this specification the value for width and height corresponds to the value of border-left to border-right or border-top to border-bottom. Changing padding and border does not change the width or height of the element. 
+- `inherit`: With this option the value of the parent element is inherited.
 
 
+Classic box model:
 
+ example --> *4_Box_Model/Part_8/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h2>Article 1</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <article class="article01">
+        <h2>Article 2</h2>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_8/styles/style.css*
+   ```
+    .headfoot {
+        width: 70%;
+        padding: 5px;
+        border: 2px solid black;
+        background-color: #adfd93;
+        text-align: center;
+    }
+
+    .article01 {
+        width: 70%;
+        padding: 15px;
+        border: 1px dotted #76ea4f;
+        background-color: #e7fad7;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_8.png)
+
+
+alternative Box model:
+
+ example --> *4_Box_Model/Part_9/index.html*
+   ```
+    <header class="headfoot">Header</header>
+      <article class="article01">
+        <h1>Article 1</h1>
+        <p>Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor. <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et <ins>magnis</ins> dis parturient montes, nascetur <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+      </article>
+      <article class="article01">
+        <h1>Article 2</h1>
+        <p>Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor. <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et <ins>magnis</ins> dis parturient montes, nascetur <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+      </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_9/styles/style.css*
+   ```
+    * {
+        box-sizing: border-box;        
+    }
+
+    .headfoot {
+        width: 70%;
+        padding: 5px;
+        border: 2px solid black;
+        background-color: #adfd93;
+        text-align: center;
+    }
+
+    .article01 {
+        width: 70%;
+        padding: 15px;
+        border: 1px dotted #76ea4f;
+        background-color: #e7fad7;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_9.png)
+
+
+The box model with box-sizing can simplify CSS life considerably. Especially if percentages are used for the width and pixel values for padding or border, i.e. different units are mixed. For example, if a column is defined with 30% width, it is with `box-sizing: border-box;` no matter what values and units are used for padding or border, it remains at 30% for the total width of the column.
+
+The interactive box model diagram, can be helpful to understand it better: [angular interactive box-model diagram](https://codepen.io/carolineartz/full/ogVXZj).
 
