@@ -22,6 +22,7 @@
 4. The box model of CSS 
     - 4.1. The classic box model
     - 4.2. The newer alternative box model of CSS
+    - 4.3. Design boxes
 
 
 --------------------------------------------------------------------------------------------
@@ -2451,4 +2452,149 @@ The browsers also offer developer tools to analyze and visualize the box model i
 In HTML, everything consists of rectangular boxes. This also applies to inline elements like `<em>`, `<strong>` and `<a>`. However, it is not possible to specify the height or width for inline elements. Here the content determines the height and width. There are also differences in margin, padding and border for the -top and -bottom versions, these have no effect.
 
 
-## 4.3. 
+## 4.3. Design boxes
+### Add and style a border with the `border` property 
+A border can be added for each element, customizing the border color, stroke width and type.
+
+With the shorthand, all four sides can be designed at once:
+
+   ```
+    border: 2px solid black;
+   ```
+this means: 
+
+   ```
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+   ```
+
+It is possible to specify two, three or four values for border-style or border-color. For example, if :
+   ```
+    border-color: green red;
+   ```
+
+This means that the upper and lower frames are displayed in green and the right and left frames are displayed in red.
+
+or:
+   ```
+    border-color: green red blue yellow;
+   ```
+
+This means the upper frame is green, the left one is red, the lower one is blue and the right one is yellow, (always in clockwise direction starting from the top).
+
+With the properties border-top, border-left, border-bottom and border-right, all four sides can be designed individually.
+
+   ```
+    border-top: green 2px dotted;
+    border-left: red 4px dashed;
+    border-bottom: blue 6px solid;
+    border-right: yellow 8px inset;
+   ```
+
+or only ones:
+
+   ```
+    border-top: green 2px dotted;
+   ```
+This means that only the upper border is displayed.
+
+Different border styles 
+| Value    | Description                         |
+| -------- | ----------------------------------- |
+| none 	   | Default value. Specifies no border. |
+| hidden   | The same as "none", except in border conflict resolution for table elements. |
+| dotted   | Specifies a dotted border. |
+| dashed   | Specifies a dashed border. |
+| solid    | Specifies a solid border. |
+| double   | Specifies a double border. |
+| groove   | Specifies a 3D grooved border. The effect depends on the border-color value. |
+| ridge    | Specifies a 3D ridged border. The effect depends on the border-color value. |
+| inset    | Specifies a 3D inset border. The effect depends on the border-color value. |
+| outset   | Specifies a 3D outset border. The effect depends on the border-color value. |
+| initial  | Sets this property to its default value. |
+| inherit  | Inherits this property from its parent element. |
+
+ example --> *4_Box_Model/Part_10/index.html*
+   ```
+    <body>
+        <h1>Different types of border</h1>
+        <p class="border01">border: blue 2px solid;</p>
+        <p class="border02">
+            border: red 1px dashed;<br /> border-left-width: 10px;
+        </p>
+        <p class="border03">border: green 5px ridge;</p>
+        <p class="border04">
+            border-top: red 5px dotted;<br /> border-right: blue 5px groove;<br /> border-bottom-style: double;<br /> border-bottom-width: 5px;<br /> border-bottom-color: green;<br /> border-left: orange 5px outset;
+        </p>
+    </body>
+   ```
+
+ example --> *4_Box_Model/Part_10/styles/style.css*
+   ```
+    * { 
+        box-sizing: border-box;
+    }
+
+    .border01 {
+        border: blue 2px solid;
+    }
+
+    .border02 {
+        border: red 1px dashed;
+        border-left-width: 20px;
+    }
+
+    .border03 {
+        border: green 5px ridge;
+    }
+
+    .border04 {
+        border-top: red 5px dotted;
+        border-right: blue 5px groove;
+        border-bottom-style: double;
+        border-bottom-width: 5px;
+        border-bottom-color: green;
+        border-left: orange 5px outset;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_10.png)
+
+
+### Create a decorative border with `border-image`
+With border-image a graphic can be used as a border. A pixel graphic or an SVG graphic is used for this purpose.
+
+ example --> *4_Box_Model/Part_11/index.html*
+   ```
+    <body>
+        <h1>Decorative border for boxes</h1>
+        <p class="border">
+            <code>.border {<br />
+            &nbsp;width: 500px;<br />
+            &nbsp;padding: 10px;<br />
+            &nbsp;border: 25px solid transparent;<br />
+            &nbsp;border-image:url('../images/myborder.png') 50 50 50 50 round;<br />
+            }</code>
+        </p>
+    </body>
+   ```
+
+ example --> *4_Box_Model/Part_11/styles/style.css*
+   ```
+    .border {
+        width: 500px;
+        padding: 10px;
+        border: 25px solid transparent;
+        border-image: url("../images/myborder.png") 50 50 50 50 round;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_11.png)
+
+`border-image` is a summary property of `border-image-source`, `border-image-slice`, `border-image-width` and `border-image-repeat`.
+
+
+### Set background color with `background-color`
+
+
