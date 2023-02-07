@@ -2440,3 +2440,15 @@ The box model with box-sizing can simplify CSS life considerably. Especially if 
 
 The interactive box model diagram, can be helpful to understand it better: [angular interactive box-model diagram](https://codepen.io/carolineartz/full/ogVXZj).
 
+#### Analyzing the box model in the browser
+
+The browsers also offer developer tools to analyze and visualize the box model in the browser. There it is also possible to change the values for testing and see how it directly affects the web page.
+
+ ![Preview](4_Box_Model/images/Box-Model-Browser.PNG)
+
+
+### The box model for inline elements
+In HTML, everything consists of rectangular boxes. This also applies to inline elements like `<em>`, `<strong>` and `<a>`. However, it is not possible to specify the height or width for inline elements. Here the content determines the height and width. There are also differences in margin, padding and border for the -top and -bottom versions, these have no effect.
+
+
+## 4.3. 
