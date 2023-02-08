@@ -2906,5 +2906,7 @@ That scaling up or stretching pixel graphics is not necessarily optimal, because
 - `background-size: contain;` --> This will always display the background image completely in the box. So even if it does not fill the whole area.
 - `background-size: cover;` --> This will always cover the entire area of the box with the image. Even if the image is not completely visible.
 
+Viewing the box model in the third dimension --> [3D CSS Box Model](https://hicks.design/journal/3d-css-box-model)
+
 
 ### Make the boxes transparent
