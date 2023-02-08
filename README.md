@@ -2903,8 +2903,8 @@ The CSS property `background-size` can be used to specify the size of the backgr
  ![Preview](4_Box_Model/images/Preview_4_18.png)
 
 That scaling up or stretching pixel graphics is not necessarily optimal, because of the display. There are two more options `contain` and `cover` which can be used for `background-size`.
-- `background-size: contain` --> This will always display the background image completely in the box. So even if it does not fill the whole area.
-- `background-size: cover` --> This will always cover the entire area of the box with the image. Even if the image is not completely visible.
+- `background-size: contain;` --> This will always display the background image completely in the box. So even if it does not fill the whole area.
+- `background-size: cover;` --> This will always cover the entire area of the box with the image. Even if the image is not completely visible.
 
 
 ### Make the boxes transparent
