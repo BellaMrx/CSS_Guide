@@ -1,0 +1,6 @@
+.border {
+    background-color: lightgreen;
+    width: 85%;
+    padding: 5px;
+    border: darkgreen 7px ridge;
+}

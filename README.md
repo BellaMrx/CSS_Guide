@@ -2596,5 +2596,89 @@ With border-image a graphic can be used as a border. A pixel graphic or an SVG g
 
 
 ### Set background color with `background-color`
+The background color is specified with `background-color`. Only with `background` it is also possible but this is only a summary of CSS properties, so the shorthand.
+
+ example --> *4_Box_Model/Part_12/index.html*
+   ```
+    <h1>Background color of boxes</h1>
+    <p class="border">
+        <code>.border {<br />
+        &nbsp;background-color: lightblue;<br />
+        &nbsp;width: 85%;<br />
+        &nbsp;padding: 5px;<br />
+        &nbsp;border: darkblue 7px ridge;<br />
+      }</code>
+    </p>
+   ```
+
+ example --> *4_Box_Model/Part_12/styles/style.css*
+   ```
+    .border {
+        background-color: lightgreen;
+        width: 85%;
+        padding: 5px;
+        border: darkgreen 7px ridge;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_12.png)
+
+
+### Use background graphics
+Since background is only a shorthand notation of several CSS properties for the background, the following properties are combined with the shorthand notation:
+- `background-color`: background color of the element
+- `background-image`: image as background of the element
+- `background-position`: position of the background image
+- `background-repeat`: repeat background image along the vertical or horizontal axis
+- `background-attachment`: Here you can specify whether the background is scrollable or fixed.
+
+Images, logos or graphics should still be added with the HTML element `<img>`. But for decoration or design a background graphic can be added with CSS.
+
+A background graphic can be added with the shorthand `background` or with `background-image`.
+
+ example --> *4_Box_Model/Part_13/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h1>Add background pattern</h1>
+        <p>
+            <code>.article01 {<br />
+          &nbsp;width: 85%;<br />
+          &nbsp;background-image: url('../images/pattern.png');<br />
+          &nbsp;border-left: grey 1px dotted;<br />
+          &nbsp;border-right: grey 1px dotted;<br />
+          &nbsp;padding: 10px;<br />
+          &nbsp;background-color: #c4c4c4;<br />
+          }</code>
+      </p>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_13/styles/style.css*
+   ```
+    .headfoot {
+        width: 85%;
+        border: gray 1px dotted;
+        padding: 10px;
+        background-color: limegreen;
+        color: white;
+        text-align: center;
+    }
+
+    .article01 {
+        width: 85%;
+        background-image: url("../images/pattern.png");
+        border-left: gray 1px dotted;
+        border-right: gray 1px dotted;
+        padding: 10px;
+        background-color: #c4c4c4;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_13.png)
+
+As you can see in this example, the background graphic is overlaid on the background color. The additional specification of a background color is useful (should match the color of the background graphic), if the graphic cannot be loaded.
+
 
 

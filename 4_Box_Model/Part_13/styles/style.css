@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, p {
+    margin-top: 0;
+}
+
+.headfoot {
+    width: 85%;
+    border: gray 1px dotted;
+    padding: 10px;
+    background-color: limegreen;
+    color: white;
+    text-align: center;
+}
+
+.article01 {
+    width: 85%;
+    background-image: url("../images/pattern.png");
+    border-left: gray 1px dotted;
+    border-right: gray 1px dotted;
+    padding: 10px;
+    background-color: #c4c4c4;
+}
