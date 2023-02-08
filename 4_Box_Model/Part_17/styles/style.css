@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;        
+}
+
+.headfoot {
+  width: 750px;
+  border: gray 1px dotted;
+  padding: 10px;
+  background-color: olivedrab;
+  color: white;
+  text-align: center;
+}
+
+.article01 {
+  width: 750px;
+  padding: 20px 50px;
+  margin: 10px 0px;
+  background: url('../images/top-left.jpg') top left no-repeat,
+              url('../images/top-right.jpg') top right no-repeat,
+              url('../images/bottom-right.jpg') bottom right no-repeat,
+              url('../images/bottom-left.jpg') bottom left no-repeat,
+              white;
+}

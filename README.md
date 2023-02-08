@@ -2752,3 +2752,159 @@ In total, there are three ways to tile a background graphic with the CSS backgro
 - `background-repeat: repeat-y;` --> vertical tiling (y-axis)
 - `background-repeat: repeat-x;` --> horizontal tiling (x-axis)
 - `background-repeat: no-repeat;` --> no tiles at all 
+
+
+### Position and fix background graphic
+The `background-position` CSS property is used to position the background graphic in the HTML element. `top`, `right`, `bottom`, `left` or `center` can be used as positions.
+
+ example --> *4_Box_Model/Part_15/index.html*
+   ```
+    <header class="headfoot">Header</header>
+      <article class="article01">
+        <h1>Add background pattern</h1>
+        <p><code>.article01 {<br>
+        &nbsp;width: 85%;<br>
+        &nbsp;background-image: url('../images/pattern.png');<br>
+        &nbsp;background-repeat: repeat-y;<br>
+        &nbsp;<b>background-position: right top;</b><br>
+        &nbsp;border-left: grey 1px dotted;<br>
+        &nbsp;border-right: grey 1px dotted;<br>
+        &nbsp;padding: 10px;<br>
+        &nbsp;background-color: #e8f3ea;<br>
+      }</code>
+    </p>
+      </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_15/styles/style.css*
+   ```
+    .article01 {
+        width: 85%;
+        background-image: url('../images/pattern.png');
+        background-repeat: repeat-y;
+        background-position: right top;
+        border-left: gray 1px dotted;
+        border-right: gray 1px dotted;
+        padding: 10px;
+        background-color: #e8f3ea;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_15.png)
+
+
+The CSS property `background-attachment` is used to fix a background graphic on the display area. When scrolling, the graphic remains inside the HTML element, this property is rarely used. The default value is `scroll`, which scrolls the background graphic along with the element as usual.
+
+ example --> *4_Box_Model/Part_16/index.html*
+   ```
+    <header class="headfoot">Header</header>
+      <article class="article01">
+        <h1>Add background pattern</h1>
+        <p><code>.article01 {<br>
+        &nbsp;width: 85%;<br>
+		&nbsp;height: 1800px;<br>
+        &nbsp;background-image: url('../images/pattern.png');<br>
+        &nbsp;<b>background-attachment: fixed;</b><br>
+        &nbsp;border-left: grey 1px dotted;<br>
+        &nbsp;border-right: grey 1px dotted;<br>
+        &nbsp;padding: 10px;<br>
+        &nbsp;background-color: #e8f3ea;<br>
+      }</code>
+    </p>
+      </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_16/styles/style.css*
+   ```
+    .article01 {
+        width: 85%;
+        height: 1800px;
+        background-image: url('../images/pattern.png');
+        background-attachment: fixed;
+        border-left: gray 1px dotted;
+        border-right: gray 1px dotted;
+        padding: 10px;
+        background-color: #e8f3ea;
+    }
+   ```
+
+
+### Stack multiple background graphics
+Stacking multiple background images can be implemented in CSS as follows:
+
+ example --> *4_Box_Model/Part_17/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h1>Stack background images</h1>
+        <p>
+            New with CSS3 and already supported by all current browsers is the stacking of multiple background images. In this example, this was used to add an ornament to all four corners of the article element.
+        </p>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_17/styles/style.css*
+   ```
+    .article01 {
+        width: 750px;
+        padding: 20px 50px;
+        margin: 10px 0px;
+        background: url('../images/top-left.jpg') top left no-repeat,
+                    url('../images/top-right.jpg') top right no-repeat,
+                    url('../images/bottom-right.jpg') bottom right no-repeat,
+                    url('../images/bottom-left.jpg') bottom left no-repeat,
+                    white;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_17.png)
+
+
+### Set the size of the background image
+The CSS property `background-size` can be used to specify the size of the background graphic. The specification can be made in pixels or percent. A specification in percent is relative to the height and width of the parent element in which the background image is to be displayed.
+
+ example --> *4_Box_Model/Part_18/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h1>background-size</h1>
+        <pre>.article01 {
+                width: 750px;
+                padding: 20px 50px;
+                background: white url('../images/pattern.png') left no-repeat;
+                <b>background-size: 100% 100%;</b>
+       }</pre>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_18/styles/style.css*
+   ```
+    .headfoot {
+        width: 750px;
+        border: gray 1px dotted;
+        padding: 10px;
+        background-color: olivedrab;
+        color: white;
+        text-align: center;
+    }
+
+    .article01 {
+        width: 750px;
+        padding: 20px 50px;
+        background: white url("../images/pattern.png") left no-repeat;
+        background-size: 100% 100%;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_18.png)
+
+That scaling up or stretching pixel graphics is not necessarily optimal, because of the display. There are two more options `contain` and `cover` which can be used for `background-size`.
+- `background-size: contain` --> This will always display the background image completely in the box. So even if it does not fill the whole area.
+- `background-size: cover` --> This will always cover the entire area of the box with the image. Even if the image is not completely visible.
+
+
+### Make the boxes transparent
