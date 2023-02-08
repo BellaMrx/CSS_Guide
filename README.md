@@ -2680,5 +2680,75 @@ A background graphic can be added with the shorthand `background` or with `backg
 
 As you can see in this example, the background graphic is overlaid on the background color. The additional specification of a background color is useful (should match the color of the background graphic), if the graphic cannot be loaded.
 
+You can also find the background patterns at [DinPattern](https://dinpattern.com/).
 
 
+### Repeat background graphic
+The background graphic is repeated vertically and horizontally as many times as space is available if no special specifications are made.
+
+This example shows a background image without background-repeat, to the bottom it works fine but to the right it doesn't look optimal.
+
+   ```
+    .article01 {
+        width: 85%;
+        background-image: url("../images/gradient.jpg");
+
+        border-left: gray 1px dotted;
+        border-right: gray 1px dotted;
+        padding: 10px;
+        background-color: #e8f3ea;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_14_A.png)
+
+Tiling of the background image can be restricted to the vertical direction by `background-repeat`, it would also work without but only if the graphic has the appropriate dimensions. For tiling in vertical direction the CSS property `background-repeat` must be assigned the value `repeat-y`.
+
+ example --> *4_Box_Model/Part_14/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h1>Add background pattern</h1>
+        <p>
+            <code>.article01 {<br />
+          &nbsp;width: 85%;<br />
+          &nbsp;background-image: url('../images/gradient.png');<br />
+          &nbsp;<b>background-repeat: repeat-y;</b><br />
+          &nbsp;border-left: grey 1px dotted;<br />
+          &nbsp;border-right: grey 1px dotted;<br />
+          &nbsp;padding: 10px;<br />
+          &nbsp;<b>background-color: #e8f3ea;</b><br />
+          }</code>
+      </p>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_14/styles/style.css*
+   ```
+    .headfoot {
+        width: 85%;
+        border: gray 1px dotted;
+        padding: 10px;
+        background-color: limegreen;
+        color: white;
+        text-align: center;
+    }
+
+    .article01 {
+        width: 85%;
+        background-image: url("../images/pattern.png");
+        background-repeat: repeat-y;
+        border-left: gray 1px dotted;
+        border-right: gray 1px dotted;
+        padding: 10px;
+        background-color: #c4c4c4;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_14.png)
+
+In total, there are three ways to tile a background graphic with the CSS background-repeat property:
+- `background-repeat: repeat-y;` --> vertical tiling (y-axis)
+- `background-repeat: repeat-x;` --> horizontal tiling (x-axis)
+- `background-repeat: no-repeat;` --> no tiles at all 
