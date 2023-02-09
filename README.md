@@ -3120,5 +3120,62 @@ Create gradients with online tools: [Ultimate CSS Gradient Generator](https://ww
 
 
 ### Add a drop shadow with the `box-shadow` property
+With the CSS property `box-shadow` it is possible to create a shadow. The simplest specification is as follows:
+   ```
+    box-shadow: 4px 4px gray;
+   ```
+- This creates a shadow around the element, with a horizontal and vertical offset of 4 pixels each. The first value is used for the horizontal offset (offset-x) and the second value for the vertical offset (offset-y). A positive value moves the shadow of the horizontal offset to the right and the vertical offset down. The opposite happens with negative values.
+
+For a soft shadow, a third value is needed to define the blurriness of the shadow. The higher the value, the softer the shadow (default value = 0).
+   ```
+    box-shadow: 4px 4px 4px gray;
+   ```
+
+To determine a radius or the spread of the shadow, a fourth value is needed. The last value defines the color of the shadow. This can also be a at the beginning.
+   ```
+    box-shadow: 4px 4px 4px 4px gray;
+   ```
+
+It is also possible to represent an inner shadow with `inset`.
+   ```
+    box-shadow: inset -4px -4px 4px 4px gray;
+   ```
+
+ example --> *4_Box_Model/Part_23/index.html*
+   ```
+    <h1>Add shadows</h1>
+    <pre class="shadow01 my_pre">box-shadow: 4px 4px gray;</pre>
+    <pre class="shadow02 my_pre">box-shadow: 4px 4px 4px gray;</pre>
+    <pre class="shadow03 my_pre">box-shadow: 4px 4px 4px 4px gray;</pre>
+    <pre class="shadow04 my_pre">box-shadow: inset -4px -4px 4px 4px gray;</pre>
+    <img class="my_img" src="images/picture.jpg" alt="Whale in clouds">
+   ```
+
+ example --> *4_Box_Model/Part_23/styles/style.css*
+   ```
+    .shadow01 {  
+        box-shadow:4px 4px gray;
+    }
+
+    .shadow02 {  
+        box-shadow:4px 4px 4px gray;
+    }
+
+    .shadow03 {  
+        box-shadow:4px 4px 4px 4px gray;
+    }
+
+    .shadow04 {  
+        box-shadow:inset -4px -4px 4px 4px gray;
+    }
+
+    .my_img {
+        border: black 2px solid;
+        box-shadow: 6px 6px 6px gray;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_23.png)
+
 
 
