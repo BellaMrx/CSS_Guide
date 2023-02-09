@@ -2951,29 +2951,29 @@ There are three ways to create transparent boxes. Either with *opacity* or RGBA 
 The CSS property *opacity* is more useful for graphics and images, because there the transparency does not work with RGBA or HSLA colors. For boxes with text, RGBA or HSLA colors should be used.
 
 ### Add a color gradient
-- A linear gradient is created with the CSS function `linear-gradient()` and assigned to the `background` (or `background-image` property.
+A linear gradient is created with the CSS function `linear-gradient()` and assigned to the `background` (or `background-image` property.
    ```
     background: linear-gradient(white, orange);
    ```
-This displays a linear color gradient from white to orange and from top to bottom (default setting).
+- This displays a linear color gradient from white to orange and from top to bottom (default setting).
 
-- To direct the gradient in a different direction, the keyword `to` , followed by the direction `bottom` (top to bottom), `top` (bottom to top), `right` (left to right) or `left` (right to left) must be specified.
+To direct the gradient in a different direction, the keyword `to` , followed by the direction `bottom` (top to bottom), `top` (bottom to top), `right` (left to right) or `left` (right to left) must be specified.
    ```
     background: linear-gradient(to right, white, orange);
    ```
-This displays a linear gradient from white to orange, but this time with a gradient from left to right.
+- This displays a linear gradient from white to orange, but this time with a gradient from left to right.
 
-- It is also possible to specify the position of the color break.
+It is also possible to specify the position of the color break.
    ```
     background: linear-gradient(to right, white 0%, orange 100%);
    ```
 
-- It is also possible to repeat a gradient:
+It is also possible to repeat a gradient:
    ```
     background: repeating-linear-gradient(40deg, white, white 25px, orange 25px, orange 50px); 
    ```
 
-- Diagonal directions can be displayed with `to right bottom` (top left to bottom right) and `to left top` (bottom right to top left).
+Diagonal directions can be displayed with `to right bottom` (top left to bottom right) and `to left top` (bottom right to top left).
 
  example --> *4_Box_Model/Part_20/index.html*
    ```
