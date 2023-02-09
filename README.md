@@ -2910,3 +2910,138 @@ Viewing the box model in the third dimension --> [3D CSS Box Model](https://hick
 
 
 ### Make the boxes transparent
+There are three ways to create transparent boxes. Either with *opacity* or RGBA or HSLA colors, as already described in the previous section. The difference between *opacity* and the RGBA or HSLA colors is that with opacity the transparency applies to all elements within the box.
+
+ example --> *4_Box_Model/Part_19/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h1>background-size</h1>
+        <pre>.article01 {
+                width: 750px;
+                padding: 20px 50px;
+                background: white url('../images/pattern.png') left no-repeat;
+                <b>background-size: 100% 100%;</b>
+       }</pre>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_19/styles/style.css*
+   ```
+    .article_01 {
+        width: 90%;
+        padding: 10px;
+        background-color: white;
+        border: black 1px dotted;
+        opacity: 0.5;
+    }
+
+    .article_02 {
+        width: 90%;
+        padding: 10px;
+        background-color: white;
+        border: black 1px dotted;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_19.png)
+
+The CSS property *opacity* is more useful for graphics and images, because there the transparency does not work with RGBA or HSLA colors. For boxes with text, RGBA or HSLA colors should be used.
+
+### Add a color gradient
+- A linear gradient is created with the CSS function `linear-gradient()` and assigned to the `background` (or `background-image` property.
+   ```
+    background: linear-gradient(white, orange);
+   ```
+This displays a linear color gradient from white to orange and from top to bottom (default setting).
+
+- To direct the gradient in a different direction, the keyword `to` , followed by the direction `bottom` (top to bottom), `top` (bottom to top), `right` (left to right) or `left` (right to left) must be specified.
+   ```
+    background: linear-gradient(to right, white, orange);
+   ```
+This displays a linear gradient from white to orange, but this time with a gradient from left to right.
+
+- It is also possible to specify the position of the color break.
+   ```
+    background: linear-gradient(to right, white 0%, orange 100%);
+   ```
+
+- It is also possible to repeat a gradient:
+   ```
+    background: repeating-linear-gradient(40deg, white, white 25px, orange 25px, orange 50px); 
+   ```
+
+- Diagonal directions can be displayed with `to right bottom` (top left to bottom right) and `to left top` (bottom right to top left).
+
+ example --> *4_Box_Model/Part_20/index.html*
+   ```
+    <header class="headfoot">Linear color gradients (start)</header>
+    <article class="trans01 my_article">
+        <p><code>background: linear-gradient(white, orange);</code></p>
+    </article>
+    <article class="trans02 my_article">
+        <p><code>background: linear-gradient(to right, white, orange);</code></p>
+    </article>
+    <article class="trans03 my_article">
+        <p>
+            <code>background: linear-gradient(to right, white 30%, orange 70%);</code
+        >
+      </p>
+    </article>
+    <article class="trans04 my_article">
+      <p>
+        <code
+          >background: linear-gradient(to right, white 50%, orange 50%);</code
+        >
+      </p>
+    </article>
+    <article class="trans05 my_article">
+      <p>
+        <code
+          >&nbsp;background: linear-gradient(to left, white 50%, orange 50%);<br />
+          &nbsp;background-size: 50px 100px;</code
+        >
+      </p>
+    </article>
+    <article class="trans06 my_article">
+      <p>
+        <code
+          >background: repeating-linear-gradient(40deg, white, white 25px,
+          orange 25px, orange 50px);</code
+        >
+      </p>
+    </article>
+    <footer class="headfoot">Linear color gradients (end)</footer>
+   ```
+
+ example --> *4_Box_Model/Part_20/styles/style.css*
+   ```
+    .trans01 { 
+        background: linear-gradient(white, orange); 
+    }
+
+    .trans02 { 
+        background: linear-gradient(to right, white, orange);  
+    }
+
+    .trans03 { 
+        background: linear-gradient(to right, white 30%, orange 70%);  
+    }
+
+    .trans04 { 
+        background: linear-gradient(to right, white 50%, orange 50%);  
+    }
+
+    .trans05 {
+        background: linear-gradient(to left, white 50%, orange 50%);
+        background-size: 50px 100px;
+    }
+
+    .trans06 { 
+        background: repeating-linear-gradient(40deg, white, white 25px, orange 25px, orange 50px);     
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_20.png)
