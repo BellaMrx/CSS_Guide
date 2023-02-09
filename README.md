@@ -3045,3 +3045,80 @@ Diagonal directions can be displayed with `to right bottom` (top left to bottom 
    ```
 
  ![Preview](4_Box_Model/images/Preview_4_20.png)
+
+
+In addition to the linear color gradients, there are also the radial color gradients, these are displayed with `radial-gradient()`.
+
+ example --> *4_Box_Model/Part_21/index.html*
+   ```
+    <header class="headfoot">Radial color gradients (start)</header>
+      <article class="trans01 my_article">
+        <p><code>background: radial-gradient(white, orange);</code></p>
+      </article>
+      <article class="trans02 my_article">
+        <p><code>background: radial-gradient( white 30%, orange 70%);</code></p>
+      </article>
+      <article class="trans03 my_article">
+        <p><code>background: repeating-radial-gradient(white, white 10px, orange 10px, orange 20px);</code></p>
+      </article>
+      <article class="trans04 my_article">
+        <p><code>background: repeating-radial-gradient(circle, white, white 10px, orange 10px, orange 20px);</code></p>
+      </article>
+    <footer class="headfoot">Radial color gradients (end)</footer>
+   ```
+
+ example --> *4_Box_Model/Part_21/styles/style.css*
+   ```
+    .trans01 { 
+        background: radial-gradient(white, orange); 
+    }
+
+    .trans02 { 
+        background: radial-gradient( white 30%, orange 70%);  
+    }
+
+    .trans03 { 
+        background: repeating-radial-gradient(white, white 10px, orange 10px, orange 20px);  
+    }
+
+    .trans04 { 
+        background: repeating-radial-gradient(circle, white, white 10px, orange 10px, orange 20px); 
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_21.png)
+
+
+Multiple colors can also be used for the gradient:
+
+ example --> *4_Box_Model/Part_22/index.html*
+   ```
+    <header class="headfoot">Multicolor color gradients (start)</header>
+      <article class="trans01 my_article">
+        <p><code>background: linear-gradient(to left, purple, blue, green, yellow, red, purple); </code></p>
+      </article>
+      <article class="trans02 my_article">
+        <p><code>background: radial-gradient( purple, blue, green, yellow, red, purple); </code></p>
+      </article>
+    <footer class="headfoot">Multicolor color gradients (end)</footer>
+   ```
+
+ example --> *4_Box_Model/Part_22/styles/style.css*
+   ```
+    .trans01 { 
+        background: linear-gradient(to left, purple, blue, green, yellow, red, purple);  
+    }
+
+    .trans02 { 
+        background: radial-gradient( purple, blue, green, yellow, red, purple);  
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_22.png)
+
+Create gradients with online tools: [Ultimate CSS Gradient Generator](https://www.colorzilla.com/gradient-editor/)
+
+
+### Add a drop shadow with the `box-shadow` property
+
+
