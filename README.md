@@ -23,6 +23,7 @@
     - 4.1. The classic box model
     - 4.2. The newer alternative box model of CSS
     - 4.3. Design boxes
+    - 4.4. CSS Vendor Prefixes
 
 
 --------------------------------------------------------------------------------------------
@@ -3176,6 +3177,200 @@ It is also possible to represent an inner shadow with `inset`.
    ```
 
  ![Preview](4_Box_Model/images/Preview_4_23.png)
+
+
+### Designing round corners
+To create round corners the CSS property `border-radius` can be used. This property can be used independently from `border`. There is no need to use a frame to round the corners. 
+   ```
+    border-radius: 10px;
+   ```
+
+is the short form of:
+   ```
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;    
+   ```
+
+It is also possible to enter multiple values:
+   ```
+    border-radius: 20px 10px;
+   ```
+
+- Here the upper left corner and the lower right corner get a radius of 20 pixels and the upper right corner and the lower left corner get a radius of 10 pixels.
+
+
+ example --> *4_Box_Model/Part_24/index.html*
+   ```
+    <header class="head">Header</header>
+    <article class="article01">
+        <h1>Round corners</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </p>
+    </article>
+    <footer class="foot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_24/styles/style.css*
+   ```
+    .head {
+        width: 85%;
+        border: gray 1px solid;
+        padding: 10px;
+        background-color: white;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: 2px 2px 2px gray;
+    }
+
+    .article01 {
+        width: 85%;
+        padding: 20px 50px;
+        margin: 10px 0px;
+        border: gray 1px solid;
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px gray;
+    }
+
+    .foot {
+        width: 85%;
+        border: gray 1px solid;
+        padding: 10px;
+        background-color: white;
+        text-align: center;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: 2px 2px 2px gray;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_24.png)
+
+
+Round corners can also be used for images.
+
+ example --> *4_Box_Model/Part_25/index.html*
+   ```
+    <h1>Round corners</h1>
+    <img class="img_radius" src="images/picture.jpg" alt="Whale in clouds" />
+    <img class="img_ellipse" src="images/picture.jpg" alt="The same picture again" />
+   ```
+
+ example --> *4_Box_Model/Part_25/styles/style.css*
+   ```
+    .img_radius {
+        border-radius: 25px;
+        box-shadow: 2px 2px 2px gray;
+    }
+
+    .img_ellipse {
+        border-radius: 50%;
+        box-shadow: 2px 2px 2px gray;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_25.png)
+
+
+There is also the possibility to specify different values for the horizontal and vertical raduis. To do this, both values are separated with a `/`. The result is corners with elliptical corners with roundings.
+
+ example --> *4_Box_Model/Part_26/index.html*
+   ```
+    <header class="head">
+        border-radius: 10px 20px 30px 40px / 5px 10px 5px 10px;
+    </header>
+    <article class="article01">
+        <h1>Elliptical roundings</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </p>
+    </article>
+    <footer class="foot">border-radius: 5px 10px / 20px;</footer>
+   ```
+
+ example --> *4_Box_Model/Part_26/styles/style.css*
+   ```
+    .head {
+        width: 85%;
+        border: gray 1px solid;
+        padding: 10px;
+        background-color: white;
+        text-align: center;
+        border-radius: 10px 20px 30px 40px / 5px 10px 5px 10px;
+        box-shadow: 2px 2px 2px gray;
+    }
+
+    .article01 {
+        width: 85%;
+        padding: 20px 50px;
+        margin: 10px 0px;
+        border: gray 1px solid;
+        border-radius: 80% / 20%;
+        box-shadow: 2px 2px 2px gray;
+    }
+
+    .foot {
+        width: 85%;
+        border: gray 1px solid;
+        padding: 10px;
+        background-color: white;
+        text-align: center;
+        border-radius: 5px 10px / 20px;
+        box-shadow: 2px 2px 2px gray;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_26.png)
+
+
+
+## 4.4. CSS Vendor Prefixes
+Vendor prefix can be used to (experimentally) use CSS properties that are still in draft or beta state. When the corresponding CSS module is in the final version and the web browser fully supports the property, the prefix can be removed. However, it is recommended to keep it so that even older web browsers can display everything accurately.
+
+most common vendor prefixes
+| abbreviation | producer             |
+| ------------ | ---------------------|
+| -webkit-	   | Chrome, Safari, Edge |
+| -moz-        | Mozilla Firefox      |
+| -o-          | Opera                |
+
+ example --> *4_Box_Model/Part_27/index.html*
+   ```
+    <header class="headfoot">Header</header>
+    <article class="article01">
+        <h1>Article 1</h1>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <article class="article01">
+        <h1>Article 2</h1>
+        <p>
+            Lorem <abbr>ipsum</abbr> dolor <em>sit amet</em>, consectetuer adipiscing elit. <strong>Aenean commodo</strong> ligula eget dolor.
+            <a href="#">Aenean massa</a>. Cum sociis natoque penatibus et
+            <ins>magnis</ins> dis parturient montes, nascetur
+            <del>ridiculus</del> mus. Donec quam felis, <mark>ultricies nec</mark>, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+    </article>
+    <footer class="headfoot">Footer</footer>
+   ```
+
+ example --> *4_Box_Model/Part_27/styles/style.css*
+   ```
+    h1 {
+        -webkit-text-emphasis: filled double-circle blue;
+        -moz-text-emphasis: filled double-circle blue;
+        text-emphasis: filled double-circle blue;
+    }
+   ```
+
+ ![Preview](4_Box_Model/images/Preview_4_27.png)
+
 
 
 
