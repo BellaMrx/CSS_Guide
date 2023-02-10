@@ -3363,9 +3363,9 @@ most common vendor prefixes
  example --> *4_Box_Model/Part_27/styles/style.css*
    ```
     h1 {
-        -webkit-text-emphasis: filled double-circle blue;
-        -moz-text-emphasis: filled double-circle blue;
-        text-emphasis: filled double-circle blue;
+        -webkit-text-emphasis: filled double-circle green;
+        -moz-text-emphasis: filled double-circle green;
+        text-emphasis: filled double-circle green;
     }
    ```
 
