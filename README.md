@@ -3371,6 +3371,11 @@ most common vendor prefixes
 
  ![Preview](4_Box_Model/images/Preview_4_27.png)
 
+Each WebDev is responsible for compliance with the standard, which means that a browser-specific CSS property noted with a vendor prefix can be changed again or even deleted altogether.
 
+A good overview, to the current versions can be found here [Ultimate CSS Gradient Generator](http://caniuse.com).
 
+--------------------------------------------------------------------------------------------
+
+# 5.
 
