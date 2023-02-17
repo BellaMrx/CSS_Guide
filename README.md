@@ -26,6 +26,7 @@
     - 4.4. CSS Vendor Prefixes
 5. CSS positioning
     - 5.1. Positioning with the CSS property `position`
+    - 5.2. Stacking with `z-index`
 
 
 --------------------------------------------------------------------------------------------
@@ -3439,16 +3440,267 @@ This is the default setting for all elements, and it is used when the CSS proper
 ### `position: relative;`
 This places an element relative to the current position with the CSS property `top`, `bottom`, `left` and `right` and the corresponding value specifications. The other elements are not affected.
 
+ example --> *5_CSS_Positioning/Part_2/index.html*
+   ```
+    <header class="foothead">Header</header>
+      <article class="article01">
+        <h1>Article  1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+      </article>
+      <article class="article02">
+        <h1>Article  2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+      </article>
+	  <article>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget </p>
+      </article>   
+   <footer class="foothead">Footer</footer>
+   ```
+
+ example --> *5_CSS_Positioning/Part_2/styles/style.css*
+   ```
+    .article01 {
+        position: static;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #adfd93;
+    }
+
+    .article02 {
+        position: relative;
+        top: -75px;
+        left: 100px;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #e7fad7;
+    }
+   ```
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_2.png)
+
 
 ### `position: absolute;`  
 This drags the element out of the document flow. With the CSS properties `top`, `bottom`, `left` and `right` the element can be placed absolutely in the nearest parent element. Regardless of where the element was noted in the HTML document. All other elements will now act as if the absolutely moved element no longer belongs to the document flow and any gap thus created will be filled with the following element.
+
+ example --> *5_CSS_Positioning/Part_3/index.html*
+   ```
+    <header class="foothead">Header</header>
+      <article class="article01">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+      </article>
+      <article class="article02">
+        <h1>Article 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+      </article>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget </p>
+    <footer class="foothead">Footer</footer>
+   ```
+
+ example --> *5_CSS_Positioning/Part_3/styles/style.css*
+   ```
+    .article01 {
+        position: static;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #adfd93;
+    }
+
+    .article02 {
+        position: absolute;
+        top: 0;
+        left: 100px;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #e7fad7;
+    }
+   ```
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_3.png)
+
+Note: If the width of a block is not specified and the positioning `position: absolute;` is used, this absolutely positioned element will only be displayed as wide as the inline value.
+
+In practice, absolute and relative positioning are often combined.
+
+ example --> *5_CSS_Positioning/Part_4/index.html*
+   ```
+    <body>
+        <figure>
+            <img src="./images/whale.jpg" alt="Whale in clouds" width="400">
+            <figcaption>Whale in clouds</figcaption>
+        </figure>
+    </body>
+   ```
+
+ example --> *5_CSS_Positioning/Part_4/styles/style.css*
+   ```
+    figure {
+        position: relative;
+        width: 400px;
+        box-shadow: 4px 6px 22px 1px rgba(0, 0, 0, 0.75);
+    }
+
+    figcaption {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background: rgba(28, 90, 100, 0.7);
+        padding: 0.75rem;
+    }
+
+    figure img {
+        display: block;
+    }
+   ```
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_4.png)
 
 
 ### `position: fixed;`
 The fixed positioning behaves at first like the absolute positioning, however with the clear difference that this fixed position is measured absolutely to the left upper edge of the web browser window. This means that a fixed element does not move when the web browser window is scrolled.
 
+ example --> *5_CSS_Positioning/Part_5/index.html*
+   ```
+    <header class="foothead">Header</header>
+    <article class="article01">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+    </article>
+    <article class="article02">
+        <h1>Article 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+    </article>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <footer class="foothead">Footer</footer>
+   ```
+
+ example --> *5_CSS_Positioning/Part_5/styles/style.css*
+   ```
+    .article01 {
+        position: static;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #adfd93;
+    }
+
+    .article02 {
+        position: fixed;
+        top: 0;
+        left: 100px;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #e7fad7;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_5.png)
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_5a.png)
+
+In practice, a fixed positioning is suitable e.g. for navigation areas, a fixed header or footer or a fixed link to the top of the page, which is always present at the same position.
+
+ example --> *5_CSS_Positioning/Part_6/index.html*
+   ```
+    <h1 id="start">Top of the page</h1>
+    <a href="#start" class="up">Up</a>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ...</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ...</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ...</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+   ```
+
+ example --> *5_CSS_Positioning/Part_6/styles/style.css*
+   ```
+    .up {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 15px;
+        border: 4px solid #76ea4f;
+        background-color: #adfd93;
+        color: black;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_6.png)
+
 
 ### `position: sticky;`
 This function is a hybrid of relative and fixed positioning. This element initially behaves as with relative positioning until a certain boundary such as the top or bottom of the screen has been reached, where the element then sticks, and behaves as with fixed positioning.
+
+ example --> *5_CSS_Positioning/Part_7/index.html*
+   ```
+    <header class="foothead">Header</header>
+    <article class="article01">
+        <h1 class="sticky_h1">Article 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ...</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+
+    </article>
+    <article class="article02">
+        <h1 class="sticky_h1">Article 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ...</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+
+    </article>
+    <footer class="foothead">Footer</footer>
+   ```
+
+ example --> *5_CSS_Positioning/Part_7/styles/style.css*
+   ```
+    .article01 {
+        position: static;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #adfd93;
+    }
+
+    .article02 {
+        position: static;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #e7fad7;
+    }
+
+    .sticky_h1 {
+        position: -webkit-sticky;
+        position: sticky;
+        top: -1px; 
+        width: 100%;
+        background-color: black;
+        color: white;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_7.png)
+
+
+### Placement of elements with `top`, `right`, `bottom` and `left`
+These four properties are additionally used for the CSS property `position`. This specifies whether an absolutely or relatively positioned element starts at the top, right, bottom and/or left. In a normal positioning with `position: static;`, specifications with the CSS properties `top`, `right`, `bottom` and `left` have no effect. Units for `top`, `right`, `bottom` and `left` are `px`, `%` or `em`.
+Only one of the properties `top` or `bottom` should be used, as well as `left` and `right`. The default value of all four CSS properties is `auto`.
+
+
+## 5.2. Stacking with `z-index` 
 
 

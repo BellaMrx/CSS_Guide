@@ -1,0 +1,13 @@
+body {
+    width: 75%;
+}
+
+.up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    border: 4px solid #76ea4f;
+    background-color: #adfd93;
+    color: black;
+}
