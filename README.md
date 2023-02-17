@@ -24,6 +24,8 @@
     - 4.2. The newer alternative box model of CSS
     - 4.3. Design boxes
     - 4.4. CSS Vendor Prefixes
+5. CSS positioning
+    - 5.1. Positioning with the CSS property `position`
 
 
 --------------------------------------------------------------------------------------------
@@ -3377,5 +3379,76 @@ A good overview, to the current versions can be found here [Can I use?](http://c
 
 --------------------------------------------------------------------------------------------
 
-# 5.
+# 5. CSS positioning
+The HTML elements are usually displayed one after the other in the order in which they were noted in the HTML code. However, you are not limited to this static positioning and can be influenced with CSS.
+
+
+## 5.1. Positioning with the CSS property `position`
+How and where an element is positioned and what is to happen to the elements following it is determined with the `position` property. There are four possible methods for positioning elements:
+
+
+### `position: static;` 
+This is the default setting for all elements, and it is used when the CSS property `position` has not been noted at all. So the elements are displayed side by side as usual.
+
+ example --> *5_CSS_Positioning/Part_1/index.html*
+   ```
+    <header class="foothead">Header</header>
+    <article class="article01">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+    </article>
+    <article class="article02">
+        <h1>Article 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+    </article>
+    <article>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+            quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+            Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
+            metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+            vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget </p>
+    </article>
+    <footer class="foothead">Footer</footer>
+   ```
+
+ example --> *5_CSS_Positioning/Part_1/styles/style.css*
+   ```
+    .article01 {
+        position: static;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #adfd93;
+    }
+
+    .article02 {
+        position: static;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #e7fad7;
+    }
+   ```
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_1.png)
+
+
+### `position: relative;`
+This places an element relative to the current position with the CSS property `top`, `bottom`, `left` and `right` and the corresponding value specifications. The other elements are not affected.
+
+
+### `position: absolute;`  
+This drags the element out of the document flow. With the CSS properties `top`, `bottom`, `left` and `right` the element can be placed absolutely in the nearest parent element. Regardless of where the element was noted in the HTML document. All other elements will now act as if the absolutely moved element no longer belongs to the document flow and any gap thus created will be filled with the following element.
+
+
+### `position: fixed;`
+The fixed positioning behaves at first like the absolute positioning, however with the clear difference that this fixed position is measured absolutely to the left upper edge of the web browser window. This means that a fixed element does not move when the web browser window is scrolled.
+
+
+### `position: sticky;`
+This function is a hybrid of relative and fixed positioning. This element initially behaves as with relative positioning until a certain boundary such as the top or bottom of the screen has been reached, where the element then sticks, and behaves as with fixed positioning.
+
 
