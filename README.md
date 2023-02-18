@@ -3807,3 +3807,52 @@ The flowing around can be stopped with the CSS property `clear`. The CSS propert
    ```
  ![Preview](5_CSS_Positioning/images/Preview_5_10.png)
 
+
+### Combine floats into a unit
+With `display: flow-root` a new block for the bypassing element is created via CSS. This element is only available to newer web browsers. For this the trick with `overflow: hidden;` would offer itself, with which as a side effect likewise the content is enclosed into a new block. An elegant solution for this is CSS's feature query @supports(). This can be used to check whether a browser can handle certain CSS property-value combinations.
+
+ example --> *5_CSS_Positioning/Part_11/index.html*
+   ```
+    <h1>A report</h1>
+    <figure>
+        <img src="images/picture.jpg" alt="Placeholder">
+        <figcaption>A picture</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+   ```
+
+ example --> *5_CSS_Positioning/Part_11/styles/style.css*
+   ```
+    .float-left {
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    
+    .head-foot {
+        background-color: grey;
+        padding: 2rem;
+        text-align: center;
+        color: white;
+    }
+    
+    .article-bg {
+        background-color: lightgrey;
+        overflow: hidden;
+    }
+    
+    @supports(display: flow-root) {
+        .article-bg {
+            display: flow-root;
+            overflow: initial;
+            background-color: lightgrey;
+        }
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_11.png)
+
+
+## 5.4. Flexible boxes (flexbox model)
+

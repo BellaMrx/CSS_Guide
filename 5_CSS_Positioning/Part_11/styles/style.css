@@ -1,0 +1,28 @@
+.float-left {
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+    
+.head-foot {
+    background-color: grey;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+    
+.article-bg {
+    background-color: lightgrey;
+    overflow: hidden;
+}
+    
+@supports(display: flow-root) {
+    .article-bg {
+        display: flow-root;
+        overflow: initial;
+        background-color: lightgrey;
+    }
+}
+    
+h1, p {
+    margin: 0;
+}
