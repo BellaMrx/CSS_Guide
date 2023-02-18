@@ -1,0 +1,19 @@
+.myarticle {
+    width: 300px;
+    padding: 10px;
+    margin: 0px 5px 5px 0px;
+    border: 1px solid black;
+    background-color: #e7fad7;
+}
+
+.mymain {
+    width: 95%;
+    padding: 10px;
+    background-color: #76ea4f;
+    display: flex;
+    flex-direction: row;
+}
+
+h1, p {
+    margin-top: 0;
+}

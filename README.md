@@ -28,6 +28,7 @@
     - 5.1. Positioning with the CSS property `position`
     - 5.2. Stacking with `z-index`
     - 5.3. Floating boxes with `float`
+    - 5.4. Flexible boxes (flexbox model)
 
 
 --------------------------------------------------------------------------------------------
@@ -3855,4 +3856,153 @@ With `display: flow-root` a new block for the bypassing element is created via C
 
 
 ## 5.4. Flexible boxes (flexbox model)
+Responsive web design is an indispensable part of creating websites today, so the desire for a simpler and better alternative to float positioning has become greater. One of these alternatives is the flexbox model. The CSS flexbox is perfect for arranging elements next to or below each other. This is very handy for galleries or links of a navigation, for example, because CSS flexboxes offer even more options, including arranging the elements neatly next to each other with a certain spacing, in a certain order, or in a certain size.
 
+The principle of flexboxes is simple. A parent element is needed in which the CSS property `display` is set to `flex`. This property affects all contained child elements. The parent element that has the `display:flex` CSS property set is also called a flex container. The child elements it contains are the flex items.
+
+
+### Align the flexbox
+How the elements are aligned within the flexbox is specified with the CSS property `flex-direction`. For horizontal alignment the value `row` can be used and for vertical alignment the value `column` is used. If `flex-direction` is not used, `row` is the default. The default orientation for the elements of a flexbox is horizontal.
+
+ example --> *5_CSS_Positioning/Part_12/index.html*
+   ```
+    <main class="mymain">
+        <article class="myarticle">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+    </main>
+   ```
+
+ example --> *5_CSS_Positioning/Part_12/styles/style.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: #e7fad7;
+    }
+
+    .mymain {
+        width: 95%;
+        padding: 10px;
+        background-color: #76ea4f;
+        display: flex;
+        flex-direction: row;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_12.png)
+
+
+If the value `column` is used instead of `row`, the individual elements within the `main` element are vertically aligned.
+
+ example --> *5_CSS_Positioning/Part_13/index.html*
+   ```
+    <main class="mymain">
+        <article class="myarticle">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+    </main>
+   ```
+
+ example --> *5_CSS_Positioning/Part_13/styles/style.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: #e7fad7;
+    }
+
+    .mymain {
+        width: 95%;
+        padding: 10px;
+        background-color: #76ea4f;
+        display: flex;
+        flex-direction: row;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_13.png)
+
+
+For the CSS properties `flex-direction`, the values `row-reverse` and `column-reverse` can be used, with which the elements are sorted and displayed in reverse order.
+
+
+### Wrap elements in a flexbox with `flex-wrap`
+The unpleasant thing about `flex-direction: row;` is that it doesn't look nice above a certain window width.
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_12_Mobile.PNG)
+
+
+If you want the elements to wrap to the next row, the flexbox model provides the CSS property `flex-wrap`. The default value `nowrap` prevents the elements in the flexbox from wrapping. If the `wrap` value is used, the elements wrap into a new row. There is also the value `wrap-reverse`, which wraps the flexible elements to the top.
+
+ example --> *5_CSS_Positioning/Part_14/index.html*
+   ```
+    <main class="mymain">
+        <article class="myarticle">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+    </main>
+   ```
+
+ example --> *5_CSS_Positioning/Part_14/styles/style.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: #e7fad7;
+    }
+
+    .mymain {
+        width: 95%;
+        padding: 10px;
+        background-color: #76ea4f;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_14.png)
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_14_Mobile.PNG)
+
+
+The shorthand notation for `flex-direction` and `flex-wrap` is possible with `flex-flow`, e.g :
+    `flex-flow: row-wrap`
+is equivalent to the notation:
+   ```
+	flex-direction: row;
+	flex-wrap: wrap;
+   ```
+
+### Arrange elements along the main axis with `justify-content`
