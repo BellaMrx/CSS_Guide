@@ -27,6 +27,7 @@
 5. CSS positioning
     - 5.1. Positioning with the CSS property `position`
     - 5.2. Stacking with `z-index`
+    - 5.3. Floating boxes with `float`
 
 
 --------------------------------------------------------------------------------------------
@@ -3702,5 +3703,107 @@ Only one of the properties `top` or `bottom` should be used, as well as `left` a
 
 
 ## 5.2. Stacking with `z-index` 
+By default, the relative, absolute, and fixed elements are stacked in the order they were noted in the document flow of the HTML document. The last element noted is on top. This behavior can be changed with the CSS property `z-index`. The z-axis is the third dimension on which the elements are stacked.
 
+The use of the CSS property `z-index` is simple. The higher the noted value of `z-index`, the higher up the element is in the stack. Thus, the element with the highest `z-index` value is at the top and the element with the lowest `z-index` value is at the bottom. If the `z-index` values are equal, the element that was last noted in the document flow is at the top.
+
+Negative values can also be used for the `z-index`. Of course, it still applies here that elements with positive values are arranged above the elements with negative values.
+
+ example --> *5_CSS_Positioning/Part_8/index.html*
+   ```
+    <header class="foothead">Header</header>
+      <article class="article01">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+      </article>
+      <article class="article02">
+        <h1>Article 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+      </article>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <footer class="foothead">Footer</footer>
+   ```
+
+ example --> *5_CSS_Positioning/Part_8/styles/style.css*
+   ```
+    .article01 {
+        position: relative;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #adfd93;
+        z-index: 2;
+    }
+
+    .article02 {
+        position: relative;
+        top: -75px;
+        left: 100px;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #e7fad7;
+        z-index: 1;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_8.png)
+
+
+## 5.3. Floating boxes with `float`
+With `float` an element is taken out of the usual document flow and placed at the right or left margin. The following elements without `float` flow around this floated element. In practice, people tend to use flexboxes or the grid layout for the layout of websites today. 
+
+ example --> *5_CSS_Positioning/Part_9/index.html*
+   ```
+    <h1>A report</h1>
+    <figure>
+        <img src="images/picture.jpg" alt="Placeholder">
+        <figcaption>A picture</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+   ```
+
+ example --> *5_CSS_Positioning/Part_9/styles/style.css*
+   ```
+    figure {
+        float: left;
+        margin: 0 0 0 1rem;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_9.png)
+
+
+In addition to `left` and `right`, the values `none` (default) and `inherit` can also be used for `float`. `none` indicates that the element should not be floated. With `inherit`, on the other hand, the element takes over the `float` value of the parent element in which it resides.
+
+Floating elements works only horizontally. The elements can only flow around to the left or to the right.
+
+Only the text around the image flows, but not the `padding`, `border`, `margin` and `background` properties. These remain behind the floated image.
+
+
+### Stop flowing around
+The flowing around can be stopped with the CSS property `clear`. The CSS property `clear` can be passed the values `left`, `right`, `both` or `none`. A `clear:left;` ends a `float:left;` and `both` ends left and right. `none` is the default value, and the elements can thus flow again. 
+
+ example --> *5_CSS_Positioning/Part_10/index.html*
+   ```
+    <h1>A report</h1>
+    <figure>
+        <img src="images/picture.jpg" alt="Placeholder">
+        <figcaption>A picture</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean ... </p>
+   ```
+
+ example --> *5_CSS_Positioning/Part_10/styles/style.css*
+   ```
+    figure {
+        float: left;
+        margin: 0 0 0 1rem;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_10.png)
 
