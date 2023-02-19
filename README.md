@@ -3947,7 +3947,7 @@ If the value `column` is used instead of `row`, the individual elements within t
 For the CSS properties `flex-direction`, the values `row-reverse` and `column-reverse` can be used, with which the elements are sorted and displayed in reverse order.
 
 
-### Wrap elements in a flexbox with `flex-wrap`
+#### Wrap elements in a flexbox with `flex-wrap`
 The unpleasant thing about `flex-direction: row;` is that it doesn't look nice above a certain window width.
 
  ![Preview](5_CSS_Positioning/images/Preview_5_12_Mobile.PNG)
@@ -4005,8 +4005,8 @@ is equivalent to the notation:
 	flex-wrap: wrap;
    ```
 
-### Arrange elements along the main axis with `justify-content`
-The CSS property `justify-content` can be used to arrange the individual elements along the main axis. Possible values for this are `flex-start`, `center`, `space-between` and `space-around`.
+#### Arrange elements along the main axis with `justify-content`
+The CSS property `justify-content` can be used to arrange the individual elements along the main axis. Possible values for this are `center`, `flex-start`, `flex-end`, `space-between` and `space-around`.
 
 - `center` : This will place the elements in the center.
 
@@ -4139,3 +4139,323 @@ The CSS property `justify-content` can be used to arrange the individual element
     }
    ```
  ![Preview](5_CSS_Positioning/images/Preview_5_15E.PNG)
+
+
+#### Arrange elements along the cross axis with `align-content`
+If the elements are to be arranged along the cross axis, the CSS property `align-content` is used. The default value is `stretch`, which distributes all elements evenly. Other values are `center`, `flex-start`, `flex-end`, `space-between` and `space-around`.
+
+- `center`
+
+ example --> *5_CSS_Positioning/Part_16/index.html*
+   ```
+    <main class="mymain">
+        <article class="myarticle">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </article>
+    </main>
+   ```
+
+ example --> *5_CSS_Positioning/Part_16/styles/style1.css*
+   ```
+    .myarticle {
+        width: 500px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 95%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_16A.PNG)
+
+
+- `flex-start`
+
+ example --> *5_CSS_Positioning/Part_16/styles/style2.css*
+   ```
+    .myarticle {
+        width: 500px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 95%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_16B.PNG)
+
+
+- `flex-end`
+
+ example --> *5_CSS_Positioning/Part_16/styles/style3.css*
+   ```
+    .myarticle {
+        width: 500px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 95%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_16C.PNG)
+
+
+- `space-between`
+
+ example --> *5_CSS_Positioning/Part_16/styles/style4.css*
+   ```
+    .myarticle {
+        width: 500px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 95%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_16D.PNG)
+
+
+- `space-around`
+
+ example --> *5_CSS_Positioning/Part_16/styles/style5.css*
+   ```
+    .myarticle {
+        width: 500px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 95%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_16E.PNG)
+
+
+#### Arrange elements with `align-self
+If individual elements in the arrangement of flexible elements are to be assigned a different property than that specified in the parent element, the CSS property `align-self` can be used. The default value is the value of the parent element. Other possible values are `stretch`, `center`, `flex-start`, `flex-end` and `baseline` (which aligns an element to the baseline).
+
+- `stretch`
+
+ example --> *5_CSS_Positioning/Part_17/index.html*
+   ```
+    <main class="mymain">
+        <article class="myarticle">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+        <article class="myarticle down">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+    </main>
+   ```
+
+ example --> *5_CSS_Positioning/Part_17/styles/style1.css*
+   ```
+    .myarticle {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .down {
+        align-self: stretch;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_17A.PNG)
+
+
+- `center`
+
+ example --> *5_CSS_Positioning/Part_17/styles/style2.css*
+   ```
+    .myarticle {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .down {
+        align-self: center;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_17B.PNG)
+
+
+- `flex-start`
+
+ example --> *5_CSS_Positioning/Part_17/styles/style3.css*
+   ```
+    .myarticle {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .down {
+        align-self: flex-start;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_17C.PNG)
+
+
+- `flex-end`
+
+ example --> *5_CSS_Positioning/Part_17/styles/style4.css*
+   ```
+    .myarticle {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .down {
+        align-self: flex-end;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_17D.PNG)
+
+
+- `baseline`
+
+ example --> *5_CSS_Positioning/Part_17/styles/style5.css*
+   ```
+    .myarticle {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        height: 400px;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .down {
+        align-self: baseline;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_17E.PNG)
+
+
+### Set flexibility of the flexbox
