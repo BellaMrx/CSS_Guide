@@ -4287,7 +4287,7 @@ If the elements are to be arranged along the cross axis, the CSS property `align
  ![Preview](5_CSS_Positioning/images/Preview_5_16E.PNG)
 
 
-#### Arrange elements with `align-self
+#### Arrange elements with `align-self`
 If individual elements in the arrangement of flexible elements are to be assigned a different property than that specified in the parent element, the CSS property `align-self` can be used. The default value is the value of the parent element. Other possible values are `stretch`, `center`, `flex-start`, `flex-end` and `baseline` (which aligns an element to the baseline).
 
 - `stretch`
@@ -4459,3 +4459,177 @@ If individual elements in the arrangement of flexible elements are to be assigne
 
 
 ### Set flexibility of the flexbox
+To set the flexibility of the corresponding elements within the flexbox, the CSS property `flex` is used. The property requires a numerical value. The numerical values behave relatively, meaning that an element with the specification `flex: 4;` is four times as flexible as an element with the property `flex: 1;`.
+
+`flex-grow` controls how flexibly the element grows relative to the rest of the elements. How far the element shrinks relative to the other elements is specified with `flex-shrink`. The base width for the element is specified with `flex-basis`. In addition to percentages, px or em can also be specified. The default value for `flex-basis` is `auto`. The default value of `flex` in general is `flex: 0 1 auto`.
+
+The CSS property `flex` is a shorthand notation for existing CSS properties of flexboxes `flex-grow`, `flex-shrink` and `flex-base`. The `flex: 2;` is the shorthand notation for `flex-grow: 2;`.
+
+The whole shorthand notation is for example:
+`flex: 2 1 30%;`
+This means:
+   ```
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-base: 30%;
+   ```
+
+ example --> *5_CSS_Positioning/Part_18/index.html*
+   ```
+    <main class="mymain">
+        <article class="myarticle article01">
+            <h1>flex: 0 0 200px;</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+        <article class="myarticle article02">
+            <h1>flex: 4 1 auto;</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </article>
+        <article class="myarticle article03">
+            <h1>flex: 1 3 150px;</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+    </main>
+   ```
+
+ example --> *5_CSS_Positioning/Part_18/styles/style.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 90%;
+        /* height: 200px; */
+        padding: 10px;
+        background-color: green;
+        display: flex;
+    }
+
+    .article01 {
+        flex: 0 0 200px;
+    }
+
+    .article02 {
+        flex: 4 1 auto;
+    }
+
+    .article03 {
+        flex: 1 3 150px;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_18.PNG)
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_18B.PNG)
+
+
+#### The peculiarity of flex-grow at line break
+
+ example --> *5_CSS_Positioning/Part_19/index.html*
+   ```
+    <main class="mymain">
+        <article class="myarticle">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+    </main>
+   ```
+
+ example --> *5_CSS_Positioning/Part_19/styles/style.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+        flex-grow: 1;
+    }
+
+    .mymain {
+        width: 95%;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_19A.PNG)
+
+When the viewport is reduced, the elements are automatically arranged differently.
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_19B.PNG)
+
+ ![Preview](5_CSS_Positioning/images/Preview_5_19C.PNG)
+
+
+### Determine the order of the boxes
+With the CSS property `order` the order itself can be set, also here a numerical value is used.
+
+ example --> *5_CSS_Positioning/Part_20/index.html*
+   ```
+    <main class="mymain">
+      <article class="myarticle article01">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+      </article>
+      <article class="myarticle article02">
+        <h1>Article 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+      </article>
+      <article class="myarticle article03">
+        <h1>Article 3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+      </article>
+    </main>
+   ```
+
+ example --> *5_CSS_Positioning/Part_20/styles/style.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 90%;
+        padding: 10px; 
+        background-color: green;
+        display: flex;
+    }
+
+    .article01 {  
+        order: 2;  
+    }
+
+    .article02 {
+        order: 3;  
+    }
+
+    .article03 {
+        order: 1;  
+    } 
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_20.PNG)
+
+
+Simple examples for testing and studying CSS flexboxes can be found on the website [Quackit](http://quackit.com/css/flexbox/examples/).
+
+
+# 6. 
