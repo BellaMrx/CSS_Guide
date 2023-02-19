@@ -4006,3 +4006,136 @@ is equivalent to the notation:
    ```
 
 ### Arrange elements along the main axis with `justify-content`
+The CSS property `justify-content` can be used to arrange the individual elements along the main axis. Possible values for this are `flex-start`, `center`, `space-between` and `space-around`.
+
+- `center` : This will place the elements in the center.
+
+ example --> *5_CSS_Positioning/Part_15/index.html*
+   ```
+    <main class="mymain">
+        <article class="myarticle">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </article>
+        <article class="myarticle">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+    </main>
+   ```
+
+ example --> *5_CSS_Positioning/Part_15/styles/style1.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_15A.PNG)
+
+
+- `flex-start` : This will align the elements left.
+
+ example --> *5_CSS_Positioning/Part_15/styles/style2.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        justify-content: flex-start;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_15B.PNG)
+
+
+- `flex-end` : This will align the elements right.
+
+ example --> *5_CSS_Positioning/Part_15/styles/style3.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        justify-content: flex-end;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_15C.PNG)
+
+
+ - `space-between` : This distributes the elements evenly. The first and the last element touches at the beginning or at the end.
+ 
+ example --> *5_CSS_Positioning/Part_15/styles/style4.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        justify-content: space-between;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_15D.PNG)
+
+
+  - `space-around` : This distributes all elements evenly.
+ 
+ example --> *5_CSS_Positioning/Part_15/styles/style5.css*
+   ```
+    .myarticle {
+        width: 300px;
+        padding: 10px;
+        margin: 0px 5px 5px 0px;
+        border: 1px solid black;
+        background-color: lightgreen;
+    }
+
+    .mymain {
+        width: 98%;
+        padding: 10px;
+        background-color: green;
+        display: flex;
+        justify-content: space-around;
+    }
+   ```
+ ![Preview](5_CSS_Positioning/images/Preview_5_15E.PNG)
