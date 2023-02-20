@@ -4751,3 +4751,5 @@ If only one media type is to be used, a specification can be made in front of th
         /* CSS statement for smartphones */
     }
    ```
+
+A media query can also be negated with `not`.
