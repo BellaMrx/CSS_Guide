@@ -4656,12 +4656,12 @@ Using the `link` element, CSS instructions are provided for the screen (`media="
 
  example --> *6_Responsive_Layouts/Part_1*
 
- `media="screen"`
+`media="screen"`
 
  ![Preview](6_Responsive_Layouts/images/Preview_6_screen.PNG)
 
 
- `media="print"`
+`media="print"`
 
  ![Preview](6_Responsive_Layouts/images/Preview_6_print.PNG)
 
