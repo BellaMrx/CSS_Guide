@@ -4658,12 +4658,10 @@ Using the `link` element, CSS instructions are provided for the screen (`media="
 
  `media="screen"`
 
-
  ![Preview](6_Responsive_Layouts/images/Preview_6_screen.PNG)
 
 
  `media="print"`
- 
 
  ![Preview](6_Responsive_Layouts/images/Preview_6_print.PNG)
 
@@ -4687,7 +4685,7 @@ mobile.css is used only if the maximum screen width of 480 pixels is not exceede
    ```
     ...
     <style type="text/css" media="screen and (max-width: 480px)">
-        /* CSS statement for screen up to max. 480 pixel
+        /* CSS statement for screen up to max. 480 pixel */
     </style>
     ...
    ```
@@ -4719,3 +4717,37 @@ If the maximum screen size of 480 pixels is not exceeded, the background is disp
 Thus, querying media properties can be used in HTML with the `link` element or in the `style` element and in CSS with the `@media` or `@import` rule.
 
 
+### Basic structure of a media properties query
+
+ ![Preview](6_Responsive_Layouts/images/MediaQuery.png)
+
+
+#### Link the media properties
+The media property is linked with the keyword `and`. Several `and` characteristics can be linked and processed. The link can be made with or without a media type.
+
+For example:
+
+   ```
+    @media screen and (min-width: 960px) {
+        /* CSS statement for desktop */
+    }
+   ```
+
+   ```
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+        /* CSS statement for tablets and netbooks */
+    }
+   ```
+
+   ```
+    @media screen and (max-width: 480px) {
+        /* CSS statement for smartphones */
+    }
+   ```
+
+If only one media type is to be used, a specification can be made in front of the media type with `only`.
+   ```
+    @media only screen and (max-width: 480px) {
+        /* CSS statement for smartphones */
+    }
+   ```
