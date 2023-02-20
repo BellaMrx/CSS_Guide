@@ -4658,9 +4658,12 @@ Using the `link` element, CSS instructions are provided for the screen (`media="
 
  `media="screen"`
 
+
  ![Preview](6_Responsive_Layouts/images/Preview_6_screen.PNG)
 
+
  `media="print"`
+ 
 
  ![Preview](6_Responsive_Layouts/images/Preview_6_print.PNG)
 
