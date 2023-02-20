@@ -4637,7 +4637,7 @@ Simple examples for testing and studying CSS flexboxes can be found on the websi
 
 -----------------------------------------------------------------------------------
 
-This is the end of CSS Guide Part 1. You can find the next part here [CSS Guide Part 2]()
+This is the end of CSS Guide Part 1. You can find the next part here [CSS Guide Part 2]().
 
 On my Twitter account [@bella_mrx](https://twitter.com/bella_mrx) you can find more useful stuff about HTML and web development. 
 
