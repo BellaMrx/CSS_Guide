@@ -4658,8 +4658,61 @@ Using the `link` element, CSS instructions are provided for the screen (`media="
 
  `media="screen"`
 
- ![Preview](6_Responsive_Layouts/images/Preview_6_screen)
+ ![Preview](6_Responsive_Layouts/images/Preview_6_screen.PNG)
 
  `media="print"`
 
- ![Preview](6_Responsive_Layouts/images/Preview_6_print)
+ ![Preview](6_Responsive_Layouts/images/Preview_6_print.PNG)
+
+
+### The media queries for media properties
+- The media properties can be included and used in various ways. The use of such a media query in HTML can be noted as follows:
+
+   ```
+    ...
+    <head>
+        <link href="styles/style.css" rel="stylesheet" />
+        <link href="styles/mobile.css" rel="stylesheet" media="screen and (max-width: 480px)" />
+    </head>
+    ...
+   ```
+
+mobile.css is used only if the maximum screen width of 480 pixels is not exceeded. For devices with a higher resolution, only style.css is used.
+
+- Including queries in the `<style>` tag is possible as follows:
+
+   ```
+    ...
+    <style type="text/css" media="screen and (max-width: 480px)">
+        /* CSS statement for screen up to max. 480 pixel
+    </style>
+    ...
+   ```
+
+- Embedding directly into the stylesheet with `@media`:
+
+   ```
+    ...
+    .main {
+        background-color: blue;
+    }
+
+    @media screen and (max-width: 480px) {
+        .main {
+        background-color: yellow;
+        }   
+    }
+    ...
+   ```
+
+If the maximum screen size of 480 pixels is not exceeded, the background is displayed in yellow.
+
+- Use media properties with the `@import` rule as follows:
+
+   ```
+    @import url('styles/mobile_480.css') screen and (max-width: 480px);
+   ```
+
+Thus, querying media properties can be used in HTML with the `link` element or in the `style` element and in CSS with the `@media` or `@import` rule.
+
+
