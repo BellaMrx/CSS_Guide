@@ -29,6 +29,8 @@
     - 5.2. Stacking with `z-index`
     - 5.3. Floating boxes with `float`
     - 5.4. Flexible boxes (flexbox model)
+6. Responsive layouts with CSS
+    - 6.1. Theoretical basic knowledge about responsive web design
 
 
 --------------------------------------------------------------------------------------------
@@ -4632,4 +4634,32 @@ With the CSS property `order` the order itself can be set, also here a numerical
 Simple examples for testing and studying CSS flexboxes can be found on the website [Quackit](http://quackit.com/css/flexbox/examples/).
 
 
-# 6. 
+# 6. Responsive layouts with CSS
+Today, responsive layouts are used to display a suitable web page for the user for any device width.
+
+
+## 6.1. Theoretical basic knowledge about responsive web design
+The way the Internet is accessed today has become very versatile. Where a few years ago a website was only viewed with a desktop PC or laptop, today many other devices such as tablets, smartphones, e-book readers, game consoles or TVs have joined the mix. The challenge here is to respond to the screen size and screen resolution of each device with a suitable layout.
+
+Statistics confirm the trend that mobile devices are now the most used devices when visitors are on the web.
+
+The most common standard sizes:
+- Smartphone: 320 to 480 pixels
+- Tablets: 768 to 1024 pixels
+- Desktop PCs: 1024 pixels and above
+
+Instead of creating and maintaining countless layout versions for the same website, responsive web design is used. In this technique, the characteristics of the device are taken into account to adapt the website to achieve an optimal and custom display for the device. The main criterion for such a layout is the screen size of the device and the available input method, e.g. mouse or touch screen.
+
+
+### The use of specific media types
+Using the `link` element, CSS instructions are provided for the screen (`media="screen"`) and a special version for the printer (`media="print"`). If the media type is not defined, then the CSS instructions automatically apply to all output types (`media="all"`).
+
+ example --> *6_Responsive_Layouts/Part_1*
+
+ `media="screen"`
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_screen)
+
+ `media="print"`
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_print)
