@@ -4,7 +4,7 @@
 
  Part 1 contains : Introduction to CSS, the CSS selectors and inheritance and the cascade.
 
- If you don't have any experience HTML, you should check here first [HTML Guide](https://github.com/BellaMrx/HTML_Guide).
+ If you don't have any experience with HTML, you should check here first [HTML Guide](https://github.com/BellaMrx/HTML_Guide).
 
  The code examples in the guide can be found in the listed folders.
 
