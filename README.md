@@ -160,7 +160,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 
  - **Declaration**: Declarations are used to format the selected HTML elements. The declaration consists of two parts, the *property* and a *value*.
 
- ![Preview](1_Introduction/Images/CSSstatement.PNG)
+ ![Preview](1_Introduction/Images/CSSstatement.jpg)
 
 
 ### The declaration of a selector
