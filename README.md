@@ -45,6 +45,17 @@
     - 6.6. Calculation with CSS and the `calc()` function
 ### [CSS Guide Part IV]()
 7. Styling with CSS
+    - 7.1. Text design with CSS
+    - 7.2. Design lists with CSS
+    - 7.3. Tables with CSS
+    - 7.4. Images and graphics with `width` and `height`
+    - 7.5. Transfom elements
+    - 7.6. Style HTML forms with CSS
+8. Testing and organizing
+    - 8.1 Validate HTML and CSS
+    - 8.2. View websites in different sizes
+    - 8.3. Set up central stylesheet
+9. Useful websites about CSS
 
 
 --------------------------------------------------------------------------------------------
@@ -64,7 +75,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
  Today, CSS no longer has a version number and consists of numerous modules. CSS3 is actually just a term for the modules added after 2.1.. However, the individual modules still have version numbers. 
 
  An overview of all modules in progress, can be found at [W3C:CSS current work](https://www.w3.org/Style/CSS/current-work.en.html).
- All other modules can be found at [W3C:CSS Snapshot 2022](http://w3.org/TR/CSS/).
+ All other modules can be found at [W3C:CSS Snapshot 2023](http://w3.org/TR/CSS/).
 
 
 ## 1.2. Principle of CSS application
