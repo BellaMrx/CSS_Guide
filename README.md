@@ -24,7 +24,7 @@
     - 3.1 The principle of inheritance in CSS
     - 3.2. Understanding the control system of the cascade
     - 3.3. Pass values to CSS properties
-### [CSS Guide Part II]()
+### [CSS Guide Part II](https://github.com/BellaMrx/CSS_Guide_Part_2)
 4. The box model of CSS 
     - 4.1. The classic box model
     - 4.2. The newer alternative box model of CSS
@@ -35,7 +35,7 @@
     - 5.2. Stacking with `z-index`
     - 5.3. Floating boxes with `float`
     - 5.4. Flexible boxes (flexbox model)
-### [CSS Guide Part III]()
+### [CSS Guide Part III](https://github.com/BellaMrx/CSS_Guide_Part_3)
 6. Responsive layouts with CSS
     - 6.1. Theoretical basic knowledge about responsive web design
     - 6.2. Create a responsive layout
@@ -43,7 +43,7 @@
     - 6.4. The CSS Grid Layout
     - 6.5. Change the behavior of HTML elements with `display`
     - 6.6. Calculation with CSS and the `calc()` function
-### [CSS Guide Part IV]()
+### [CSS Guide Part IV](https://github.com/BellaMrx/CSS_Guide_Part_4)
 7. Styling with CSS
     - 7.1. Text design with CSS
     - 7.2. Design lists with CSS
@@ -1973,7 +1973,7 @@ Besides margin, there are other CSS properties that I will discuss here later.
 
 ------------------------------------------------------------------------------------------------
 
-This is the end of CSS Guide Part 1. You can find the next part here [CSS Guide Part II]().
+This is the end of CSS Guide Part 1. You can find the next part here [CSS Guide Part II](https://github.com/BellaMrx/CSS_Guide_Part_2).
 
 On my Twitter account [@bella_mrx](https://twitter.com/bella_mrx) you can find more useful stuff about HTML and web development. 
 
