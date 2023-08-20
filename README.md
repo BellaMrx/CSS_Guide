@@ -81,8 +81,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 ## 1.2. Principle of CSS application
  In CSS, rules for the individual HTML elements determine the appearance. It is not important at this point to understand what is written in *style.css*.
  
- example --> *1_Introduction/Part_1/index.html*
-
+- index.html
    ```
     <header>
         <h1>My CSS blog</h1>
@@ -113,9 +112,9 @@ From this point on, knowledge of HTML should be available. If there is no knowle
         </p>
     </footer>
    ```
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/index.html) --> *1_Introduction/Part_1/...*
 
-  example --> *1_Introduction/Part_1/style.css*
-
+- style.css
    ```
     body { 
      margin:0px; 
@@ -157,6 +156,8 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 
     hr { color: #dd95cd;}
    ```
+  [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/style.css) --> *1_Introduction/Part_1/style.css*
+
   ![Preview](1_Introduction/Images/Preview_1_1.png)
 
 
