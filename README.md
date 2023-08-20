@@ -81,7 +81,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 ## 1.2. Principle of CSS application
  In CSS, rules for the individual HTML elements determine the appearance. It is not important at this point to understand what is written in *style.css*.
  
-- index.html
+ - index.html
    ```
     <header>
         <h1>My CSS blog</h1>
@@ -112,9 +112,9 @@ From this point on, knowledge of HTML should be available. If there is no knowle
         </p>
     </footer>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/index.html) --> *1_Introduction/Part_1/...*
+    [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/index.html) --> *1_Introduction/Part_1/...*
 
-- style.css
+ - style.css
    ```
     body { 
      margin:0px; 
@@ -156,7 +156,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 
     hr { color: #dd95cd;}
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/style.css) --> *1_Introduction/Part_1/...*
+    [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/style.css) --> *1_Introduction/Part_1/...*
 
   ![Preview](1_Introduction/Images/Preview_1_1.png)
 
@@ -223,7 +223,7 @@ There are three ways to include CSS in an HTML document:
     <p style="font-family: Verdana;">Daily articles about CSS and all things related to web design and development...</p>
     <h3 style="font-family: Verdana; margin-left: 20px;">More tips</h3>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_2/index.html) --> *1_Introduction/Part_2/...*
+    [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_2/index.html) --> *1_Introduction/Part_2/...*
 
 **internal style sheet**
 - With this method, the CSS instructions are specified in the header of the HTML document between `<style> ... </style>` are specified. These apply to the gaze HTML document. For learning CSS it is advantageous, because you have everything in one file. But if a style is applied to multiple web pages and changed later, each page must be changed individually.
@@ -252,12 +252,12 @@ There are three ways to include CSS in an HTML document:
         </style>
     </head>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_3/index.html) --> *1_Introduction/Part_3/...*
+    [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_3/index.html) --> *1_Introduction/Part_3/...*
 
 **external style sheet**
 - This method is best suited for large web pages. HTML and CSS are saved in separate files. This is the only way to ensure that the layout is consistent for each page of a large web project. The CSS file is included in the link element in the header.
  
-- index.html
+ - index.html
    ```
     <head>
         <title>My CSS blog</title>
@@ -298,9 +298,9 @@ There are three ways to include CSS in an HTML document:
         </footer>
     </body>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/index.html) --> *1_Introduction/Part_4/...l*
+    [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/index.html) --> *1_Introduction/Part_4/...l*
  
-- style.css
+ - style.css
    ```
     h1 { 
         font-family: "Verdana", "Geneva";
@@ -346,11 +346,11 @@ There are three ways to include CSS in an HTML document:
         margin: 20px; 
     }
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/style.css) --> *1_Introduction/Part_4/...*
+    [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/style.css) --> *1_Introduction/Part_4/...*
 
 Several methods can be used at the same time, e.g. an internal and external stylesheet. Here the rule noted last gets the preference.
 
-- index.html
+ - index.html
    ```
     <head>
         <title>CSS Conflicts</title>
@@ -369,21 +369,21 @@ Several methods can be used at the same time, e.g. an internal and external styl
         <p>Second paragraph text ...</p>
     </body>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/index.html) --> *1_Introduction/Part_5/...*
+    [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/index.html) --> *1_Introduction/Part_5/...*
  
-- style.css
+ - style.css
    ```
     p { 
         text-align:right; 
         color: grey; 
     }
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/style.css) --> *1_Introduction/Part_5/...*
+    [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/style.css) --> *1_Introduction/Part_5/...*
 
 Using the global title attribute, alternative stylessheets can be set up within the link or style element. This can be useful during team development to compare different styles. Or for different color schemes e.g. light and dark mode.
 
  ![Preview](1_Introduction/Images/LightDarkMode.png)
- [Example](https://github.com/BellaMrx/CSS_Guide/tree/main/1_Introduction/Part_6) --> *1_Introduction/Part_6/...*
+    [Example](https://github.com/BellaMrx/CSS_Guide/tree/main/1_Introduction/Part_6) --> *1_Introduction/Part_6/...*
 
 
 ### Include style statements from an external CSS file with @import
