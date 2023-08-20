@@ -81,7 +81,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 ## 1.2. Principle of CSS application
  In CSS, rules for the individual HTML elements determine the appearance. It is not important at this point to understand what is written in *style.css*.
  
- - index.html
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/index.html) --> *1_Introduction/Part_1/index.html*
    ```
     <header>
         <h1>My CSS blog</h1>
@@ -112,10 +112,9 @@ From this point on, knowledge of HTML should be available. If there is no knowle
         </p>
     </footer>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/index.html) --> *1_Introduction/Part_1/...*
 
 
- - style.css
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/style.css) --> *1_Introduction/Part_1/style.css*
    ```
     body { 
      margin:0px; 
@@ -157,7 +156,6 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 
     hr { color: #dd95cd;}
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/style.css) --> *1_Introduction/Part_1/...*
 
 
   ![Preview](1_Introduction/Images/Preview_1_1.png)
@@ -220,17 +218,18 @@ There are three ways to include CSS in an HTML document:
 **inline style**
 - This method is not very advantageous, because the HTML document becomes quickly confusing, and each change must be made individually, which is very time-consuming. However, if only a single property is to be changed that only applies to this element, then this method can be used for testing or demonstration purposes.
 
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_2/index.html) --> *1_Introduction/Part_2/index.html*
    ```
     <h2 style="font-family: Verdana; background: blue; padding: 2px; text-align: center;">CSS Tips</h2>
     <p style="font-family: Verdana;">Daily articles about CSS and all things related to web design and development...</p>
     <h3 style="font-family: Verdana; margin-left: 20px;">More tips</h3>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_2/index.html) --> *1_Introduction/Part_2/...*
 
 
 **internal style sheet**
 - With this method, the CSS instructions are specified in the header of the HTML document between `<style> ... </style>` are specified. These apply to the gaze HTML document. For learning CSS it is advantageous, because you have everything in one file. But if a style is applied to multiple web pages and changed later, each page must be changed individually.
- 
+
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_3/index.html) --> *1_Introduction/Part_3/index.html* 
    ```
     <head>
         <title>My CSS blog</title>
@@ -255,13 +254,12 @@ There are three ways to include CSS in an HTML document:
         </style>
     </head>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_3/index.html) --> *1_Introduction/Part_3/...*
 
 
 **external style sheet**
 - This method is best suited for large web pages. HTML and CSS are saved in separate files. This is the only way to ensure that the layout is consistent for each page of a large web project. The CSS file is included in the link element in the header.
  
- - index.html
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/index.html) --> *1_Introduction/Part_4/index.html*
    ```
     <head>
         <title>My CSS blog</title>
@@ -302,10 +300,9 @@ There are three ways to include CSS in an HTML document:
         </footer>
     </body>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/index.html) --> *1_Introduction/Part_4/...l*
  
 
- - style.css
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/style.css) --> *1_Introduction/Part_4/style.css*
    ```
     h1 { 
         font-family: "Verdana", "Geneva";
@@ -351,12 +348,11 @@ There are three ways to include CSS in an HTML document:
         margin: 20px; 
     }
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/style.css) --> *1_Introduction/Part_4/...*
 
 
 Several methods can be used at the same time, e.g. an internal and external stylesheet. Here the rule noted last gets the preference.
 
- - index.html
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/index.html) --> *1_Introduction/Part_5/index.html*
    ```
     <head>
         <title>CSS Conflicts</title>
@@ -375,17 +371,15 @@ Several methods can be used at the same time, e.g. an internal and external styl
         <p>Second paragraph text ...</p>
     </body>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/index.html) --> *1_Introduction/Part_5/...*
  
 
- - style.css
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/style.css) --> *1_Introduction/Part_5/style.css*
    ```
     p { 
         text-align:right; 
         color: grey; 
     }
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/style.css) --> *1_Introduction/Part_5/...*
 
 
 Using the global title attribute, alternative stylessheets can be set up within the link or style element. This can be useful during team development to compare different styles. Or for different color schemes e.g. light and dark mode.
@@ -397,6 +391,7 @@ Using the global title attribute, alternative stylessheets can be set up within 
 ### Include style statements from an external CSS file with @import
 The `@import` rule is noted in the HTML document header between `<style> ... </style>`. In practice, this example makes little sense, but should illustrate the use of the @import -rule. It is important that the `@import` rule is noted at the beginning, before which no CSS statement may stand.
 
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_7/index.html) --> *1_Introduction/Part_7/index.html*
    ```
     <head>
         <title>My CSS blog</title>
@@ -406,7 +401,6 @@ The `@import` rule is noted in the HTML document header between `<style> ... </s
         </style>
     </head>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_7/index.html) --> *1_Introduction/Part_7/...*
 
 
 ### Media-specific stylesheets for specific output devices
@@ -414,6 +408,7 @@ If a stylesheet is to be specified for a particular output medium, this can be d
 
 This example demonstrates how to create a media-specific stylesheet for the screen and another for the printer:
 
+ - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_8/index.html) --> *1_Introduction/Part_8/index.html*
    ```
     <head>
         <title>My CSS blog</title>
@@ -426,7 +421,6 @@ This example demonstrates how to create a media-specific stylesheet for the scre
         </style>
     </head>
    ```
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/tree/main/1_Introduction/Part_8) --> *1_Introduction/Part_8/...*
 
 
 If the output device is a screen (`media="screen"`), the HTML document is formatted with *style.css*. If the output device is a printer (`media="print"`), the document is formatted with *print.css*.
