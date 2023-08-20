@@ -81,7 +81,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
 ## 1.2. Principle of CSS application
  In CSS, rules for the individual HTML elements determine the appearance. It is not important at this point to understand what is written in *style.css*.
  
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/index.html) --> *1_Introduction/Part_1/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/index.html) --> *1_Introduction/Part_1/index.html*
    ```
     <header>
         <h1>My CSS blog</h1>
@@ -114,7 +114,7 @@ From this point on, knowledge of HTML should be available. If there is no knowle
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/style.css) --> *1_Introduction/Part_1/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_1/style.css) --> *1_Introduction/Part_1/style.css*
    ```
     body { 
      margin:0px; 
@@ -218,7 +218,7 @@ There are three ways to include CSS in an HTML document:
 **inline style**
 - This method is not very advantageous, because the HTML document becomes quickly confusing, and each change must be made individually, which is very time-consuming. However, if only a single property is to be changed that only applies to this element, then this method can be used for testing or demonstration purposes.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_2/index.html) --> *1_Introduction/Part_2/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_2/index.html) --> *1_Introduction/Part_2/index.html*
    ```
     <h2 style="font-family: Verdana; background: blue; padding: 2px; text-align: center;">CSS Tips</h2>
     <p style="font-family: Verdana;">Daily articles about CSS and all things related to web design and development...</p>
@@ -229,7 +229,7 @@ There are three ways to include CSS in an HTML document:
 **internal style sheet**
 - With this method, the CSS instructions are specified in the header of the HTML document between `<style> ... </style>` are specified. These apply to the gaze HTML document. For learning CSS it is advantageous, because you have everything in one file. But if a style is applied to multiple web pages and changed later, each page must be changed individually.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_3/index.html) --> *1_Introduction/Part_3/index.html* 
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_3/index.html) --> *1_Introduction/Part_3/index.html* 
    ```
     <head>
         <title>My CSS blog</title>
@@ -259,7 +259,7 @@ There are three ways to include CSS in an HTML document:
 **external style sheet**
 - This method is best suited for large web pages. HTML and CSS are saved in separate files. This is the only way to ensure that the layout is consistent for each page of a large web project. The CSS file is included in the link element in the header.
  
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/index.html) --> *1_Introduction/Part_4/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/index.html) --> *1_Introduction/Part_4/index.html*
    ```
     <head>
         <title>My CSS blog</title>
@@ -302,7 +302,7 @@ There are three ways to include CSS in an HTML document:
    ```
  
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/style.css) --> *1_Introduction/Part_4/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_4/style.css) --> *1_Introduction/Part_4/style.css*
    ```
     h1 { 
         font-family: "Verdana", "Geneva";
@@ -352,7 +352,7 @@ There are three ways to include CSS in an HTML document:
 
 Several methods can be used at the same time, e.g. an internal and external stylesheet. Here the rule noted last gets the preference.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/index.html) --> *1_Introduction/Part_5/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/index.html) --> *1_Introduction/Part_5/index.html*
    ```
     <head>
         <title>CSS Conflicts</title>
@@ -373,7 +373,7 @@ Several methods can be used at the same time, e.g. an internal and external styl
    ```
  
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/style.css) --> *1_Introduction/Part_5/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_5/style.css) --> *1_Introduction/Part_5/style.css*
    ```
     p { 
         text-align:right; 
@@ -391,7 +391,7 @@ Using the global title attribute, alternative stylessheets can be set up within 
 ### Include style statements from an external CSS file with @import
 The `@import` rule is noted in the HTML document header between `<style> ... </style>`. In practice, this example makes little sense, but should illustrate the use of the @import -rule. It is important that the `@import` rule is noted at the beginning, before which no CSS statement may stand.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_7/index.html) --> *1_Introduction/Part_7/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_7/index.html) --> *1_Introduction/Part_7/index.html*
    ```
     <head>
         <title>My CSS blog</title>
@@ -408,7 +408,7 @@ If a stylesheet is to be specified for a particular output medium, this can be d
 
 This example demonstrates how to create a media-specific stylesheet for the screen and another for the printer:
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_8/index.html) --> *1_Introduction/Part_8/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/1_Introduction/Part_8/index.html) --> *1_Introduction/Part_8/index.html*
    ```
     <head>
         <title>My CSS blog</title>
@@ -467,7 +467,7 @@ If you want to know which selectors are implemented in the web browser and which
 ### Type selector
 Such a type selector, also called HTML element selector, addresses the HTML elements directly with the element name.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_1/index.html) --> *2_CSS_Selectors/Part_1/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_1/index.html) --> *2_CSS_Selectors/Part_1/index.html*
    ```
     <head>
         <title>Type selectors</title>
@@ -491,7 +491,7 @@ Such a type selector, also called HTML element selector, addresses the HTML elem
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_1/styles/style.css) --> *2_CSS_Selectors/Part_1/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_1/styles/style.css) --> *2_CSS_Selectors/Part_1/styles/style.css*
    ```
     /* black frame, centered text, 5 pixel distance from top */
     header, nav, footer { 
@@ -530,7 +530,7 @@ In an HTML document there is usually more than just, for example, a `<p>` elemen
 
 It is also possible to use several classes at once.
     
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_2/index.html) --> *2_CSS_Selectors/Part_2/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_2/index.html) --> *2_CSS_Selectors/Part_2/index.html*
    ```
     <body>
         <header class="head_foot">Header</header>
@@ -552,7 +552,7 @@ It is also possible to use several classes at once.
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_2/styles/style.css) --> *2_CSS_Selectors/Part_2/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_2/styles/style.css) --> *2_CSS_Selectors/Part_2/styles/style.css*
    ```
     /* black frame, centered text, 5 pixel distance from top */
     header, nav, footer { 
@@ -608,7 +608,7 @@ It is also possible to use several classes at once.
 ### ID selector
 An ID is assigned with the HTML attribute `id`. IDs are always unique elements in an HTML document, i.e. they may only be assigned to one element in the HTML document. Since an ID occurs only once, the id is usually preferred for div elements. In CSS the id is marked with a *#* e.g. `#main {...}`
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_3/index.html) --> *2_CSS_Selectors/Part_3/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_3/index.html) --> *2_CSS_Selectors/Part_3/index.html*
    ```
     <body>
         <div id="header">Header</div>
@@ -630,7 +630,7 @@ An ID is assigned with the HTML attribute `id`. IDs are always unique elements i
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_3/styles/style.css) --> *2_CSS_Selectors/Part_3/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_3/styles/style.css) --> *2_CSS_Selectors/Part_3/styles/style.css*
    ```
     /* black frame, centered text, 5 pixel distance from top */
     #header, #nav, #footer { 
@@ -694,7 +694,7 @@ Meaningful class names and ID names should be assigned. A meaningful name should
 ### Universal selector
 The universal selector is used to select all HTML elements in the HTML document. The universal selector is marked with the asterisk `*`.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_4/index.html) --> *2_CSS_Selectors/Part_4/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_4/index.html) --> *2_CSS_Selectors/Part_4/index.html*
    ```
     <body>
         <header>Header</header>
@@ -709,7 +709,7 @@ The universal selector is used to select all HTML elements in the HTML document.
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_4/styles/style.css) --> *2_CSS_Selectors/Part_4/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_4/styles/style.css) --> *2_CSS_Selectors/Part_4/styles/style.css*
    ```
     /* black frame for all elements */
 
@@ -732,7 +732,7 @@ The universal selector is used to select all HTML elements in the HTML document.
 ### Attribute selector
 The attribute selector is used to select HTML elements according to their HTML attributes. This is the possibility to check the presence of an attribute.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_5/index.html) --> *2_CSS_Selectors/Part_5/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_5/index.html) --> *2_CSS_Selectors/Part_5/index.html*
    ```
     <h1>Attribute selector</h1>
     <p>
@@ -745,7 +745,7 @@ The attribute selector is used to select HTML elements according to their HTML a
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_5/styles/style.css) --> *2_CSS_Selectors/Part_5/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_5/styles/style.css) --> *2_CSS_Selectors/Part_5/styles/style.css*
    ```
     a[title] {
         text-decoration: none;
@@ -763,7 +763,7 @@ There are 3 possibilities:
 - `[attributname~=attributevalue]`
 - `[attributname|=attributevalue]`
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_6/index.html) --> *2_CSS_Selectors/Part_6/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_6/index.html) --> *2_CSS_Selectors/Part_6/index.html*
    ```
     <body>
         <h1>[title=deprecated]</h1>
@@ -787,7 +787,7 @@ There are 3 possibilities:
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_6/styles/style.css) --> *2_CSS_Selectors/Part_6/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_6/styles/style.css) --> *2_CSS_Selectors/Part_6/styles/style.css*
    ```
     /* Styling for all HTML elements where title
     has the attribute value deprecated */
@@ -816,7 +816,7 @@ There are 3 possibilities:
 CSS pseudo-classes are selectors for specific properties.
 - Pseudo-classes for visited and non-visited hyperlinks
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_7/index.html) --> *2_CSS_Selectors/Part_7/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_7/index.html) --> *2_CSS_Selectors/Part_7/index.html*
    ```
     <body>
         <h1>:link and :visited</h1>
@@ -833,7 +833,7 @@ CSS pseudo-classes are selectors for specific properties.
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_7/styles/style.css) --> *2_CSS_Selectors/Part_7/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_7/styles/style.css) --> *2_CSS_Selectors/Part_7/styles/style.css*
    ```
     a:link { 
         color: red; 
@@ -856,7 +856,7 @@ CSS pseudo-classes are selectors for specific properties.
 
 - Pseudo classes for user interactions with mouse and keyboard
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_8/index.html) --> *2_CSS_Selectors/Part_8/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_8/index.html) --> *2_CSS_Selectors/Part_8/index.html*
    ```
     <body>
         <h1>:hover and :focus</h1>
@@ -874,7 +874,7 @@ CSS pseudo-classes are selectors for specific properties.
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_8/styles/style.css) --> *2_CSS_Selectors/Part_8/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_8/styles/style.css) --> *2_CSS_Selectors/Part_8/styles/style.css*
    ```
     input { 
         background-color: lightgray; 
@@ -915,7 +915,7 @@ CSS pseudo-classes are selectors for specific properties.
 
 - Pseudo class for reference targets
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_9/index.html) --> *2_CSS_Selectors/Part_9/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_9/index.html) --> *2_CSS_Selectors/Part_9/index.html*
    ```
     <body>
         <h1>:target</h1>
@@ -941,7 +941,7 @@ CSS pseudo-classes are selectors for specific properties.
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_9/styles/style.css) --> *2_CSS_Selectors/Part_9/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_9/styles/style.css) --> *2_CSS_Selectors/Part_9/styles/style.css*
    ```
     :target { 
         background: lightgrey; 
@@ -966,7 +966,7 @@ Structure pseudo-classes can be used to select elements based on their position 
 
 - CSS structure pseudo-classes with `:root` and `:empty`
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_10/index.html) --> *2_CSS_Selectors/Part_10/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_10/index.html) --> *2_CSS_Selectors/Part_10/index.html*
    ```
     <body>
         <h1>:root and :empty</h1>
@@ -995,7 +995,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_10/styles/style.css) --> *2_CSS_Selectors/Part_10/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_10/styles/style.css) --> *2_CSS_Selectors/Part_10/styles/style.css*
    ```
     :root { 
         color: lightgrey; 
@@ -1015,7 +1015,7 @@ Structure pseudo-classes can be used to select elements based on their position 
 
 - Structure pseudo-classes for child elements
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_11/index.html) --> *2_CSS_Selectors/Part_11/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_11/index.html) --> *2_CSS_Selectors/Part_11/index.html*
    ```
     <body>
         <h1>:first-child in body</h1>
@@ -1048,7 +1048,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_11/styles/style.css) --> *2_CSS_Selectors/Part_11/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_11/styles/style.css) --> *2_CSS_Selectors/Part_11/styles/style.css*
    ```
     * { 
         background-color: white; 
@@ -1070,7 +1070,7 @@ Structure pseudo-classes can be used to select elements based on their position 
  ![Preview](2_CSS_Selectors/Images/Preview_2_11.png)
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_12/index.html) --> *2_CSS_Selectors/Part_12/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_12/index.html) --> *2_CSS_Selectors/Part_12/index.html*
    ```
     <body>
         <h1>:nth-child on table</h1>
@@ -1105,7 +1105,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_12/styles/style.css) --> *2_CSS_Selectors/Part_12/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_12/styles/style.css) --> *2_CSS_Selectors/Part_12/styles/style.css*
    ```
     tr:nth-child(odd) { 
         background: lightgray; 
@@ -1129,7 +1129,7 @@ Structure pseudo-classes can be used to select elements based on their position 
 
 - Structure pseudo-classes for certain child elements
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_13/index.html) --> *2_CSS_Selectors/Part_13/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_13/index.html) --> *2_CSS_Selectors/Part_13/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1150,7 +1150,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_13/styles/style.css) --> *2_CSS_Selectors/Part_13/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_13/styles/style.css) --> *2_CSS_Selectors/Part_13/styles/style.css*
    ```
     article:first-of-type { 
         border: 2px solid black; 
@@ -1164,7 +1164,7 @@ Structure pseudo-classes can be used to select elements based on their position 
  ![Preview](2_CSS_Selectors/Images/Preview_2_13.png)
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_14/index.html) --> *2_CSS_Selectors/Part_14/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_14/index.html) --> *2_CSS_Selectors/Part_14/index.html*
    ```
     <body>
         <h1>:only-of-type</h1>
@@ -1174,7 +1174,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_14/styles/style.css) --> *2_CSS_Selectors/Part_14/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_14/styles/style.css) --> *2_CSS_Selectors/Part_14/styles/style.css*
    ```
     em:only-of-type { 
         font-weight: bold; 
@@ -1186,7 +1186,7 @@ Structure pseudo-classes can be used to select elements based on their position 
 
 - Pseudo elements, the selectors for elements that do not exist
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_15/index.html) --> *2_CSS_Selectors/Part_15/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_15/index.html) --> *2_CSS_Selectors/Part_15/index.html*
    ```
     <body>
         <h1>:first-letter and :first-line</h1>
@@ -1215,7 +1215,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_15/styles/style.css) --> *2_CSS_Selectors/Part_15/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_15/styles/style.css) --> *2_CSS_Selectors/Part_15/styles/style.css*
    ```
     p::first-line { 
         font-weight: bold; 
@@ -1253,7 +1253,7 @@ A combiner is a character between two selectors that concatenates these selector
 
 - Descendant selector (E, F)
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_16/index.html) --> *2_CSS_Selectors/Part_16/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_16/index.html) --> *2_CSS_Selectors/Part_16/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1276,7 +1276,7 @@ A combiner is a character between two selectors that concatenates these selector
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_16/styles/style.css) --> *2_CSS_Selectors/Part_16/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_16/styles/style.css) --> *2_CSS_Selectors/Part_16/styles/style.css*
    ```
     article p { 
         background: lightblue; 
@@ -1288,7 +1288,7 @@ A combiner is a character between two selectors that concatenates these selector
 
 - Child selector (E1 > E2)
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_17/index.html) --> *2_CSS_Selectors/Part_17/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_17/index.html) --> *2_CSS_Selectors/Part_17/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1311,7 +1311,7 @@ A combiner is a character between two selectors that concatenates these selector
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_17/styles/style.css) --> *2_CSS_Selectors/Part_17/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_17/styles/style.css) --> *2_CSS_Selectors/Part_17/styles/style.css*
    ```
     article > p { 
         background: lightblue; 
@@ -1323,7 +1323,7 @@ A combiner is a character between two selectors that concatenates these selector
 
 - Neighbor selector (E1 + E2)
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_18/index.html) --> *2_CSS_Selectors/Part_18/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_18/index.html) --> *2_CSS_Selectors/Part_18/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1346,7 +1346,7 @@ A combiner is a character between two selectors that concatenates these selector
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_18/styles/style.css) --> *2_CSS_Selectors/Part_18/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_18/styles/style.css) --> *2_CSS_Selectors/Part_18/styles/style.css*
    ```
     article + p { 
         background: lightblue; 
@@ -1358,7 +1358,7 @@ A combiner is a character between two selectors that concatenates these selector
 
 - Sibling selector (E1 ~ E2)
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_19/index.html) --> *2_CSS_Selectors/Part_19/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_19/index.html) --> *2_CSS_Selectors/Part_19/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1381,7 +1381,7 @@ A combiner is a character between two selectors that concatenates these selector
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_19/styles/style.css) --> *2_CSS_Selectors/Part_19/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_19/styles/style.css) --> *2_CSS_Selectors/Part_19/styles/style.css*
    ```
     article ~ p { 
         background: lightblue; 
@@ -1399,7 +1399,7 @@ A combiner is a character between two selectors that concatenates these selector
 An important principle in CSS is inheritance. Only this makes it possible to define different CSS properties such as colors, font and font size once in a central place instead of having to repeat them all the time.
 The various HTML elements have ancestors and descendants (parent and child elements). Because of these relationships, the subsequent child elements inherit many style properties from the higher-level parent elements. 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_1/index.html) --> *3_Inheritance_Cascade/Part_1/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_1/index.html) --> *3_Inheritance_Cascade/Part_1/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1421,7 +1421,7 @@ The various HTML elements have ancestors and descendants (parent and child eleme
 
 The body element here contains a header, article, two p and a footer element as direct descendants. This makes the body element the parent element of all these elements. Direct descendants of the article element are the h1, p, and ul elements. These direct descendants of article are the indirect descendants of the body element. Starting from the body element, the set CSS properties are inherited from element to element.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_1/styles/style.css) --> *3_Inheritance_Cascade/Part_1/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_1/styles/style.css) --> *3_Inheritance_Cascade/Part_1/styles/style.css*
    ```
     body {
         background: gray;
@@ -1452,7 +1452,7 @@ The following are not inherited: `background`, `border`, `width`, `height`, `pad
 ### Force inheritance with `inherit` 
 Some CSS properties are not inherited, but it is possible to force that with `inherit`.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_2/index.html) --> *3_Inheritance_Cascade/Part_2/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_2/index.html) --> *3_Inheritance_Cascade/Part_2/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1473,7 +1473,7 @@ Some CSS properties are not inherited, but it is possible to force that with `in
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_2/styles/style.css) --> *3_Inheritance_Cascade/Part_2/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_2/styles/style.css) --> *3_Inheritance_Cascade/Part_2/styles/style.css*
    ```
     body {
         font-family: Arial, Verdana;
@@ -1497,7 +1497,7 @@ Some CSS properties are not inherited, but it is possible to force that with `in
 
 ### Restore the default value of a CSS property with `initial`
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_3/index.html) --> *3_Inheritance_Cascade/Part_3/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_3/index.html) --> *3_Inheritance_Cascade/Part_3/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1518,7 +1518,7 @@ Some CSS properties are not inherited, but it is possible to force that with `in
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_3/styles/style.css) --> *3_Inheritance_Cascade/Part_3/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_3/styles/style.css) --> *3_Inheritance_Cascade/Part_3/styles/style.css*
    ```
     body {
         font-family: Arial, Verdana;
@@ -1551,7 +1551,7 @@ The `unset` keyword is a middle ground between `inherit` and `initial`. When the
 ### Force inherit or restore values for all properties
 With the shorthand notation `all`, all CSS properties of the parent element can be inherited with `inherit` or reset to default with `initial`. `unset` can also be used with `all`.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_4/index.html) --> *3_Inheritance_Cascade/Part_4/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_4/index.html) --> *3_Inheritance_Cascade/Part_4/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1572,7 +1572,7 @@ With the shorthand notation `all`, all CSS properties of the parent element can 
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_4/styles/style.css) --> *3_Inheritance_Cascade/Part_4/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_4/styles/style.css) --> *3_Inheritance_Cascade/Part_4/styles/style.css*
    ```
     body {
         font-family: Arial, Verdana;
@@ -1619,7 +1619,7 @@ Of these three sources, the browser stylesheet has the lowest priority. If a use
 ### Increase the priority of a CSS property with `!important`
 If a CSS rule or CSS property is declared multiple times in the same file, the last declared property usually becomes active.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_5/index.html) --> *3_Inheritance_Cascade/Part_5/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_5/index.html) --> *3_Inheritance_Cascade/Part_5/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1640,7 +1640,7 @@ If a CSS rule or CSS property is declared multiple times in the same file, the l
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_5/styles/style.css) --> *3_Inheritance_Cascade/Part_5/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_5/styles/style.css) --> *3_Inheritance_Cascade/Part_5/styles/style.css*
    ```
     .priority {
         border: 2px solid red;
@@ -1656,7 +1656,7 @@ If a CSS rule or CSS property is declared multiple times in the same file, the l
 
 The CSS keyword `!important` can be used to increase the priority so that the property cannot be overridden by the following specifications.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_6/index.html) --> *3_Inheritance_Cascade/Part_6/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_6/index.html) --> *3_Inheritance_Cascade/Part_6/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1677,7 +1677,7 @@ The CSS keyword `!important` can be used to increase the priority so that the pr
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_6/styles/style.css) --> *3_Inheritance_Cascade/Part_6/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_6/styles/style.css) --> *3_Inheritance_Cascade/Part_6/styles/style.css*
    ```
     .priority {
         border: 2px solid red !important;
@@ -1702,7 +1702,7 @@ D = pseudo elements
 
 Universal selectors with `*` get no weighting and behave neutrally, as do combinatorial characters `>`,`+`,`~` and the space between two selectors.
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_7/index.html) --> *3_Inheritance_Cascade/Part_7/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_7/index.html) --> *3_Inheritance_Cascade/Part_7/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1719,7 +1719,7 @@ Universal selectors with `*` get no weighting and behave neutrally, as do combin
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_7/styles/style.css) --> *3_Inheritance_Cascade/Part_7/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_7/styles/style.css) --> *3_Inheritance_Cascade/Part_7/styles/style.css*
    ```
     .aclass { 
         color: green; 
@@ -1874,7 +1874,7 @@ Another function is rgba(), this has been extended by only one value, the alpha 
     }
    ```
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_8/index.html) --> *3_Inheritance_Cascade/Part_8/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_8/index.html) --> *3_Inheritance_Cascade/Part_8/index.html*
    ```
     <body>
         <h3>color: rgba(255, 255, 255, 0.5);</h3>
@@ -1885,7 +1885,7 @@ Another function is rgba(), this has been extended by only one value, the alpha 
    ```
 
 
- - [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_8/styles/style.css) --> *3_Inheritance_Cascade/Part_8/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_8/styles/style.css) --> *3_Inheritance_Cascade/Part_8/styles/style.css*
    ```
     .p_article_1 { 
         background-image:url('../images/sunsetTree.jpg');
