@@ -467,7 +467,7 @@ If you want to know which selectors are implemented in the web browser and which
 ### Type selector
 Such a type selector, also called HTML element selector, addresses the HTML elements directly with the element name.
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_1/index.html) --> *2_CSS_Selectors/Part_1/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_1) --> *2_CSS_Selectors/Part_1/index.html*
    ```
     <head>
         <title>Type selectors</title>
@@ -491,7 +491,7 @@ Such a type selector, also called HTML element selector, addresses the HTML elem
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_1/styles/style.css) --> *2_CSS_Selectors/Part_1/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_1) --> *2_CSS_Selectors/Part_1/styles/style.css*
    ```
     /* black frame, centered text, 5 pixel distance from top */
     header, nav, footer { 
@@ -530,7 +530,7 @@ In an HTML document there is usually more than just, for example, a `<p>` elemen
 
 It is also possible to use several classes at once.
     
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_2/index.html) --> *2_CSS_Selectors/Part_2/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_2) --> *2_CSS_Selectors/Part_2/index.html*
    ```
     <body>
         <header class="head_foot">Header</header>
@@ -552,7 +552,7 @@ It is also possible to use several classes at once.
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_2/styles/style.css) --> *2_CSS_Selectors/Part_2/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_2) --> *2_CSS_Selectors/Part_2/styles/style.css*
    ```
     /* black frame, centered text, 5 pixel distance from top */
     header, nav, footer { 
@@ -608,7 +608,7 @@ It is also possible to use several classes at once.
 ### ID selector
 An ID is assigned with the HTML attribute `id`. IDs are always unique elements in an HTML document, i.e. they may only be assigned to one element in the HTML document. Since an ID occurs only once, the id is usually preferred for div elements. In CSS the id is marked with a *#* e.g. `#main {...}`
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_3/index.html) --> *2_CSS_Selectors/Part_3/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_3) --> *2_CSS_Selectors/Part_3/index.html*
    ```
     <body>
         <div id="header">Header</div>
@@ -630,7 +630,7 @@ An ID is assigned with the HTML attribute `id`. IDs are always unique elements i
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_3/styles/style.css) --> *2_CSS_Selectors/Part_3/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_3) --> *2_CSS_Selectors/Part_3/styles/style.css*
    ```
     /* black frame, centered text, 5 pixel distance from top */
     #header, #nav, #footer { 
@@ -694,7 +694,7 @@ Meaningful class names and ID names should be assigned. A meaningful name should
 ### Universal selector
 The universal selector is used to select all HTML elements in the HTML document. The universal selector is marked with the asterisk `*`.
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_4/index.html) --> *2_CSS_Selectors/Part_4/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_4) --> *2_CSS_Selectors/Part_4/index.html*
    ```
     <body>
         <header>Header</header>
@@ -709,7 +709,7 @@ The universal selector is used to select all HTML elements in the HTML document.
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_4/styles/style.css) --> *2_CSS_Selectors/Part_4/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_4) --> *2_CSS_Selectors/Part_4/styles/style.css*
    ```
     /* black frame for all elements */
 
@@ -732,7 +732,7 @@ The universal selector is used to select all HTML elements in the HTML document.
 ### Attribute selector
 The attribute selector is used to select HTML elements according to their HTML attributes. This is the possibility to check the presence of an attribute.
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_5/index.html) --> *2_CSS_Selectors/Part_5/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_5) --> *2_CSS_Selectors/Part_5/index.html*
    ```
     <h1>Attribute selector</h1>
     <p>
@@ -745,7 +745,7 @@ The attribute selector is used to select HTML elements according to their HTML a
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_5/styles/style.css) --> *2_CSS_Selectors/Part_5/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_5) --> *2_CSS_Selectors/Part_5/styles/style.css*
    ```
     a[title] {
         text-decoration: none;
@@ -763,7 +763,7 @@ There are 3 possibilities:
 - `[attributname~=attributevalue]`
 - `[attributname|=attributevalue]`
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_6/index.html) --> *2_CSS_Selectors/Part_6/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_6) --> *2_CSS_Selectors/Part_6/index.html*
    ```
     <body>
         <h1>[title=deprecated]</h1>
@@ -787,7 +787,7 @@ There are 3 possibilities:
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_6/styles/style.css) --> *2_CSS_Selectors/Part_6/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_6) --> *2_CSS_Selectors/Part_6/styles/style.css*
    ```
     /* Styling for all HTML elements where title
     has the attribute value deprecated */
@@ -816,7 +816,7 @@ There are 3 possibilities:
 CSS pseudo-classes are selectors for specific properties.
 - Pseudo-classes for visited and non-visited hyperlinks
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_7/index.html) --> *2_CSS_Selectors/Part_7/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_7) --> *2_CSS_Selectors/Part_7/index.html*
    ```
     <body>
         <h1>:link and :visited</h1>
@@ -833,7 +833,7 @@ CSS pseudo-classes are selectors for specific properties.
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_7/styles/style.css) --> *2_CSS_Selectors/Part_7/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_7) --> *2_CSS_Selectors/Part_7/styles/style.css*
    ```
     a:link { 
         color: red; 
@@ -856,7 +856,7 @@ CSS pseudo-classes are selectors for specific properties.
 
 - Pseudo classes for user interactions with mouse and keyboard
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_8/index.html) --> *2_CSS_Selectors/Part_8/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_8) --> *2_CSS_Selectors/Part_8/index.html*
    ```
     <body>
         <h1>:hover and :focus</h1>
@@ -874,7 +874,7 @@ CSS pseudo-classes are selectors for specific properties.
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_8/styles/style.css) --> *2_CSS_Selectors/Part_8/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_8) --> *2_CSS_Selectors/Part_8/styles/style.css*
    ```
     input { 
         background-color: lightgray; 
@@ -915,7 +915,7 @@ CSS pseudo-classes are selectors for specific properties.
 
 - Pseudo class for reference targets
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_9/index.html) --> *2_CSS_Selectors/Part_9/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_9) --> *2_CSS_Selectors/Part_9/index.html*
    ```
     <body>
         <h1>:target</h1>
@@ -941,7 +941,7 @@ CSS pseudo-classes are selectors for specific properties.
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_9/styles/style.css) --> *2_CSS_Selectors/Part_9/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_9) --> *2_CSS_Selectors/Part_9/styles/style.css*
    ```
     :target { 
         background: lightgrey; 
@@ -966,7 +966,7 @@ Structure pseudo-classes can be used to select elements based on their position 
 
 - CSS structure pseudo-classes with `:root` and `:empty`
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_10/index.html) --> *2_CSS_Selectors/Part_10/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_10) --> *2_CSS_Selectors/Part_10/index.html*
    ```
     <body>
         <h1>:root and :empty</h1>
@@ -995,7 +995,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_10/styles/style.css) --> *2_CSS_Selectors/Part_10/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_10) --> *2_CSS_Selectors/Part_10/styles/style.css*
    ```
     :root { 
         color: lightgrey; 
@@ -1015,7 +1015,7 @@ Structure pseudo-classes can be used to select elements based on their position 
 
 - Structure pseudo-classes for child elements
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_11/index.html) --> *2_CSS_Selectors/Part_11/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_11) --> *2_CSS_Selectors/Part_11/index.html*
    ```
     <body>
         <h1>:first-child in body</h1>
@@ -1048,7 +1048,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_11/styles/style.css) --> *2_CSS_Selectors/Part_11/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_11) --> *2_CSS_Selectors/Part_11/styles/style.css*
    ```
     * { 
         background-color: white; 
@@ -1070,7 +1070,7 @@ Structure pseudo-classes can be used to select elements based on their position 
  ![Preview](2_CSS_Selectors/Images/Preview_2_11.png)
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_12/index.html) --> *2_CSS_Selectors/Part_12/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_12) --> *2_CSS_Selectors/Part_12/index.html*
    ```
     <body>
         <h1>:nth-child on table</h1>
@@ -1105,7 +1105,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_12/styles/style.css) --> *2_CSS_Selectors/Part_12/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_12) --> *2_CSS_Selectors/Part_12/styles/style.css*
    ```
     tr:nth-child(odd) { 
         background: lightgray; 
@@ -1129,7 +1129,7 @@ Structure pseudo-classes can be used to select elements based on their position 
 
 - Structure pseudo-classes for certain child elements
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_13/index.html) --> *2_CSS_Selectors/Part_13/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_13) --> *2_CSS_Selectors/Part_13/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1150,7 +1150,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_13/styles/style.css) --> *2_CSS_Selectors/Part_13/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_13) --> *2_CSS_Selectors/Part_13/styles/style.css*
    ```
     article:first-of-type { 
         border: 2px solid black; 
@@ -1164,7 +1164,7 @@ Structure pseudo-classes can be used to select elements based on their position 
  ![Preview](2_CSS_Selectors/Images/Preview_2_13.png)
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_14/index.html) --> *2_CSS_Selectors/Part_14/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_14) --> *2_CSS_Selectors/Part_14/index.html*
    ```
     <body>
         <h1>:only-of-type</h1>
@@ -1174,7 +1174,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_14/styles/style.css) --> *2_CSS_Selectors/Part_14/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_14) --> *2_CSS_Selectors/Part_14/styles/style.css*
    ```
     em:only-of-type { 
         font-weight: bold; 
@@ -1186,7 +1186,7 @@ Structure pseudo-classes can be used to select elements based on their position 
 
 - Pseudo elements, the selectors for elements that do not exist
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_15/index.html) --> *2_CSS_Selectors/Part_15/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_15) --> *2_CSS_Selectors/Part_15/index.html*
    ```
     <body>
         <h1>:first-letter and :first-line</h1>
@@ -1215,7 +1215,7 @@ Structure pseudo-classes can be used to select elements based on their position 
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_15/styles/style.css) --> *2_CSS_Selectors/Part_15/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_15) --> *2_CSS_Selectors/Part_15/styles/style.css*
    ```
     p::first-line { 
         font-weight: bold; 
@@ -1253,7 +1253,7 @@ A combiner is a character between two selectors that concatenates these selector
 
 - Descendant selector (E, F)
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_16/index.html) --> *2_CSS_Selectors/Part_16/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_16) --> *2_CSS_Selectors/Part_16/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1276,7 +1276,7 @@ A combiner is a character between two selectors that concatenates these selector
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_16/styles/style.css) --> *2_CSS_Selectors/Part_16/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_16) --> *2_CSS_Selectors/Part_16/styles/style.css*
    ```
     article p { 
         background: lightblue; 
@@ -1288,7 +1288,7 @@ A combiner is a character between two selectors that concatenates these selector
 
 - Child selector (E1 > E2)
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_17/index.html) --> *2_CSS_Selectors/Part_17/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_17) --> *2_CSS_Selectors/Part_17/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1311,7 +1311,7 @@ A combiner is a character between two selectors that concatenates these selector
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_17/styles/style.css) --> *2_CSS_Selectors/Part_17/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_17) --> *2_CSS_Selectors/Part_17/styles/style.css*
    ```
     article > p { 
         background: lightblue; 
@@ -1323,7 +1323,7 @@ A combiner is a character between two selectors that concatenates these selector
 
 - Neighbor selector (E1 + E2)
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_18/index.html) --> *2_CSS_Selectors/Part_18/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_18) --> *2_CSS_Selectors/Part_18/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1346,7 +1346,7 @@ A combiner is a character between two selectors that concatenates these selector
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_18/styles/style.css) --> *2_CSS_Selectors/Part_18/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_18) --> *2_CSS_Selectors/Part_18/styles/style.css*
    ```
     article + p { 
         background: lightblue; 
@@ -1358,7 +1358,7 @@ A combiner is a character between two selectors that concatenates these selector
 
 - Sibling selector (E1 ~ E2)
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_19/index.html) --> *2_CSS_Selectors/Part_19/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_19) --> *2_CSS_Selectors/Part_19/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1381,7 +1381,7 @@ A combiner is a character between two selectors that concatenates these selector
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_19/styles/style.css) --> *2_CSS_Selectors/Part_19/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/2_CSS_Selectors/Part_19) --> *2_CSS_Selectors/Part_19/styles/style.css*
    ```
     article ~ p { 
         background: lightblue; 
