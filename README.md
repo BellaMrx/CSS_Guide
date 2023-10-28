@@ -1399,7 +1399,7 @@ A combiner is a character between two selectors that concatenates these selector
 An important principle in CSS is inheritance. Only this makes it possible to define different CSS properties such as colors, font and font size once in a central place instead of having to repeat them all the time.
 The various HTML elements have ancestors and descendants (parent and child elements). Because of these relationships, the subsequent child elements inherit many style properties from the higher-level parent elements. 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_1/index.html) --> *3_Inheritance_Cascade/Part_1/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_1) --> *3_Inheritance_Cascade/Part_1/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1421,7 +1421,7 @@ The various HTML elements have ancestors and descendants (parent and child eleme
 
 The body element here contains a header, article, two p and a footer element as direct descendants. This makes the body element the parent element of all these elements. Direct descendants of the article element are the h1, p, and ul elements. These direct descendants of article are the indirect descendants of the body element. Starting from the body element, the set CSS properties are inherited from element to element.
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_1/styles/style.css) --> *3_Inheritance_Cascade/Part_1/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_1) --> *3_Inheritance_Cascade/Part_1/styles/style.css*
    ```
     body {
         background: gray;
@@ -1452,7 +1452,7 @@ The following are not inherited: `background`, `border`, `width`, `height`, `pad
 ### Force inheritance with `inherit` 
 Some CSS properties are not inherited, but it is possible to force that with `inherit`.
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_2/index.html) --> *3_Inheritance_Cascade/Part_2/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_2) --> *3_Inheritance_Cascade/Part_2/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1473,7 +1473,7 @@ Some CSS properties are not inherited, but it is possible to force that with `in
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_2/styles/style.css) --> *3_Inheritance_Cascade/Part_2/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_2) --> *3_Inheritance_Cascade/Part_2/styles/style.css*
    ```
     body {
         font-family: Arial, Verdana;
@@ -1497,7 +1497,7 @@ Some CSS properties are not inherited, but it is possible to force that with `in
 
 ### Restore the default value of a CSS property with `initial`
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_3/index.html) --> *3_Inheritance_Cascade/Part_3/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_3) --> *3_Inheritance_Cascade/Part_3/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1518,7 +1518,7 @@ Some CSS properties are not inherited, but it is possible to force that with `in
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_3/styles/style.css) --> *3_Inheritance_Cascade/Part_3/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_3) --> *3_Inheritance_Cascade/Part_3/styles/style.css*
    ```
     body {
         font-family: Arial, Verdana;
@@ -1551,7 +1551,7 @@ The `unset` keyword is a middle ground between `inherit` and `initial`. When the
 ### Force inherit or restore values for all properties
 With the shorthand notation `all`, all CSS properties of the parent element can be inherited with `inherit` or reset to default with `initial`. `unset` can also be used with `all`.
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_4/index.html) --> *3_Inheritance_Cascade/Part_4/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_4) --> *3_Inheritance_Cascade/Part_4/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1572,7 +1572,7 @@ With the shorthand notation `all`, all CSS properties of the parent element can 
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_4/styles/style.css) --> *3_Inheritance_Cascade/Part_4/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_4) --> *3_Inheritance_Cascade/Part_4/styles/style.css*
    ```
     body {
         font-family: Arial, Verdana;
@@ -1619,7 +1619,7 @@ Of these three sources, the browser stylesheet has the lowest priority. If a use
 ### Increase the priority of a CSS property with `!important`
 If a CSS rule or CSS property is declared multiple times in the same file, the last declared property usually becomes active.
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_5/index.html) --> *3_Inheritance_Cascade/Part_5/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_5) --> *3_Inheritance_Cascade/Part_5/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1640,7 +1640,7 @@ If a CSS rule or CSS property is declared multiple times in the same file, the l
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_5/styles/style.css) --> *3_Inheritance_Cascade/Part_5/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_5) --> *3_Inheritance_Cascade/Part_5/styles/style.css*
    ```
     .priority {
         border: 2px solid red;
@@ -1656,7 +1656,7 @@ If a CSS rule or CSS property is declared multiple times in the same file, the l
 
 The CSS keyword `!important` can be used to increase the priority so that the property cannot be overridden by the following specifications.
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_6/index.html) --> *3_Inheritance_Cascade/Part_6/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_6) --> *3_Inheritance_Cascade/Part_6/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1677,7 +1677,7 @@ The CSS keyword `!important` can be used to increase the priority so that the pr
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_6/styles/style.css) --> *3_Inheritance_Cascade/Part_6/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_6) --> *3_Inheritance_Cascade/Part_6/styles/style.css*
    ```
     .priority {
         border: 2px solid red !important;
@@ -1702,7 +1702,7 @@ D = pseudo elements
 
 Universal selectors with `*` get no weighting and behave neutrally, as do combinatorial characters `>`,`+`,`~` and the space between two selectors.
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_7/index.html) --> *3_Inheritance_Cascade/Part_7/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_7) --> *3_Inheritance_Cascade/Part_7/index.html*
    ```
     <body>
         <header>Header</header>
@@ -1719,7 +1719,7 @@ Universal selectors with `*` get no weighting and behave neutrally, as do combin
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_7/styles/style.css) --> *3_Inheritance_Cascade/Part_7/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_7) --> *3_Inheritance_Cascade/Part_7/styles/style.css*
    ```
     .aclass { 
         color: green; 
@@ -1874,7 +1874,7 @@ Another function is rgba(), this has been extended by only one value, the alpha 
     }
    ```
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_8/index.html) --> *3_Inheritance_Cascade/Part_8/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_8) --> *3_Inheritance_Cascade/Part_8/index.html*
    ```
     <body>
         <h3>color: rgba(255, 255, 255, 0.5);</h3>
@@ -1885,7 +1885,7 @@ Another function is rgba(), this has been extended by only one value, the alpha 
    ```
 
 
- [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_8/styles/style.css) --> *3_Inheritance_Cascade/Part_8/styles/style.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide/blob/main/3_Inheritance_Cascade/Part_8) --> *3_Inheritance_Cascade/Part_8/styles/style.css*
    ```
     .p_article_1 { 
         background-image:url('../images/sunsetTree.jpg');
